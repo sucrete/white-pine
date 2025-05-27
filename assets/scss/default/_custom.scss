@@ -1778,6 +1778,7 @@ footer {
             .logo-column {
               div:not(.that-group) {
                 .link-group {
+                  font-size: 15px;
                   .contact-stack {
                     border-right: none;
                     border-bottom: 1px solid var(--color-offset);
@@ -1816,6 +1817,22 @@ footer {
               }
               .footer-form {
                 padding-bottom: 5rem;
+              }
+              div:not(.that-group) {
+                .link-group {
+                  .contact-stack {
+                    .link {
+                      .icon {
+                        &.map-icon {
+                          width: 22px;
+                        }
+                        &.phone-icon {
+                          width: 25.5px;
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
             .weather-col {
