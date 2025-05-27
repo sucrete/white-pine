@@ -13,15 +13,13 @@ export class Header extends LitElement {
             <div class="header-four-wrapper">
               <div class="nav-area">
                 <nav>
-                  <ul class='parent-nav'>
+                  <ul class="parent-nav">
                     <li>
                       <a class="nav-link" href="calendar.html">Calendar</a>
                     </li>
                     <li>
                       <a class="nav-link" href="contact.html">Contact</a>
                     </li>
-
-                  
                   </ul>
                 </nav>
               </div>
@@ -46,21 +44,25 @@ export class Header extends LitElement {
                   alt=""
                   class="white-pine-badge"
                 />
-
+                <img
+                  src="/assets/images/logo/white-pine-offset.svg"
+                  alt=""
+                  class="white-pine-offset injectable"
+                />
                 <img
                   src="/assets/images/logo/white-pine-coarse-2.svg"
                   alt=""
-                  class="deer-chase-logo-roman injectable"
+                  class="white-pine-logo-roman injectable"
                 />
                 <img
                   src="/assets/images/logo/lone-pine.svg"
                   alt=""
-                  class="deer-chase-logo-stag injectable"
+                  class="white-pine-logo-stag injectable"
                 />
               </a>
               <div class="nav-area">
                 <nav>
-                  <ul class='parent-nav'>
+                  <ul class="parent-nav">
                     <!-- <li>
                       <a class="nav-link" href="events.html"
                         >Events</a

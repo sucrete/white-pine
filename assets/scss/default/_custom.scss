@@ -508,7 +508,8 @@ a {
     fill: white;
   }
 }
-.deer-chase-logo-roman {
+
+.white-pine-logo-roman {
   width: 240px;
   height: auto;
   path {
@@ -518,16 +519,24 @@ a {
 
 header {
   &.header--sticky {
-    .deer-chase-logo-roman,
-    .deer-chase-logo-roman-stacked,
-    .deer-chase-logo-stag {
+    .white-pine-logo-roman,
+    .white-pine-logo-roman-stacked,
+    .white-pine-offset,
+    .white-pine-logo-stag {
       display: none;
+    }
+    .white-pine-offset {
+      width: 200px;
+      height: auto;
+      path {
+        fill: var(--color-primary);
+      }
     }
     &.sticky {
       .white-pine-badge {
         display: none;
       }
-      .deer-chase-logo-roman {
+      .white-pine-logo-roman {
         display: unset;
       }
       .nav-area {
@@ -545,6 +554,13 @@ header {
       }
     }
   }
+  &.style-white {
+    .white-pine-offset {
+      path {
+        fill: white;
+      }
+    }
+  }
 }
 
 //* subpage header at the top (ie not .sticky)
@@ -556,7 +572,7 @@ header {
           .row {
             .header-four-wrapper {
               .logo {
-                .deer-chase-logo-roman {
+                .white-pine-logo-roman {
                   path {
                     fill: var(--color-primary);
                   }
@@ -1840,7 +1856,7 @@ footer {
               .white-pine-badge {
                 display: none;
               }
-              .deer-chase-logo-roman {
+              .white-pine-offset {
                 position: relative;
                 display: unset;
                 top: 3px;
@@ -1854,8 +1870,9 @@ footer {
           .row {
             .header-four-wrapper {
               .logo {
-                .deer-chase-logo-roman {
+                .white-pine-offset {
                   top: 0px;
+                  display: none;
                 }
               }
             }
@@ -2059,7 +2076,7 @@ footer {
             a {
               &.logo {
                 // width: 5px;
-                .deer-chase-logo {
+                .white-pine-logo {
                   &-roman {
                     display: none;
                   }
@@ -2084,7 +2101,7 @@ footer {
           .row {
             .header-four-wrapper {
               a.logo {
-                .deer-chase-logo-stag {
+                .white-pine-logo-stag {
                   display: unset;
                   width: 22px;
                   height: auto;
@@ -2108,7 +2125,7 @@ footer {
           .header-four-wrapper {
             a {
               &.logo {
-                .deer-chase-logo {
+                .white-pine-logo {
                   &-roman-stacked {
                     path {
                       fill: white;
@@ -2126,7 +2143,7 @@ footer {
             .header-four-wrapper {
               a {
                 &.logo {
-                  .deer-chase-logo-roman-stacked {
+                  .white-pine-logo-roman-stacked {
                     display: none;
                   }
                 }

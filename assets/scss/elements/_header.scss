@@ -112,8 +112,7 @@ header .rts-btn {
     }
 
     @media #{$sm-layout} {
-      padding: 15px 10px;
-      padding-left: 0px;
+      padding: 15px 0px;
     }
 
     .nav-area {
@@ -347,7 +346,7 @@ header .rts-btn {
 
       svg {
         rect {
-          fill: #113e0c;
+          fill: var(--color-primary);
         }
       }
     }
