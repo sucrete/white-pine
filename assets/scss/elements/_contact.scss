@@ -1,0 +1,185 @@
+
+.container-contact {
+  max-width: 768px;
+  margin: auto;
+}
+
+.bg_iamge {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-form {
+  margin-top: 50px;
+
+  input {
+    border-radius: 0;
+    height: 44px;
+    border: 1px solid #d1d1d1;
+    font-size: 16px;
+    color: #6d6d6d;
+    padding: 12px;
+    background-color: #f0f0f0;
+
+    &:focus,
+    &:hover {
+      border: 1px solid var(--color-primary);
+    }
+  }
+
+  .half-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @media #{$large-mobile} {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .single {
+    width: 100%;
+    margin-bottom: 23px;
+
+    label {
+      margin-bottom: 7px;
+      font-size: 14px;
+      color: #4f4f4f;
+      font-weight: 500;
+    }
+  }
+
+  textarea {
+    height: 133px;
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+    font-size: 16px;
+    color: #6d6d6d;
+    padding: 12px;
+
+    &:focus,
+    &:hover {
+      border: 1px solid var(--color-primary);
+    }
+  }
+
+  .form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    label {
+      margin: 0;
+      padding-left: 10px;
+      font-size: 14px;
+      font-weight: 500;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.single-location-area-contact {
+  text-align: center;
+
+  .icon {
+    margin-bottom: 16px;
+
+    i {
+      color: var(--color-primary);
+      font-size: 24px;
+    }
+  }
+
+  p {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  span {
+    color: #5d5d5d;
+  }
+}
+
+.section-seperator-b {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+//* contact confirmation message
+.contact-form,
+.wedding-form {
+  position: relative;
+  .message-sent-box {
+    background-color: var(--color-primary);
+    padding: 4rem;
+    padding: 2.5rem 3rem 3.25rem 3rem;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 777;
+    pointer-events: none;
+    transition: all 0.45s ease;
+    opacity: 0;
+    .row {
+      .image-orb {
+        padding: 1rem;
+        background-color: rgb(0 0 0 / 18%);
+        border: 1px solid rgb(0 0 0 / 9%);
+        border-radius: 99px;
+        height: 52px;
+        width: 52px;
+        position: relative;
+        img {
+          position: absolute;
+          top: 53%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 19px !important;
+          height: auto;
+        }
+      }
+      h4 {
+        color: rgb(255, 255, 255);
+        font-family: "Aeonik";
+        letter-spacing: 0.1px;
+        line-height: 100%;
+        font-weight: 500;
+        margin-bottom: 0px;
+        margin-top: 12px;
+        font-size: 20px;
+      }
+    }
+    &.show {
+      top: 45%;
+      opacity: 1;
+    }
+  }
+  .inputs-wrapper {
+    transition: opacity 0.2s ease;
+    &.subdued {
+      opacity: 0.4;
+      label,
+      button,
+      input,
+      .single textarea#message {
+        pointer-events: none;
+      }
+    }
+  }
+}
+.wedding-form {
+  .message-sent-box {
+    padding: 2.5rem 3rem 2.75rem 3rem;
+  }
+}

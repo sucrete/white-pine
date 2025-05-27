@@ -1,0 +1,122 @@
+.nav-area {
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      a {
+        padding: 38px 0;
+        display: block;
+        color: #000000;
+        font-size: 16.5px;
+        font-family: "Wayfarer";
+        letter-spacing: 1px;
+        position: relative;
+        &:after {
+          background: none repeat scroll 0 0 transparent;
+          bottom: 3.25rem;
+          content: "";
+          display: block;
+          height: 1.76px;
+          left: 50%;
+          border-radius: 77px;
+          position: absolute;
+          background: var(--color-primary);
+          // background: #c6bfa2;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s,
+            opacity 0.3s ease 0s;
+          width: 0;
+          opacity: 0;
+        }
+        &:hover {
+          color: #0e5023;
+          &:after {
+            width: 100%;
+            left: 0;
+            opacity: .9;
+          }
+        }
+        &.active {
+          color: #0e5023;
+          &:after {
+            width: 100%;
+            left: 0;
+            opacity: 1;
+          }
+          &.book-tee-time-btn {
+            &:after {
+              opacity: 0;
+            }
+            &:hover {
+              &:after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.header--sticky.sticky {
+  .nav-area ul li > a.nav-link {
+    padding: 20px 0;
+  }
+}
+.header--sticky.header-area-four {
+  &:not(.home) {
+    .header-four-wrapper {
+      .nav-area {
+        nav {
+          .parent-nav {
+            .nav-link {
+              &:after {
+                background: white;
+                background: var(--color-secondary)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.has-dropdown {
+  a {
+    display: flex;
+    align-items: center;
+
+    i {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        top: -11px;
+        font-size: 11px;
+        right: -14px;
+        transition: 0.25s ease;
+        transform-origin: center;
+        -webkit-text-stroke: 0.75px;
+      }
+    }
+  }
+
+  &:hover {
+    & > a {
+      i {
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
