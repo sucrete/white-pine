@@ -235,7 +235,7 @@ export class Footer extends LitElement {
                   <div class="copyright-wrapper">
                     <div class="new-row">
                       <p>
-                        © White Pine Golf Club,
+                        © White Pine Golf Course,
                         ${new Date().getFullYear()}
                       </p>
                     </div>
