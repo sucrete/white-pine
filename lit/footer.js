@@ -27,7 +27,7 @@ export class Footer extends LitElement {
                     <div class="col"></div>
                   </div>
 
-                  <div class="link-group d-flex flex-row flex-start">
+                  <div class="link-group d-flex flex-column flex-md-row flex-start">
                     <div class="contact-stack">
                       <div class="footer-link-group-title">contact</div>
                       <a

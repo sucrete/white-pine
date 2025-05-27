@@ -260,6 +260,8 @@ section.hours-table {
   max-width: 100%;
   justify-content: space-between;
   padding: 24px 15px !important;
+  padding-bottom: 26px !important;
+  padding-left: 20px !important;
   background-color: var(--color-primary) !important;
 }
 
@@ -1757,6 +1759,23 @@ footer {
       .rts-footer-area {
         .container {
           .row {
+            .logo-column {
+              div:not(.that-group) {
+                .link-group {
+                  .contact-stack {
+                    border-right: none;
+                    border-bottom: 1px solid var(--color-offset);
+                    padding-bottom: 2rem;
+                    padding-right: 0;
+                  }
+                  .social-stack {
+                    padding-left: 0;
+                    padding-top: 2rem;
+                  }
+                }
+              }
+            }
+
             .weather-col {
               .weather-card {
                 padding: 4rem;
@@ -1785,12 +1804,10 @@ footer {
             }
             .weather-col {
               .weather-card {
-                padding: 5rem 3rem;
+                padding: 1rem;
+                padding-top: 1.5rem;
+                padding-bottom: .25rem;
                 width: 100%;
-                .card-body {
-                  .weather-heading {
-                  }
-                }
               }
             }
           }
@@ -2019,6 +2036,17 @@ footer {
       }
     }
   }
+  // .banner-four-area {
+  //   &.home-page {
+  //     .container {
+  //       .short-introduction {
+  //         p {
+  //           font-size: 15px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media screen and (max-width: 576px) {
@@ -2058,7 +2086,7 @@ footer {
               a.logo {
                 .deer-chase-logo-stag {
                   display: unset;
-                  width: 30px;
+                  width: 22px;
                   height: auto;
                   position: absolute;
                   left: 10px;
@@ -2111,11 +2139,11 @@ footer {
   }
   .banner-four-area.home-page {
     .container {
-      margin-bottom: 2rem;
+      margin-bottom: 0rem;
       .short-introduction {
         p {
-          font-size: 17px;
-          line-height: 130%;
+          font-size: 15px;
+          line-height: 140%;
           margin-bottom: 1rem;
           letter-spacing: 0.4px;
           text-shadow: 0 0 12px black;
@@ -2135,52 +2163,27 @@ footer {
       }
     }
   }
-  section.hours-table {
-    padding-top: 2rem !important;
-    .container {
-      .the-table-itself {
-        .hours-table-brow {
-          flex-direction: column;
-        }
-      }
-    }
-  }
 
-  section {
-    &.perks {
-      .container {
-        padding: 0 15px;
-        .row {
-          [class*="col"] {
-            div {
-              h2 {
-                font-size: 40px;
-                margin-bottom: 1rem;
-              }
-            }
-            a {
-              // margin-bottom: 3rem;
-            }
-            &:first-of-type {
-              padding-left: 15px;
-              padding-right: 15px;
-            }
-          }
-        }
-      }
+  .why-choose-us-working-process {
+    .gradient-mask {
+      background: radial-gradient(
+        ellipse 80% 60% at 50% 60%,
+        rgba(250, 250, 246, 0.9) 35%,
+        rgb(250, 250, 246) 70%
+      );
     }
-  }
-
-  .membership-page-body {
     .container {
       .row {
-        .col {
-          .membership-nav-wrapper {
-            ul.membership-nav {
-              .nav-item {
-                .nav-link {
-                  font-size: 16px;
-                }
+        .introduction-column {
+          .why-choose-process-left {
+            .title {
+              font-size: 35px;
+            }
+            p {
+              font-size: 15px;
+              line-height: 140%;
+              &:first-of-type {
+                margin-bottom: 18px;
               }
             }
           }
