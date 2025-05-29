@@ -311,6 +311,16 @@ section.hours-table {
     line-height: 140%;
     margin-bottom: 0rem;
     text-shadow: 0 0 19px black;
+    .compass {
+      display: inline-block;
+      padding-right: 15px;
+      .compass-icon {
+        position: relative;
+        top: -3px;
+        width: 22px;
+        height: auto;
+      }
+    }
   }
   a {
     position: relative;

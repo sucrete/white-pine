@@ -79,6 +79,14 @@ export class Footer extends LitElement {
                         City of Ely
                       </a>
                       <a
+                        href="https://www.elynevada.net/"
+                        class="social-link link"
+                        target="_blank"
+                      >
+                        <img src="./assets/images/icons/tourism.svg" class="tourism" alt="" />
+                        City of Ely Tourism
+                      </a>
+                      <a
                         href="https://www.whitepinecounty.net/"
                         class="social-link link"
                         target="_blank"
