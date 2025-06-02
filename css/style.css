@@ -6,6 +6,7 @@
   --color-offset: #576047;
   --color-secondary: #b4a02a;
   --color-accent: #c6bfa2;
+  --desat-red: #b0632e;
   --grey-screen: rgba(0, 0, 0, 0.108);
   --light-grey: #f4f4f4;
   --color-body: #262626;
@@ -12565,7 +12566,7 @@ Copyright (c) 2015 Daniel Eden
   padding: 38px 0;
   display: block;
   color: #000000;
-  font-size: 16.5px;
+  font-size: 15.5px;
   font-family: "Wayfarer";
   letter-spacing: 1px;
   position: relative;
@@ -15435,7 +15436,7 @@ section.cta.blonde .rts-cts-area {
   text-align: center;
   line-height: 46px;
   font-size: 24px;
-  color: var(--color-accent);
+  color: var(--color-secondary);
   left: 50%;
   top: 50%;
   height: 46px;
@@ -15445,7 +15446,7 @@ section.cta.blonde .rts-cts-area {
   z-index: 111;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
-  border: 0px solid var(--color-accent);
+  border: 0px solid var(--color-secondary);
   border: none !important;
   box-shadow: none;
   border-radius: 50% !important;
@@ -16759,11 +16760,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16778,11 +16779,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(2) {
   z-index: 9;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(2).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16797,11 +16798,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16816,11 +16817,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16835,11 +16836,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(5) {
   z-index: 6;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(5).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16854,11 +16855,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(6) {
   z-index: 5;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(6).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16873,28 +16874,9 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(7) {
   z-index: 4;
-  transform: rotate(0deg) translate(-50%, -50%);
-}
-.slyde:nth-child(7).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(8) {
-  z-index: 3;
   transform: rotate(2deg) translate(-50%, -50%);
 }
-.slyde:nth-child(8).leave {
+.slyde:nth-child(7).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
@@ -16909,13 +16891,32 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background-color: transparent;
 }
 
+.slyde:nth-child(8) {
+  z-index: 3;
+  transform: rotate(-3deg) translate(-50%, -50%);
+}
+.slyde:nth-child(8).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-3deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16930,11 +16931,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17182,7 +17183,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   padding-right: 12px !important;
   padding-left: 19px !important;
   border: none !important;
-  margin-left: 15px;
+  margin-left: 0px;
 }
 .my-btn svg {
   margin-bottom: -2px;
@@ -17201,49 +17202,6 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 .my-btn.book-tee-time-btn {
   font-family: "Wayfarer";
-}
-
-.notices {
-  border-radius: 10px;
-  transform: translateY(-3rem);
-  margin-bottom: 5rem;
-  background: #ffffff;
-  position: relative;
-  z-index: 69;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-.notices .row {
-  height: 100%;
-}
-.notices .row [class*=col] {
-  padding: 40px 45px;
-}
-.notices .row [class*=col]:not(:first-of-type) {
-  border-left: 1.5px solid rgba(0, 0, 0, 0.05);
-}
-.notices .row [class*=col] .notice-icon {
-  padding-bottom: 20px;
-}
-.notices .row [class*=col] .notice-icon img {
-  width: auto;
-  height: 25px;
-}
-.notices .row [class*=col] p .explainer-icon {
-  margin-bottom: 3px;
-}
-@media (max-width: 992px) {
-  .notices.greens-fees {
-    margin-bottom: 0rem;
-  }
-  .notices.greens-fees .row [class*=col]:nth-of-type(3), .notices.greens-fees .row [class*=col]:nth-of-type(4) {
-    border-top: 1.5px solid rgba(0, 0, 0, 0.05);
-  }
-}
-@media (max-width: 576px) {
-  .notices.greens-fees .row [class*=col]:nth-of-type(2) {
-    border-top: 1.5px solid rgba(0, 0, 0, 0.05);
-  }
 }
 
 .slider-wrapper {
@@ -17664,6 +17622,9 @@ table tbody tr th {
   vertical-align: middle;
   padding-left: 20px;
 }
+table tbody tr th .th-wrap, table tbody tr th .note {
+  line-height: 126%;
+}
 table tbody tr th .th-wrap {
   margin-top: auto;
   margin-bottom: auto;
@@ -17672,7 +17633,6 @@ table tbody tr th .th-wrap {
   align-items: center;
   font-family: "Aeonik Medium";
   text-transform: capitalize;
-  line-height: 1em;
 }
 table tbody tr th .note {
   font-family: "Sono", monospace;
@@ -17682,7 +17642,6 @@ table tbody tr th .note {
   font-variation-settings: "MONO" 1;
   font-size: 13px;
   letter-spacing: 0.5px;
-  line-height: 120%;
   margin-left: 1px;
   color: #878787;
 }
@@ -18003,111 +17962,93 @@ section.terms .container .inner-container ul:first-of-type {
 }
 
 .rates-page-body {
-  padding-top: 17rem;
+  padding-top: 15rem;
   padding-bottom: 9rem;
   background-color: #fafafa;
   position: relative;
 }
-.rates-page-body [class*=table-wrapper] {
+.rates-page-body .row [class*=table-wrapper] {
   padding-bottom: 5rem;
+  position: relative;
 }
-.rates-page-body [class*=table-wrapper] hr {
+.rates-page-body .row [class*=table-wrapper] hr {
   margin-top: 4.5rem;
   margin-bottom: 4rem;
   opacity: 0.05;
   border-top: solid 1.5px;
 }
-.rates-page-body [class*=table-wrapper] .table-preface {
+.rates-page-body .row [class*=table-wrapper] .table-preface {
   padding-bottom: 0rem;
   margin-bottom: -1rem;
 }
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] h3 {
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] h3 {
   font-size: 40px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0rem;
 }
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] p {
-  max-width: 600px;
-}
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] p,
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper {
-  font-size: 19px;
-  padding-left: 3px;
-}
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] p a,
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper a {
-  color: var(--body-text);
-  transition: opacity 0.15s ease;
-  text-decoration: underline;
-}
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] p a:hover,
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper a:hover {
-  opacity: 0.8;
-}
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper {
-  display: flex;
-  font-size: 17px;
-  flex-direction: row;
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] h3.no-paragraph {
   margin-bottom: 2rem;
-  padding-right: 5px;
 }
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper .hours-title {
-  color: rgb(140, 140, 140);
-  padding-bottom: 10px;
-  padding: 12px 5px 0px 6px;
-  writing-mode: vertical-rl;
-  text-orientation: sideways-right;
-  background-color: #ededed;
-  transform: rotate(180deg);
-}
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper .hours-side {
-  flex-grow: 1;
-  padding-left: 15px;
-}
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper .hours-side .hours-row {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 5px;
-  width: 100%;
-}
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper .hours-side .hours-row:last-of-type {
-  padding-bottom: 0px;
-}
-.rates-page-body [class*=table-wrapper] .table-preface [class*=col] .hours-wrapper .hours-side .hours-row .spanner {
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] h3.nudge {
   position: relative;
-  top: -7px;
-  flex: 1;
-  border-bottom: 1.5px dotted rgba(0, 0, 0, 0.184);
-  margin-left: 10px;
-  margin-right: 10px;
+  left: -2px;
 }
-.rates-page-body [class*=table-wrapper] .table-preface.range {
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] p {
+  max-width: 600px;
+  font-size: 19px;
+}
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] p .explainer-icon {
+  margin-bottom: 3px;
+}
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] .notice-icon {
+  width: fit-content;
+  left: -1rem;
+  top: -10rem;
+}
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] .notice-icon img {
+  width: 80px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.01)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.02)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0 32px 32px rgba(0, 0, 0, 0.06));
+}
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] .notice-subheading {
+  font-family: "Wayfarer";
+  font-size: 15px;
+  color: var(--desat-red);
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  margin-left: 1px;
+}
+.rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] .desat-red {
+  font-size: 40px;
+  color: var(--desat-red);
+}
+.rates-page-body .row [class*=table-wrapper] .table-preface.range {
   margin-bottom: -2.5rem;
 }
-.rates-page-body [class*=table-wrapper] .table-preface.range h3 {
+.rates-page-body .row [class*=table-wrapper] .table-preface.range h3 {
   margin-bottom: 1.5rem;
 }
-.rates-page-body [class*=table-wrapper] .table-preface.busy {
+.rates-page-body .row [class*=table-wrapper] .table-preface.busy {
   margin-bottom: -1rem;
 }
 @media (max-width: 768px) {
-  .rates-page-body [class*=table-wrapper] .table-preface {
+  .rates-page-body .row [class*=table-wrapper] .table-preface {
     padding-bottom: 3rem;
   }
 }
 @media (max-width: 576px) {
-  .rates-page-body [class*=table-wrapper] .table-preface [class*=col] h3 {
+  .rates-page-body .row [class*=table-wrapper] .table-preface [class*=col] h3 {
     font-size: 33px;
     margin-bottom: 0rem;
   }
 }
-.rates-page-body [class*=table-wrapper] table .th-wrap {
+.rates-page-body .row [class*=table-wrapper] table .th-wrap {
   text-transform: none;
 }
-.rates-page-body [class*=table-wrapper] table tbody tr:nth-child(odd) th,
-.rates-page-body [class*=table-wrapper] table tbody tr:nth-child(odd) td {
-  background: #ededed;
+.rates-page-body .row [class*=table-wrapper] table tbody tr:nth-child(odd) th,
+.rates-page-body .row [class*=table-wrapper] table tbody tr:nth-child(odd) td {
+  background: rgb(236, 236, 236);
 }
-.rates-page-body [class*=table-wrapper] table tbody tr td {
+.rates-page-body .row [class*=table-wrapper] table tbody tr td {
   width: 25%;
   padding-right: 0px;
   padding-left: 0px;
@@ -18726,12 +18667,6 @@ footer .rts-copyright-area-one .new-row p {
   .membership-page-body .container .row .col .tab-content .tab-pane table {
     width: 972px;
     position: relative;
-  }
-  .pool-page-body .container .bento-wrapper .notices-wrapper {
-    overflow: hidden;
-  }
-  .pool-page-body .container .bento-wrapper .notices-wrapper .notices .row [class*=col]:nth-of-type(2), .pool-page-body .container .bento-wrapper .notices-wrapper .notices .row [class*=col]:nth-of-type(3) {
-    border-top: 1.5px solid rgba(0, 0, 0, 0.05);
   }
 }
 @media screen and (max-width: 576px) {

@@ -14,12 +14,16 @@ export class Header extends LitElement {
               <div class="nav-area">
                 <nav>
                   <ul class="parent-nav">
+                     <li>
+                      <a class="nav-link" href="rates.html">Rates</a>
+                    </li>
+                     <li>
+                      <a class="nav-link" href="membership.html">membership</a>
+                    </li>
                     <li>
                       <a class="nav-link" href="calendar.html">Calendar</a>
                     </li>
-                    <li>
-                      <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
+                   
                   </ul>
                 </nav>
               </div>
@@ -63,14 +67,9 @@ export class Header extends LitElement {
               <div class="nav-area">
                 <nav>
                   <ul class="parent-nav">
-                    <!-- <li>
-                      <a class="nav-link" href="events.html"
-                        >Events</a
-                      >
-                    </li>
                     <li>
                       <a class="nav-link" href="contact.html"> Contact </a>
-                    </li> -->
+                    </li>
                     <li>
                       <a
                         href="book-tee-time.html"
