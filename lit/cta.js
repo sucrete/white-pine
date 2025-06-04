@@ -33,7 +33,7 @@ export class CTA extends LitElement {
                   </a>
                 </div>
                 <div class="right" >
-                 <div class="right-overlay"></div>
+                 <!-- <div class="right-overlay"></div> -->
                 </div>
               </div>
             </div>

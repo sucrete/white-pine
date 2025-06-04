@@ -45,8 +45,7 @@ textarea {
     padding: 0 15px;
     outline: none;
     background-color: #f0f0f0;
-    border: var(--border-width) solid rgba(0, 0, 0, 0.108);
-    // border-radius: var(--radius);
+    border: var(--border-width) solid rgba(0, 0, 0, 0.04);
 
     /* -- Placeholder -- */
     &::placeholder {

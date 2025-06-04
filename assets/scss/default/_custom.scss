@@ -193,6 +193,60 @@ section.hours-table {
   }
 }
 
+//* membership form section
+section {
+  &.form-section {
+    background-color: #fafaf6;
+    &.weddings {
+      padding: 5rem 0 14rem 0;
+    }
+    &.membership-form {
+      padding: 0 0 14rem 0;
+    }
+    .container {
+      background-color: #eeede4;
+      padding: 5rem;
+      .row {
+        [class*="col"] {
+          h3 {
+            font-family: "Aeonik";
+            font-size: 4rem;
+            margin-bottom: 3rem;
+          }
+          form {
+            label {
+              padding-bottom: 5px;
+              color: var(--color-primary);
+            }
+            input,
+            textarea {
+              background: #e8e7dd;
+              // border: none;
+              min-height: 40px;
+            }
+            button {
+              margin-top: 2rem;
+              padding-left: 25px;
+              padding-right: 25px;
+            }
+          }
+          img {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+            height: auto;
+            &.golfer-swangin {
+              width: 192px;
+              margin: 0 auto;
+              margin-top: -7px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 //* sidebar 'book tee time' button
 .sidebar-btn {
   margin-left: 0px;
@@ -610,7 +664,8 @@ table {
       th {
         vertical-align: middle;
         padding-left: 20px;
-        .th-wrap, .note {
+        .th-wrap,
+        .note {
           line-height: 126%;
         }
         .th-wrap {
@@ -999,261 +1054,124 @@ section {
 }
 
 //~ Rates/Greens Fees
-.rates-page-body {
-  padding-top: 15rem;
-  padding-bottom: 9rem;
-  background-color: #fafafa;
-  position: relative;
-  .row {
-    [class*="table-wrapper"] {
-      padding-bottom: 5rem;
-      position: relative;
-      hr {
-        margin-top: 4.5rem;
-        margin-bottom: 4rem;
-        opacity: 0.05;
-        border-top: solid 1.5px;
-      }
-      .table-preface {
-        padding-bottom: 0rem;
-        margin-bottom: -1rem;
-        [class*="col"] {
-          h3 {
-            font-size: 40px;
-            margin-bottom: 0rem;
-            &.no-paragraph {
-              margin-bottom: 2rem;
-            }
-            &.nudge {
-              position: relative;
-              left: -2px;
-            }
-          }
-          p {
-            max-width: 600px;
-            font-size: 19px;
-            .explainer-icon {
-              margin-bottom: 3px;
-            }
-          }
-          .notice-icon {
-            width: fit-content;
-            left: -1rem;
-            top: -10rem;
-            img {
-              width: 80px;
-              margin-bottom: 10px;
-              filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.01))
-                drop-shadow(0 2px 2px rgba(0, 0, 0, 0.02))
-                drop-shadow(0 4px 4px rgba(0, 0, 0, 0.03))
-                drop-shadow(0 8px 8px rgba(0, 0, 0, 0.04))
-                drop-shadow(0 16px 16px rgba(0, 0, 0, 0.05))
-                drop-shadow(0 32px 32px rgba(0, 0, 0, 0.06));
-            }
-          }
-
-          .notice-subheading {
-            font-family: "Wayfarer";
-            font-size: 15px;
-            color: var(--desat-red);
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            margin-left: 1px;
-          }
-          .desat-red {
-            font-size: 40px;
-            color: var(--desat-red);
-          }
+section {
+  &.rates-page-body,
+  &.membership-page-body {
+    padding-top: 15rem;
+    padding-bottom: 9rem;
+    background-color: #fafafa;
+    position: relative;
+    .row {
+      [class*="table-wrapper"] {
+        padding-bottom: 5rem;
+        position: relative;
+        hr {
+          margin-top: 4.5rem;
+          margin-bottom: 4rem;
+          opacity: 0.05;
+          border-top: solid 1.5px;
         }
-        &.range {
-          margin-bottom: -2.5rem;
-          h3 {
-            margin-bottom: 1.5rem;
-          }
-        }
-        &.busy {
+        .table-preface {
+          padding-bottom: 0rem;
           margin-bottom: -1rem;
-        }
-        @media (max-width: 768px) {
-          padding-bottom: 3rem;
-        }
-        @media (max-width: 576px) {
           [class*="col"] {
             h3 {
-              font-size: 33px;
+              font-size: 40px;
               margin-bottom: 0rem;
-            }
-          }
-        }
-      }
-      table {
-        .th-wrap {
-          text-transform: none;
-        }
-        tbody {
-          tr:nth-child(odd) th,
-          tr:nth-child(odd) td {
-            background: rgb(236 236 236);
-          }
-          tr {
-            td {
-              width: 25%;
-              padding-right: 0px;
-              padding-left: 0px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .table-wrapper-busy {
-    .table-preface {
-      margin-bottom: -1.75rem;
-    }
-  }
-  @media (max-width: 992px) {
-    padding-bottom: 2rem;
-  }
-}
-//scorecard section
-section {
-  &.scorecard {
-    background: #fafafa;
-    padding-bottom: 17rem;
-    .container {
-      .scorecard-image {
-        filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.04))
-          drop-shadow(0 2px 2px rgba(0, 0, 0, 0.05))
-          drop-shadow(0 4px 4px rgba(0, 0, 0, 0.06))
-          drop-shadow(0 8px 8px rgba(0, 0, 0, 0.07))
-          drop-shadow(0 16px 16px rgba(0, 0, 0, 0.08))
-          drop-shadow(0 32px 32px rgba(0, 0, 0, 0.09));
-      }
-    }
-  }
-}
-
-section {
-  &.weddings-page-body {
-    padding: 12rem 0;
-    background-image: url("../assets/images/svgs/pretty-pretty-princess-pattern.svg");
-    position: relative;
-    .container {
-      position: relative;
-      z-index: 77;
-      .row {
-        [class*="col"] {
-          .slyder-container {
-            height: 500px;
-            .slyde {
-              min-width: 650px;
-              &.square {
-                min-width: 400px;
+              &.no-paragraph {
+                margin-bottom: 2rem;
               }
-            }
-            .reload-button {
-              border: 7px solid rgb(249, 248, 246);
-              color: #818181;
-              svg {
-                path {
-                  fill: #818181;
-                }
+              &.nudge {
+                position: relative;
+                left: -2px;
               }
-              &:hover {
-                color: #5d5d5d;
-                svg {
-                  path {
-                    fill: #5d5d5d;
-                  }
-                }
-              }
-            }
-          }
-        }
-        .col-one {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          .center-me {
-            h2 {
-              letter-spacing: -1px;
             }
             p {
+              max-width: 600px;
               font-size: 19px;
+              .explainer-icon {
+                margin-bottom: 3px;
+              }
+            }
+            .notice-icon {
+              width: fit-content;
+              left: -1rem;
+              top: -10rem;
+              img {
+                width: 80px;
+                margin-bottom: 10px;
+                filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.01))
+                  drop-shadow(0 2px 2px rgba(0, 0, 0, 0.02))
+                  drop-shadow(0 4px 4px rgba(0, 0, 0, 0.03))
+                  drop-shadow(0 8px 8px rgba(0, 0, 0, 0.04))
+                  drop-shadow(0 16px 16px rgba(0, 0, 0, 0.05))
+                  drop-shadow(0 32px 32px rgba(0, 0, 0, 0.06));
+              }
+            }
+
+            .notice-subheading {
+              font-family: "Wayfarer";
+              font-size: 15px;
+              color: var(--desat-red);
+              letter-spacing: 1px;
+              margin-bottom: 5px;
+              margin-left: 1px;
+            }
+            .desat-red {
+              font-size: 40px;
+              color: var(--desat-red);
+            }
+          }
+          &.range {
+            margin-bottom: -2.5rem;
+            h3 {
+              margin-bottom: 1.5rem;
+            }
+          }
+          &.busy {
+            margin-bottom: -1rem;
+          }
+          @media (max-width: 768px) {
+            padding-bottom: 3rem;
+          }
+          @media (max-width: 576px) {
+            [class*="col"] {
+              h3 {
+                font-size: 33px;
+                margin-bottom: 0rem;
+              }
+            }
+          }
+        }
+        table {
+          .th-wrap {
+            text-transform: none;
+          }
+          tbody {
+            tr:nth-child(odd) th,
+            tr:nth-child(odd) td {
+              background: rgb(236 236 236);
+            }
+            tr {
+              td {
+                width: 25%;
+                padding-right: 0px;
+                padding-left: 0px;
+              }
             }
           }
         }
       }
     }
-    .weddings-section-overlay,
-    .gradient-mask {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      // ellipse <width> <height> at <position>
-      // ellipse 100% 20% at 60%
-    }
-    .weddings-section-overlay {
-      background: rgba(250, 250, 246, 0.505);
-    }
-    .gradient-mask {
-      background: radial-gradient(
-        ellipse 60% 70% at 65%,
-        transparent 35%,
-        rgb(250, 250, 246) 70%
-      );
-    }
-  }
-}
-section.weddings-form-section {
-  padding: 5rem 0 14rem 0;
-  background-color: #fafaf6;
-  .container {
-    background-color: #eeede4;
-    padding: 5rem;
-    padding-bottom: 6rem;
-    .row {
-      [class*="col"] {
-        h3 {
-          font-family: "Aeonik";
-        }
-        form {
-          label {
-            padding-bottom: 5px;
-            color: var(--color-primary);
-          }
-          input,
-          textarea {
-            background: white;
-            border: none;
-            min-height: 40px;
-          }
-          button {
-            margin-top: 2rem;
-            padding-left: 25px;
-            padding-right: 25px;
-          }
-        }
-        img {
-          display: block;
-          width: 100%;
-          object-fit: contain;
-          height: auto;
-        }
+
+    .table-wrapper-busy {
+      .table-preface {
+        margin-bottom: -1.75rem;
       }
     }
-  }
-}
-
-//~ Course
-section {
-  &.course-page-body {
-    padding: 17rem 0;
-    background-color: #f4f4f4;
-    // background-image: radial-gradient(ellipse 130% 100% at 50% 80%, #f4f4f4 40%, #a8a5a0)
+    @media (max-width: 992px) {
+      padding-bottom: 2rem;
+    }
   }
 }
 

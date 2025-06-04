@@ -640,12 +640,24 @@ $subpage-height: 550px;
     }
   }
   &.book-tee-time-banner {
-    background-image: url(../images/white-pine-putting-under-mountain.jpg); 
+    background-image: url(../images/white-pine-putting-under-mountain-large.jpg); 
     .overlay {
       background-image: $darker-background-gradient;
     }
   }
   &.calendar-banner {
+    background-image: url(../images/white-pine-chipping-large.jpg); 
+    .overlay {
+      background-image: $darker-background-gradient;
+    }
+  }
+  &.rates-banner {
+    background-image: url(../images/white-pine-putting-group.jpg); 
+    .overlay {
+      background-image: $darker-background-gradient;
+    }
+  }
+  &.membership-banner {
     background-image: url(../images/white-pine-putting-group.jpg); 
     .overlay {
       background-image: $darker-background-gradient;
