@@ -16880,11 +16880,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(-1deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-1deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16899,11 +16899,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(2) {
   z-index: 9;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(2).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16918,11 +16918,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16937,11 +16937,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16956,11 +16956,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(5) {
   z-index: 6;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(5).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16975,11 +16975,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(6) {
   z-index: 5;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(6).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17013,11 +17013,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17032,11 +17032,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17051,11 +17051,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -18626,7 +18626,10 @@ footer .rts-copyright-area-one .new-row p {
     padding-bottom: 4rem;
   }
   footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .logo-brick {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .logo-brick .logo-col a .footer-logo {
+    width: 100px;
   }
   footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .footer-form {
     padding-bottom: 5rem;
@@ -18798,6 +18801,9 @@ footer .rts-copyright-area-one .new-row p {
     text-shadow: 0 0 12px black;
     width: 90%;
   }
+  .banner-four-area.home-page .container .short-introduction p .compass .compass-icon {
+    width: 16px;
+  }
   .banner-four-area.home-page .container .short-introduction a .trip-advisor-bite {
     padding: 1rem 0rem 0.5rem 0.25rem;
   }
@@ -18827,6 +18833,80 @@ footer .rts-copyright-area-one .new-row p {
     padding: 3.25rem 3.5rem 3.5rem 3.5rem;
     margin-bottom: 20px;
   }
+  .rates-page-body .container .row .table-wrapper-promo .table-preface [class*=col] .notice-icon img,
+  .membership-page-body .container .row .table-wrapper-promo .table-preface [class*=col] .notice-icon img {
+    width: 55px;
+    margin-bottom: 5px;
+  }
+  .rates-page-body .container .row .table-wrapper-promo .table-preface [class*=col] .notice-subheading,
+  .membership-page-body .container .row .table-wrapper-promo .table-preface [class*=col] .notice-subheading {
+    font-size: 12px;
+  }
+  .rates-page-body .container .row .table-wrapper-promo .table-preface [class*=col] h3,
+  .membership-page-body .container .row .table-wrapper-promo .table-preface [class*=col] h3 {
+    font-size: 33px;
+  }
+  .rates-page-body .container .row [class*=table-wrapper],
+  .membership-page-body .container .row [class*=table-wrapper] {
+    padding-bottom: 3rem;
+  }
+  .rates-page-body .container .row [class*=table-wrapper] hr,
+  .membership-page-body .container .row [class*=table-wrapper] hr {
+    margin: 3rem 0;
+  }
+  .rates-page-body .container .row [class*=table-wrapper] .table-preface [class*=col] h3,
+  .rates-page-body .container .row [class*=table-wrapper] .table-preface [class*=col] h3.no-paragraph,
+  .membership-page-body .container .row [class*=table-wrapper] .table-preface [class*=col] h3,
+  .membership-page-body .container .row [class*=table-wrapper] .table-preface [class*=col] h3.no-paragraph {
+    margin-bottom: 0.5rem;
+  }
+  .rates-page-body .container .row [class*=table-wrapper] .table-preface [class*=col] p,
+  .membership-page-body .container .row [class*=table-wrapper] .table-preface [class*=col] p {
+    line-height: 108%;
+    font-size: 16px;
+  }
+  .rates-page-body .container .row [class*=table-wrapper] table tbody tr th,
+  .membership-page-body .container .row [class*=table-wrapper] table tbody tr th {
+    padding: 15px 0 15px 15px;
+  }
+  .rates-page-body .container .row [class*=table-wrapper] table tbody tr th .th-wrap,
+  .membership-page-body .container .row [class*=table-wrapper] table tbody tr th .th-wrap {
+    font-size: 15px;
+    line-height: 144%;
+  }
+  .rates-page-body .container .row [class*=table-wrapper] table tbody tr th .note,
+  .membership-page-body .container .row [class*=table-wrapper] table tbody tr th .note {
+    font-size: 12px;
+    line-height: 98%;
+  }
+  .rates-page-body .container .row [class*=table-wrapper] table tbody tr td,
+  .membership-page-body .container .row [class*=table-wrapper] table tbody tr td {
+    padding: 15px 0;
+    font-size: 15px;
+  }
+  section.form-section.membership-form {
+    padding: 10px;
+  }
+  section.form-section.membership-form .container {
+    padding: 5rem 2rem;
+  }
+  section.form-section.membership-form .container .row [class*=col] h3 {
+    font-size: 3rem;
+    line-height: 30px;
+  }
+  section.form-section.membership-form .container .row [class*=col] p {
+    font-size: 15px;
+    line-height: 108%;
+  }
+  section.form-section.membership-form .container .row [class*=col] p br {
+    display: none;
+  }
+  section.form-section.membership-form .container .row [class*=col] form .inputs-wrapper .row .mobile-col-top-margin {
+    margin-top: 1rem;
+  }
+  .membership-page-body {
+    padding-top: 7rem !important;
+  }
   .booking-container {
     padding: 7rem 29px;
   }
@@ -18842,10 +18922,6 @@ footer .rts-copyright-area-one .new-row p {
     font-size: 36px;
     margin-bottom: 8px;
   }
-  .membership-page-body {
-    padding-bottom: 0 !important;
-    padding-top: 2rem !important;
-  }
   .membership-page-body .container {
     padding-bottom: 0 !important;
   }
@@ -18854,70 +18930,6 @@ footer .rts-copyright-area-one .new-row p {
   }
   .membership-page-body .container .row .col .tab-content:nth-of-type(2) {
     padding-top: 0;
-  }
-  section.terms {
-    padding-bottom: 4rem;
-  }
-  section.terms .container {
-    padding: 22px;
-    padding-top: 0;
-  }
-  section.terms .container .inner-container {
-    padding-left: 2rem;
-  }
-  section.terms .container .inner-container h3 {
-    margin-bottom: 0px;
-    font-size: 23px;
-  }
-  section.terms .container .inner-container h3 ul {
-    margin-top: 0;
-    background: green;
-  }
-  section.terms .container .inner-container h3 ul li {
-    line-height: 150%;
-  }
-  section.weddings-page-body .container .row [class*=col] div h2 {
-    font-size: 33px;
-  }
-  section.weddings-page-body .container .row [class*=col] .slyder-container {
-    height: 275px;
-  }
-  section.weddings-page-body .container .row [class*=col] .slyder-container .slyde {
-    min-width: 398px;
-  }
-  section.weddings-page-body .container .row [class*=col] .slyder-container .slyde.square {
-    min-width: 275px;
-  }
-  section.weddings-page-body .gradient-mask {
-    background: radial-gradient(ellipse 80% 50% at 50% 30%, transparent 35%, rgb(250, 250, 246) 70%);
-  }
-  section.weddings-form-section {
-    padding-top: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 6rem;
-  }
-  section.weddings-form-section .container {
-    padding: 2rem;
-    padding-bottom: 6.5rem;
-  }
-  section.weddings-form-section .container .row [class*=col] h3 {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-    font-size: 29px;
-    line-height: 31px;
-  }
-  section.weddings-form-section .container form .row [class*=col] {
-    margin-top: 0rem;
-  }
-  section.weddings-form-section .container .mobile-row-top-padding {
-    padding-top: 2rem;
-  }
-  section.weddings-form-section .container .mobile-col-top-padding {
-    padding-top: 1rem;
-  }
-  section.course-page-body .container .embla .embla__slide__wrapper {
-    height: 219px;
   }
   section.contact-page-body .rts-location-contact-area {
     padding-top: 4rem;

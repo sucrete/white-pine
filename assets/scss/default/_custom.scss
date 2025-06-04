@@ -1,5 +1,3 @@
-
-
 .my-hr {
   background-color: #d1d1d1;
   opacity: 1;
@@ -211,14 +209,14 @@ section {
           h3 {
             font-family: "Aeonik";
             font-size: 4rem;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
             color: var(--color-secondary);
             margin-left: -3px;
           }
           hr {
             margin: 2rem 0;
             background: var(--color-primary);
-            opacity: .1
+            opacity: 0.1;
           }
           .membership-p {
             font-size: 18px;
@@ -244,7 +242,7 @@ section {
               text-transform: uppercase;
               font-size: 12px;
             }
-            
+
             input,
             textarea {
               background: #e3e2d8;
@@ -1699,8 +1697,13 @@ footer {
             padding-bottom: 4rem;
             .logo-column {
               .logo-brick {
-                padding-bottom: 4rem;
+                padding-bottom: 2rem;
                 .logo-col {
+                  a {
+                    .footer-logo {
+                      width: 100px;
+                    }
+                  }
                 }
               }
               .footer-form {
@@ -2039,6 +2042,11 @@ footer {
           letter-spacing: 0.4px;
           text-shadow: 0 0 12px black;
           width: 90%;
+          .compass {
+            .compass-icon {
+              width: 16px;
+            }
+          }
         }
         a {
           .trip-advisor-bite {
@@ -2092,7 +2100,110 @@ footer {
       margin-bottom: 20px;
     }
   }
-
+  .rates-page-body,
+  .membership-page-body {
+    .container {
+      .row {
+        .table-wrapper {
+          &-promo {
+            .table-preface {
+              [class*="col"] {
+                .notice-icon {
+                  img {
+                    width: 55px;
+                    margin-bottom: 5px;
+                  }
+                }
+                .notice-subheading {
+                  font-size: 12px;
+                }
+                h3 {
+                  font-size: 33px;
+                }
+              }
+            }
+          }
+        }
+        [class*="table-wrapper"] {
+          padding-bottom: 3rem;
+          hr {
+            margin: 3rem 0;
+          }
+          .table-preface {
+            [class*="col"] {
+              h3,
+              h3.no-paragraph {
+                margin-bottom: 0.5rem;
+              }
+              p {
+                line-height: 108%;
+                font-size: 16px;
+              }
+            }
+          }
+          table {
+            tbody {
+              tr {
+                th {
+                  padding: 15px 0 15px 15px;
+                  .th-wrap {
+                    font-size: 15px;
+                    line-height: 144%;
+                  }
+                  .note {
+                    font-size: 12px;
+                    line-height: 98%;
+                  }
+                }
+                td {
+                  padding: 15px 0;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  section {
+    &.form-section.membership-form {
+      padding: 10px;
+      .container {
+        padding: 5rem 2rem;
+        .row {
+          [class*="col"] {
+            h3 {
+              font-size: 3rem;
+              line-height: 30px;
+            }
+            p {
+              font-size: 15px;
+              line-height: 108%;
+              br {
+                display: none;
+              }
+            }
+            form {
+              .inputs-wrapper {
+                .row {
+                  [class*='col'] {
+                    // margin-top: 0;
+                  }
+                  .mobile-col-top-margin {
+                    margin-top: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .membership-page-body {
+    padding-top: 7rem !important;
+  }
   .booking-container {
     padding: 7rem 29px;
     .row {
@@ -2117,8 +2228,8 @@ footer {
     }
   }
   .membership-page-body {
-    padding-bottom: 0 !important;
-    padding-top: 2rem !important;
+    // padding-bottom: 0 !important;
+    // padding-top: 2rem !important;
     .container {
       padding-bottom: 0 !important;
       .row {
@@ -2135,110 +2246,7 @@ footer {
       }
     }
   }
-  section {
-    &.terms {
-      padding-bottom: 4rem;
-      .container {
-        padding: 22px;
-        padding-top: 0;
-        .inner-container {
-          padding-left: 2rem;
-          h3 {
-            margin-bottom: 0px;
-            font-size: 23px;
-            ul {
-              margin-top: 0;
-              background: green;
-              li {
-                line-height: 150%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 
-  section {
-    &.weddings-page-body {
-      .container {
-        .row {
-          [class*="col"] {
-            div {
-              h2 {
-                font-size: 33px;
-              }
-            }
-            .slyder-container {
-              height: 275px;
-              .slyde {
-                min-width: 398px;
-                &.square {
-                  min-width: 275px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  section {
-    &.weddings-page-body {
-      .gradient-mask {
-        background: radial-gradient(
-          ellipse 80% 50% at 50% 30%,
-          transparent 35%,
-          rgb(250, 250, 246) 70%
-        );
-      }
-    }
-    &.weddings-form-section {
-      padding-top: 0;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      padding-bottom: 6rem;
-      .container {
-        padding: 2rem;
-        padding-bottom: 6.5rem;
-        .row {
-          [class*="col"] {
-            h3 {
-              padding-top: 4rem;
-              padding-bottom: 3rem;
-              font-size: 29px;
-              line-height: 31px;
-            }
-          }
-        }
-        form {
-          .row {
-            [class*="col"] {
-              margin-top: 0rem;
-            }
-          }
-        }
-        .mobile-row-top-padding {
-          padding-top: 2rem;
-        }
-        .mobile-col-top-padding {
-          padding-top: 1rem;
-        }
-      }
-    }
-  }
-  section {
-    &.course-page-body {
-      .container {
-        .embla {
-          .embla__slide__wrapper {
-            height: 219px;
-          }
-        }
-      }
-    }
-  }
   section {
     &.contact-page-body {
       .rts-location-contact-area {
