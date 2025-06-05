@@ -16859,7 +16859,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   left: 50%;
   width: fit-content;
   min-width: 550px;
-  height: fit-content;
+  height: auto;
   transition: 1s transform ease-in-out, 1s opacity ease-in-out, 1.5s filter ease-in-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -16880,11 +16880,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16899,11 +16899,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(2) {
   z-index: 9;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(2).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16918,11 +16918,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16937,11 +16937,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(-2deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-2deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16956,11 +16956,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(5) {
   z-index: 6;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(5).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16994,11 +16994,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(7) {
   z-index: 4;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(7).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17013,11 +17013,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17051,11 +17051,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17082,7 +17082,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     height: 287px;
   }
   .slyder-container .slyde {
-    min-width: 350px;
+    min-width: 115%;
   }
 }
 .theme-light {
@@ -18630,6 +18630,8 @@ footer .rts-copyright-area-one .new-row p {
   }
   footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .logo-brick .logo-col a .footer-logo {
     width: 100px;
+    position: relative;
+    z-index: 98;
   }
   footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .footer-form {
     padding-bottom: 5rem;
@@ -18837,6 +18839,8 @@ footer .rts-copyright-area-one .new-row p {
   .membership-page-body .container .row .table-wrapper-promo .table-preface [class*=col] .notice-icon img {
     width: 55px;
     margin-bottom: 5px;
+    z-index: 97;
+    position: relative;
   }
   .rates-page-body .container .row .table-wrapper-promo .table-preface [class*=col] .notice-subheading,
   .membership-page-body .container .row .table-wrapper-promo .table-preface [class*=col] .notice-subheading {
@@ -18877,7 +18881,7 @@ footer .rts-copyright-area-one .new-row p {
   .rates-page-body .container .row [class*=table-wrapper] table tbody tr th .note,
   .membership-page-body .container .row [class*=table-wrapper] table tbody tr th .note {
     font-size: 12px;
-    line-height: 98%;
+    line-height: 111%;
   }
   .rates-page-body .container .row [class*=table-wrapper] table tbody tr td,
   .membership-page-body .container .row [class*=table-wrapper] table tbody tr td {
@@ -18895,8 +18899,8 @@ footer .rts-copyright-area-one .new-row p {
     line-height: 30px;
   }
   section.form-section.membership-form .container .row [class*=col] p {
-    font-size: 15px;
-    line-height: 108%;
+    font-size: 17px;
+    line-height: 113%;
   }
   section.form-section.membership-form .container .row [class*=col] p br {
     display: none;

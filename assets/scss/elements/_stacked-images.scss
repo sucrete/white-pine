@@ -56,7 +56,7 @@
   left: 50%;
   width: fit-content;
   min-width: 550px;
-  height: fit-content;
+  height: auto;
   transition: 1s transform ease-in-out, 1s opacity ease-in-out,
     1.5s filter ease-in-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -127,7 +127,8 @@ $zLayer: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1;
   .slyder-container {
     height: 287px;
     .slyde {
-      min-width: 350px;
+      min-width: 115%;
+
     }
   }
 

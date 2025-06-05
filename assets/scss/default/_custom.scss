@@ -1702,6 +1702,8 @@ footer {
                   a {
                     .footer-logo {
                       width: 100px;
+                      position: relative;
+                      z-index: 98;
                     }
                   }
                 }
@@ -2112,6 +2114,8 @@ footer {
                   img {
                     width: 55px;
                     margin-bottom: 5px;
+                    z-index: 97;
+                    position: relative;
                   }
                 }
                 .notice-subheading {
@@ -2152,7 +2156,7 @@ footer {
                   }
                   .note {
                     font-size: 12px;
-                    line-height: 98%;
+                    line-height: 111%;
                   }
                 }
                 td {
@@ -2178,8 +2182,8 @@ footer {
               line-height: 30px;
             }
             p {
-              font-size: 15px;
-              line-height: 108%;
+              font-size: 17px;
+              line-height: 113%;
               br {
                 display: none;
               }
@@ -2187,7 +2191,7 @@ footer {
             form {
               .inputs-wrapper {
                 .row {
-                  [class*='col'] {
+                  [class*="col"] {
                     // margin-top: 0;
                   }
                   .mobile-col-top-margin {
