@@ -1123,6 +1123,8 @@ section {
               width: fit-content;
               left: -1rem;
               top: -10rem;
+              -webkit-transform: translateZ(0);
+              overflow: visible;
               img {
                 width: 80px;
                 margin-bottom: 10px;
