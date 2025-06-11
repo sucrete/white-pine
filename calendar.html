@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
     <link
       rel="shortcut icon"
       type="image/x-icon"
       href="assets/images/fav.png"
     />
-    <title>Contact Us</title>
+    <title>Events at White Pine</title>
     <link
       rel="stylesheet preload"
       href="assets/css/vendor/bootstrap.min.css"
@@ -31,6 +31,7 @@
       media="print"
       onload="this.media='all'"
     />
+
     <link rel="stylesheet preload" href="css/style.css" as="style" />
 
     <!-- header Lit component -->
@@ -41,6 +42,32 @@
 
     <!-- footer Lit component -->
     <script type="module" src="./lit/footer.js"></script>
+
+    <!-- fullCalendar js/css -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+    <script src="assets/js/fetchData.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var cal = document.getElementById("calendar");
+        var myModal = document.getElementById("calModal");
+        var modalTitle = document.getElementsByClassName("modal-title")[0];
+        fetchData().then((data) => {
+          console.log("fetchData return: ", JSON.stringify(data, null, 2));
+          // after data fetch initialize fullCalendar
+          var calendar = new FullCalendar.Calendar(cal, {
+            initialView: "dayGridMonth",
+            eventClick: function (info) {
+              // myModal.classList.toggle("show");
+              console.log("firing eventClick");
+              modalTitle.textContent = info.event.title;
+              $("#calModal").modal("show");
+            },
+            events: data,
+          });
+          calendar.render();
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -75,13 +102,41 @@
 
     <section class="calendar-section mobile-padding">
       <div class="container mt-3 mt-lg-10">
-        <div class="title-bar row">
-          <h2 class="wow fadeInUp" data-wow-offset="120" data-wow-delay="1s">
-            Upcoming Events
-          </h2>
-
-          <!-- Calendar goes here -->
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="calModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Modal title
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+        <div id="calendar"></div>
       </div>
     </section>
 
@@ -126,7 +181,7 @@
       <div class="mobile-menu-main">
         <nav class="nav-main mainmenu-nav mt--30">
           <ul class="mainmenu metismenu" id="mobile-menu-active">
-             <li>
+            <li>
               <a href="rates.html" class="main">Rates</a>
             </li>
             <li>
@@ -138,7 +193,7 @@
             <li>
               <a href="contact.html" class="main">Contact</a>
             </li>
-           
+
             <li>
               <a
                 href="book-tee-time.html"

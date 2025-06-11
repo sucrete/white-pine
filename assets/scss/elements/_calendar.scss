@@ -1,0 +1,115 @@
+.fc .fc-button {
+  border-radius: 12px;
+}
+
+.fc-event {
+  cursor: pointer;
+}
+
+section {
+  &.calendar-section {
+    background: rgb(249, 249, 249);
+    .container {
+      #calendar {
+        .fc-header-toolbar {
+          .fc-toolbar-chunk {
+            .fc-toolbar-title {
+              font-size: 47px;
+            }
+            &:last-of-type {
+              display: flex;
+            }
+
+            button,
+            .fc-button-group {
+              font-family: "Sono";
+              font-weight: 500;
+              text-transform: uppercase;
+              background: white;
+              color: black;
+            }
+            button {
+              border: 1px solid #ddd;
+              &:hover {
+                background: #f4f4f4;
+              }
+              &.fc-today-button {
+                padding-left: 15px;
+                padding-right: 15px;
+                box-shadow: 0 1px 2px 0 #0000000d;
+                &[disabled] {
+                  pointer-events: none;
+                  opacity: 0.25;
+                }
+              }
+            }
+            .fc-button-group {
+              border-radius: 12px;
+              box-shadow: 0 1px 2px 0 #0000000d;
+              button {
+                &:active,
+                &:focus {
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+        }
+        .fc-view-harness {
+          .fc-daygrid {
+            table {
+              margin-bottom: 0;
+              border: none;
+              max-width: 100% !important;
+              thead {
+                th {
+                  border: none;
+                }
+                .fc-col-header-cell-cushion {
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  font-size: 16px;
+                  letter-spacing: 3px;
+                  font-weight: 700;
+                  padding-bottom: 1.5rem;
+                }
+              }
+              tbody {
+                tr {
+                  td {
+                    &[role="presentation"] {
+                      border: none;
+                    }
+                    .fc-daygrid-day-number {
+                      text-decoration: none;
+                      font-size: 16px;
+                      padding-right: 8px;
+                      font-weight: 600;
+                    }
+                    .fc-day-other {
+                      background-color: transparent;
+                      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADxJREFUKFNjZCAOSDESoU6KgYHhGSGFYEUgw/AphCvCpxBFES6FGIqwKcSqCF0hTkXICvEqgikkqAikEACQ/wklBaJ5yQAAAABJRU5ErkJggg==)
+                        repeat;
+                    }
+                    &:not(.fc-day-other) {
+                      background: white;
+                    }
+                    .fc-day-today {
+                      background: var(--color-secondary);
+                      .fc-daygrid-day-top {
+                        color: white;
+                        .fc-daygrid-day-number {
+                          font-weight: 700;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
