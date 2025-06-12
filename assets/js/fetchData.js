@@ -1,6 +1,6 @@
 console.log("fetchData attached");
   const sanityQuery =
-        "https://5vgxmbfr.api.sanity.io/v2025-06-11/data/query/production?query=*%5B_type+%3D%3D+%27event%27%5D%0A&perspective=published";
+        "https://5vgxmbfr.api.sanity.io/v2025-06-12/data/query/production?query=%7B%27events%27%3A*%5B_type+%3D%3D+%27event%27%5D%2C%27images%27%3A*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%7D&perspective=published";
 
 async function fetchData() {
   try {
@@ -11,7 +11,7 @@ async function fetchData() {
     }
 
     const data = await response.json();
-    console.log("%cfetch successful ", "color:chartreuse;background: black");
+    // console.log("%cfetch successful ", "color:chartreuse;background: black");
     console.log("%cfetch successful ", "color:chartreuse;background: black", data, data.result);
     return data.result;
   } catch (error) {

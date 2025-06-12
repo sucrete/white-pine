@@ -51,7 +51,6 @@
     <script src="assets/js/fetchData.js"></script>
     <!-- fullCalendar manipulation -->
     <script>
-      // moment().format('MMMM Do, YYYY');
       document.addEventListener("DOMContentLoaded", function () {
         var cal = document.getElementById("calendar");
         var myModal = document.getElementById("calModal");
@@ -59,6 +58,7 @@
         var modalBody = document.getElementsByClassName("modal-body")[0];
         var modalDate = document.getElementsByClassName("modal-date")[0];
         var modalDateEnd = document.getElementsByClassName("modal-date-end")[0];
+        var modalFooter = document.getElementsByClassName("modal-footer")[0];
         var modalAttachment =
           document.getElementsByClassName("modal-attachment")[0];
         var modalLink = document.getElementsByClassName("modal-link")[0];
@@ -67,28 +67,44 @@
           // after data fetch initialize fullCalendar
           var calendar = new FullCalendar.Calendar(cal, {
             initialView: "dayGridMonth",
+            events: data.events,
             eventClick: function (info) {
-              // myModal.classList.toggle("show");
               console.log("firing eventClick");
               modalTitle.textContent = info.event.title;
               modalDate.textContent = moment(info.event.start).format(
                 "dddd, MMMM Do"
               );
-              // modalDate.textContent = moment(info.event.start).format(
-              //   "MMMM Do, YYYY"
-              // );
               modalBody.textContent = info.event.extendedProps.eventDescription;
+
+              // check if there is an event end and if not remove any formally set .textContent
+              if (info.event.end) {
+                modalDateEnd.textContent =
+                  " - " + moment(info.event.end).format("dddd, MMMM Do");
+              } else {
+                modalDateEnd.textContent = "";
+              }
+
+              // check if there is an attachment AND a link
+              if (
+                info.event.extendedProps.flyerQuestion ||
+                Object.keys(info.event.extendedProps).includes("linkDeets")
+              ) {
+                modalFooter.style = "display: flex";
+                if (info.event.extendedProps.flyerQuestion) {
+                  // if there is a flyer search for it and attach it to the View Flyer button...
+                  var imageAssetObject = data.images.find(image => image._id === info.event.extendedProps.flyer.asset._ref);
+                  console.log(imageAssetObject.url)
+                  modalAttachment.href = imageAssetObject.url;
+                } else {
+                  // ...otherwise delete the button
+                  modalAttachment.style = "display:none";
+                }
+              } else {
+                modalFooter.style = "display: none";
+              }
+
               $("#calModal").modal("show");
             },
-            events: data,
-            // events: [
-            //   {
-            //     title: "Hello there,bud",
-            //     start: "2025-06-11",
-            //     end: "2025-06-13",
-            //     allDay: true,
-            //   },
-            // ],
           });
           calendar.render();
         });
@@ -159,11 +175,14 @@
                   /><span class="modal-date"></span
                   ><span class="modal-date-end"></span>
                 </div>
-                <hr/>
+                <hr />
                 <div class="modal-body"></div>
               </div>
               <div class="modal-footer row">
-                <a href="" class="btn btn-secondary col modal-attachment"
+                <a
+                  href=""
+                  class="btn btn-secondary col modal-attachment"
+                  target="_blank"
                   >view flyer</a
                 >
                 <a href="" class="btn btn-secondary col modal-link">register</a>
