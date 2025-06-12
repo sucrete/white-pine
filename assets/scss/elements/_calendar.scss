@@ -1,9 +1,34 @@
 .fc .fc-button {
   border-radius: 12px;
 }
-
+.fc .fc-daygrid-event-harness:not(:first-of-type) {
+  padding-top: 10px;
+}
 .fc-event {
   cursor: pointer;
+  background-color: var(--color-secondary);
+  border: none;
+  margin-bottom: 1px !important;
+  transition: all 0.25s ease;
+  .fc-event-title {
+    font-family: "Sono";
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 475;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-overflow: ellipsis;
+  }
+  &:hover {
+    background-color: #c8b025;
+    box-shadow: rgba(180, 159, 42, 0.3) 0px 4px 6px -1px,
+      rgba(180, 159, 42, 0.1) 0px 2px 4px -1px;
+  }
+}
+
+.fc-daygrid-event {
+  border-radius: 1px;
 }
 
 section {
@@ -37,6 +62,9 @@ section {
                 padding-left: 15px;
                 padding-right: 15px;
                 box-shadow: 0 1px 2px 0 #0000000d;
+                &:hover {
+                  background: #fffbca;
+                }
                 &[disabled] {
                   pointer-events: none;
                   opacity: 0.25;
@@ -95,9 +123,9 @@ section {
                       background: white;
                     }
                     .fc-day-today {
-                      background: var(--color-secondary);
+                      background: #fffbca;
                       .fc-daygrid-day-top {
-                        color: white;
+                        // color: white;
                         .fc-daygrid-day-number {
                           font-weight: 700;
                         }
@@ -106,6 +134,123 @@ section {
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+$inner-border-color: #f3f3f3;
+
+//* Modal styling
+.modal {
+  .modal-dialog {
+    max-width: 600px;
+    // .modal-content defines the modal box
+    .modal-content {
+      border-radius: 10px;
+      overflow: hidden;
+      border: none;
+      box-shadow: #003d3d0a 0px 64px 64px -32px, #003d3d0a 0px 32px 32px -16px,
+        #003d3d0a 0px 16px 16px -8px, #003d3d0a 0px 12px 12px -6px,
+        #003d3d0a 0px 6px 6px -3px, #003d3d0a 0px 3px 3px -1.5px,
+        #001f1f14 0px 1px 1px -0.5px, #003d3d0a 0px 0px 0px 1px;
+      .modal-header {
+        padding: 2rem;
+        padding-bottom: .5rem;
+        // border-bottom-color: $inner-border-color;
+        border: none;
+        .modal-title {
+          font-family: "Aeonik Medium";
+          color: rgb(29, 29, 29);
+          font-size: 24px;
+        }
+        .close-button-wrapper {
+          background-color: #f9f9f9;
+          border-radius: 77px;
+          height: 40px;
+          width: 40px;
+          position: relative;
+          border: none;
+          .btn-close {
+            padding: 0;
+            margin: 0;
+            transition: all 0.15s ease;
+            @include center-it;
+          }
+          &:hover {
+            .btn-close {
+              color: rgb(29, 29, 29);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .modal-body-wrapper {
+        line-height: 120%;
+        font-size: 17px;
+        padding: 2rem;
+        padding-top: 0;
+        .date-wrapper {
+          color: hsla(50, 8%, 45%, 0.836);
+          letter-spacing: 0.2px;
+          .date-icon {
+            position: relative;
+            width: auto;
+            height: 14px;
+            margin-right: 10px;
+            margin-left: 1.5px;
+            top: -2px;
+            path {
+              fill: var(--color-secondary);
+            }
+          }
+        }
+        hr {
+          background-color: $inner-border-color;
+          margin: 1.8rem 0;
+          opacity: 1;
+        }
+        .modal-body {
+          padding: 0;
+          color: #767364;
+          letter-spacing: 0.2px;
+        }
+      }
+      .modal-footer {
+        $mf-padding: 25px;
+        padding: 2rem;
+        padding-left: $mf-padding;
+        padding-right: $mf-padding;
+        gap: 2px;
+        border-top-color: transparent;
+        .btn {
+          font-family: "Wayfarer";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: lowercase;
+          letter-spacing: 1px;
+          font-size: 15px;
+          height: 45px;
+          border-radius: 0;
+          background-color: var(--color-secondary);
+          padding-bottom: 6px;
+          transition: all 0.25s ease;
+          border: none;
+          &:hover {
+            background-color: #c8b025;
+          }
+          &.modal-attachment {
+            border: 2px solid var(--color-secondary);
+            background-color: transparent;
+            color: var(--color-secondary);
+            &:hover {
+              color: white;
+              background-color: #c8b025;
+              border-color: #c8b025;
             }
           }
         }

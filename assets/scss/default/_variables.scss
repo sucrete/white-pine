@@ -105,6 +105,9 @@ $sm-layout: 'only screen and (max-width: 767px)';
 $large-mobile: 'only screen and (max-width: 575px)';
 $small-mobile: 'only screen and (max-width: 479px)';
 
-@mixin thicken() {
-    
+@mixin center-it {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }

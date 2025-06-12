@@ -45,12 +45,23 @@
 
     <!-- fullCalendar js/css -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+    <!-- moment.js - time parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+    <!-- Sanity data fetch -->
     <script src="assets/js/fetchData.js"></script>
+    <!-- fullCalendar manipulation -->
     <script>
+      // moment().format('MMMM Do, YYYY');
       document.addEventListener("DOMContentLoaded", function () {
         var cal = document.getElementById("calendar");
         var myModal = document.getElementById("calModal");
         var modalTitle = document.getElementsByClassName("modal-title")[0];
+        var modalBody = document.getElementsByClassName("modal-body")[0];
+        var modalDate = document.getElementsByClassName("modal-date")[0];
+        var modalDateEnd = document.getElementsByClassName("modal-date-end")[0];
+        var modalAttachment =
+          document.getElementsByClassName("modal-attachment")[0];
+        var modalLink = document.getElementsByClassName("modal-link")[0];
         fetchData().then((data) => {
           console.log("fetchData return: ", JSON.stringify(data, null, 2));
           // after data fetch initialize fullCalendar
@@ -60,9 +71,24 @@
               // myModal.classList.toggle("show");
               console.log("firing eventClick");
               modalTitle.textContent = info.event.title;
+              modalDate.textContent = moment(info.event.start).format(
+                "dddd, MMMM Do"
+              );
+              // modalDate.textContent = moment(info.event.start).format(
+              //   "MMMM Do, YYYY"
+              // );
+              modalBody.textContent = info.event.extendedProps.eventDescription;
               $("#calModal").modal("show");
             },
             events: data,
+            // events: [
+            //   {
+            //     title: "Hello there,bud",
+            //     start: "2025-06-11",
+            //     end: "2025-06-13",
+            //     allDay: true,
+            //   },
+            // ],
           });
           calendar.render();
         });
@@ -113,25 +139,34 @@
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Modal title
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">...</div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
+                <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
+                <button class="close-button-wrapper" data-bs-dismiss="modal">
+                  <div
+                    type="div"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></div>
                 </button>
+              </div>
+
+              <div class="modal-body-wrapper">
+                <div class="date-wrapper">
+                  <img
+                    src="assets/images/icons/calendar.svg"
+                    class="injectable date-icon"
+                    alt=""
+                  /><span class="modal-date"></span
+                  ><span class="modal-date-end"></span>
+                </div>
+                <hr/>
+                <div class="modal-body"></div>
+              </div>
+              <div class="modal-footer row">
+                <a href="" class="btn btn-secondary col modal-attachment"
+                  >view flyer</a
+                >
+                <a href="" class="btn btn-secondary col modal-link">register</a>
               </div>
             </div>
           </div>

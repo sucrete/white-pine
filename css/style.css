@@ -16880,11 +16880,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16899,11 +16899,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(2) {
   z-index: 9;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(2).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16918,11 +16918,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16937,11 +16937,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(-1deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-1deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16975,11 +16975,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(6) {
   z-index: 5;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(6).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16994,11 +16994,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(7) {
   z-index: 4;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(7).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17013,11 +17013,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17032,11 +17032,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17282,8 +17282,34 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   border-radius: 12px;
 }
 
+.fc .fc-daygrid-event-harness:not(:first-of-type) {
+  padding-top: 10px;
+}
+
 .fc-event {
   cursor: pointer;
+  background-color: var(--color-secondary);
+  border: none;
+  margin-bottom: 1px !important;
+  transition: all 0.25s ease;
+}
+.fc-event .fc-event-title {
+  font-family: "Sono";
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 475;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-overflow: ellipsis;
+}
+.fc-event:hover {
+  background-color: #c8b025;
+  box-shadow: rgba(180, 159, 42, 0.3) 0px 4px 6px -1px, rgba(180, 159, 42, 0.1) 0px 2px 4px -1px;
+}
+
+.fc-daygrid-event {
+  border-radius: 1px;
 }
 
 section.calendar-section {
@@ -17313,6 +17339,9 @@ section.calendar-section .container #calendar .fc-header-toolbar .fc-toolbar-chu
   padding-left: 15px;
   padding-right: 15px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.0509803922);
+}
+section.calendar-section .container #calendar .fc-header-toolbar .fc-toolbar-chunk button.fc-today-button:hover {
+  background: #fffbca;
 }
 section.calendar-section .container #calendar .fc-header-toolbar .fc-toolbar-chunk button.fc-today-button[disabled] {
   pointer-events: none;
@@ -17358,13 +17387,117 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   background: white;
 }
 section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table tbody tr td .fc-day-today {
-  background: var(--color-secondary);
-}
-section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table tbody tr td .fc-day-today .fc-daygrid-day-top {
-  color: white;
+  background: #fffbca;
 }
 section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table tbody tr td .fc-day-today .fc-daygrid-day-top .fc-daygrid-day-number {
   font-weight: 700;
+}
+
+.modal .modal-dialog {
+  max-width: 600px;
+}
+.modal .modal-dialog .modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  box-shadow: rgba(0, 61, 61, 0.0392156863) 0px 64px 64px -32px, rgba(0, 61, 61, 0.0392156863) 0px 32px 32px -16px, rgba(0, 61, 61, 0.0392156863) 0px 16px 16px -8px, rgba(0, 61, 61, 0.0392156863) 0px 12px 12px -6px, rgba(0, 61, 61, 0.0392156863) 0px 6px 6px -3px, rgba(0, 61, 61, 0.0392156863) 0px 3px 3px -1.5px, rgba(0, 31, 31, 0.0784313725) 0px 1px 1px -0.5px, rgba(0, 61, 61, 0.0392156863) 0px 0px 0px 1px;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  padding: 2rem;
+  padding-bottom: 0.5rem;
+  border: none;
+}
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-family: "Aeonik Medium";
+  color: rgb(29, 29, 29);
+  font-size: 24px;
+}
+.modal .modal-dialog .modal-content .modal-header .close-button-wrapper {
+  background-color: #f9f9f9;
+  border-radius: 77px;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  border: none;
+}
+.modal .modal-dialog .modal-content .modal-header .close-button-wrapper .btn-close {
+  padding: 0;
+  margin: 0;
+  transition: all 0.15s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal .modal-dialog .modal-content .modal-header .close-button-wrapper:hover .btn-close {
+  color: rgb(29, 29, 29);
+  opacity: 1;
+}
+.modal .modal-dialog .modal-content .modal-body-wrapper {
+  line-height: 120%;
+  font-size: 17px;
+  padding: 2rem;
+  padding-top: 0;
+}
+.modal .modal-dialog .modal-content .modal-body-wrapper .date-wrapper {
+  color: hsla(50, 8%, 45%, 0.836);
+  letter-spacing: 0.2px;
+}
+.modal .modal-dialog .modal-content .modal-body-wrapper .date-wrapper .date-icon {
+  position: relative;
+  width: auto;
+  height: 14px;
+  margin-right: 10px;
+  margin-left: 1.5px;
+  top: -2px;
+}
+.modal .modal-dialog .modal-content .modal-body-wrapper .date-wrapper .date-icon path {
+  fill: var(--color-secondary);
+}
+.modal .modal-dialog .modal-content .modal-body-wrapper hr {
+  background-color: #f3f3f3;
+  margin: 1.8rem 0;
+  opacity: 1;
+}
+.modal .modal-dialog .modal-content .modal-body-wrapper .modal-body {
+  padding: 0;
+  color: #767364;
+  letter-spacing: 0.2px;
+}
+.modal .modal-dialog .modal-content .modal-footer {
+  padding: 2rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  gap: 2px;
+  border-top-color: transparent;
+}
+.modal .modal-dialog .modal-content .modal-footer .btn {
+  font-family: "Wayfarer";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  height: 45px;
+  border-radius: 0;
+  background-color: var(--color-secondary);
+  padding-bottom: 6px;
+  transition: all 0.25s ease;
+  border: none;
+}
+.modal .modal-dialog .modal-content .modal-footer .btn:hover {
+  background-color: #c8b025;
+}
+.modal .modal-dialog .modal-content .modal-footer .btn.modal-attachment {
+  border: 2px solid var(--color-secondary);
+  background-color: transparent;
+  color: var(--color-secondary);
+}
+.modal .modal-dialog .modal-content .modal-footer .btn.modal-attachment:hover {
+  color: white;
+  background-color: #c8b025;
+  border-color: #c8b025;
 }
 
 .my-hr {
