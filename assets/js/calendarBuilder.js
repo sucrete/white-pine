@@ -18,16 +18,35 @@ document.addEventListener("DOMContentLoaded", function () {
     classNames: ["custom-view"],
     content: function (props) {
       let segs = sliceEvents(props, true); // allDay=true
+      console.log("segs", segs);
+      console.log("segs.length < 0", segs.length > 0);
+      console.log("segs[0].def", segs[0]?.def);
+      // let html =
+      //   '<div class="view-events">' +
+      //   "<ul>" +
+      //   segs
+      //     .map(function (seg) {
+      //       return `<li>${seg.def.title} </li>`;
+      //     })
+      //     .join("") +
+      //   "</ul>" +
+      //   "</div>";
+
       let html =
-        '<div class="view-events">' +
-        "<ul>" +
-        segs
-          .map(function (seg) {
-            return `<li>${seg.def.title} </li>`;
-          })
-          .join("") +
-        "</ul>" +
-        "</div>";
+        segs.length > 0
+          ? `${segs
+              .map((seg) => {
+                return `
+          <div class="event-list-item">
+            <div class="event-list-title">${seg.def.title}</div>
+              <div class="event-list-date-wrapper">
+                <div class="event-list-date-wrapper">${seg.def.start}</div>
+              </div>
+          </div>
+          `;
+              })
+              .join("")}`
+          : `<div>${segs.length}</div>`;
 
       return { html: html };
     },
@@ -58,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         monthList: {
           buttonText: "list",
           duration: {
-            months: 1,
+            months: 2,
           },
         },
       },
