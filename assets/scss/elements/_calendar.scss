@@ -48,7 +48,9 @@ section {
             button,
             .fc-button-group {
               font-family: "Sono";
-              font-weight: 500;
+              font-weight: 475;
+              font-size: 13px;
+              letter-spacing: 1px;
               text-transform: uppercase;
               background: white;
               color: black;
@@ -75,6 +77,8 @@ section {
               border-radius: 12px;
               box-shadow: 0 1px 2px 0 #0000000d;
               button {
+                padding-left: 15px;
+                padding-right: 15px;
                 &:active,
                 &:focus {
                   box-shadow: none;
@@ -159,7 +163,7 @@ $inner-border-color: #f3f3f3;
         #001f1f14 0px 1px 1px -0.5px, #003d3d0a 0px 0px 0px 1px;
       .modal-header {
         padding: 2rem;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
         // border-bottom-color: $inner-border-color;
         border: none;
         .modal-title {
@@ -235,13 +239,18 @@ $inner-border-color: #f3f3f3;
           letter-spacing: 1px;
           font-size: 15px;
           height: 45px;
-          border-radius: 0;
+          border-radius: 1px;
           background-color: var(--color-secondary);
           padding-bottom: 6px;
           transition: all 0.25s ease;
           border: none;
           &:hover {
             background-color: #c8b025;
+          }
+          &:active,
+          &:focus {
+            box-shadow: none;
+            border: none;
           }
           &.modal-attachment {
             border: 2px solid var(--color-secondary);

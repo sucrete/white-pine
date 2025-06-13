@@ -43,84 +43,15 @@
     <!-- footer Lit component -->
     <script type="module" src="./lit/footer.js"></script>
 
-    <!-- fullCalendar js/css -->
+    <!-- fullCalendar -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+    <!-- fullCalendar initiation -->
+    <script src="assets/js/calendarBuilder.js"></script>
     <!-- moment.js - time parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
     <!-- Sanity data fetch -->
     <script src="assets/js/fetchData.js"></script>
-    <!-- fullCalendar manipulation -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var cal = document.getElementById("calendar");
-        var myModal = document.getElementById("calModal");
-        var modalTitle = document.getElementsByClassName("modal-title")[0];
-        var modalBody = document.getElementsByClassName("modal-body")[0];
-        var modalDate = document.getElementsByClassName("modal-date")[0];
-        var modalDateEnd = document.getElementsByClassName("modal-date-end")[0];
-        var modalFooter = document.getElementsByClassName("modal-footer")[0];
-        var modalAttachment =
-          document.getElementsByClassName("modal-attachment")[0];
-        var modalLink = document.getElementsByClassName("modal-link")[0];
-        fetchData().then((data) => {
-          console.log("fetchData return: ", JSON.stringify(data, null, 2));
-          // after data fetch initialize fullCalendar
-          var calendar = new FullCalendar.Calendar(cal, {
-            initialView: "dayGridMonth",
-            events: data.events,
-            eventClick: function (info) {
-              console.log("firing eventClick");
-              modalTitle.textContent = info.event.title;
-              modalDate.textContent = moment(info.event.start).format(
-                "dddd, MMMM Do"
-              );
-              modalBody.textContent = info.event.extendedProps.eventDescription;
-
-              // check if there is an event end and if not remove any formally set .textContent
-              if (info.event.end) {
-                modalDateEnd.textContent =
-                  " - " + moment(info.event.end).format("dddd, MMMM Do");
-              } else {
-                modalDateEnd.textContent = "";
-              }
-
-              // check if there is an attachment AND a link
-              if (
-                info.event.extendedProps.flyerQuestion ||
-                info.event.extendedProps.linkQuestion
-              ) {
-                modalFooter.style = "display: flex";
-                // if there is a flyer, search for it and attach it to the View Flyer button...
-                if (info.event.extendedProps.flyerQuestion) {
-                  modalAttachment.style = "display:flex";
-                  var imageAssetObject = data.images.find(
-                    (image) =>
-                      image._id === info.event.extendedProps.flyer.asset._ref
-                  );
-                  modalAttachment.href = imageAssetObject.url;
-                } else {
-                  // ...otherwise delete the button
-                  modalAttachment.style = "display:none";
-                }
-                // if there is a registration link, search for it and attach it to the View Flyer button...
-                if (info.event.extendedProps.linkQuestion) {
-                  modalLink.style = "display:flex";
-                  modalLink.href = info.event.extendedProps.linkDeets.linkURL;
-                } else {
-                  // ...otherwise delete the button
-                  modalLink.style = "display:none";
-                }
-              } else {
-                modalFooter.style = "display: none";
-              }
-
-              $("#calModal").modal("show");
-            },
-          });
-          calendar.render();
-        });
-      });
-    </script>
+    
   </head>
 
   <body>
