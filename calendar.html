@@ -87,17 +87,28 @@
               // check if there is an attachment AND a link
               if (
                 info.event.extendedProps.flyerQuestion ||
-                Object.keys(info.event.extendedProps).includes("linkDeets")
+                info.event.extendedProps.linkQuestion
               ) {
                 modalFooter.style = "display: flex";
+                // if there is a flyer, search for it and attach it to the View Flyer button...
                 if (info.event.extendedProps.flyerQuestion) {
-                  // if there is a flyer search for it and attach it to the View Flyer button...
-                  var imageAssetObject = data.images.find(image => image._id === info.event.extendedProps.flyer.asset._ref);
-                  console.log(imageAssetObject.url)
+                  modalAttachment.style = "display:flex";
+                  var imageAssetObject = data.images.find(
+                    (image) =>
+                      image._id === info.event.extendedProps.flyer.asset._ref
+                  );
                   modalAttachment.href = imageAssetObject.url;
                 } else {
                   // ...otherwise delete the button
                   modalAttachment.style = "display:none";
+                }
+                // if there is a registration link, search for it and attach it to the View Flyer button...
+                if (info.event.extendedProps.linkQuestion) {
+                  modalLink.style = "display:flex";
+                  modalLink.href = info.event.extendedProps.linkDeets.linkURL;
+                } else {
+                  // ...otherwise delete the button
+                  modalLink.style = "display:none";
                 }
               } else {
                 modalFooter.style = "display: none";
@@ -185,7 +196,12 @@
                   target="_blank"
                   >view flyer</a
                 >
-                <a href="" class="btn btn-secondary col modal-link">register</a>
+                <a
+                  href=""
+                  class="btn btn-secondary col modal-link"
+                  target="_blank"
+                  >register</a
+                >
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@
   border-radius: 12px;
 }
 .fc .fc-daygrid-event-harness:not(:first-of-type) {
-  padding-top: 10px;
+  // padding-top: 10px;
 }
 .fc-event {
   cursor: pointer;
@@ -67,7 +67,7 @@ section {
                 }
                 &[disabled] {
                   pointer-events: none;
-                  opacity: 0.25;
+                  opacity: 0;
                 }
               }
             }
