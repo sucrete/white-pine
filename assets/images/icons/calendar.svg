@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width="512" height="512"><path d="M21,2H18V0H15V2H9V0H6V2H3A3,3,0,0,0,0,5V24H24V5A3,3,0,0,0,21,2ZM3,21V10H21V21Z"/></svg>
+<svg id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #b4a02a;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M448,42.7h-64V0h-64v42.7h-128V0h-64v42.7h-64C28.7,42.7,0,71.3,0,106.7v405.3h512V106.7c0-35.3-28.7-64-64-64ZM64,448v-234.7h384v234.7H64Z"/>
+</svg>

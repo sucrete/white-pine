@@ -12,54 +12,94 @@ document.addEventListener("DOMContentLoaded", function () {
   var modalAttachment = document.getElementsByClassName("modal-attachment")[0];
   var modalLink = document.getElementsByClassName("modal-link")[0];
 
-  //~ create custom view
-  const { sliceEvents, createPlugin } = FullCalendar;
-  const CustomViewConfig = {
-    classNames: ["custom-view"],
-    content: function (props) {
-      let segs = sliceEvents(props, true); // allDay=true
-      console.log("segs", segs);
-      console.log("segs.length < 0", segs.length > 0);
-      console.log("segs[0].def", segs[0]?.def);
-      // let html =
-      //   '<div class="view-events">' +
-      //   "<ul>" +
-      //   segs
-      //     .map(function (seg) {
-      //       return `<li>${seg.def.title} </li>`;
-      //     })
-      //     .join("") +
-      //   "</ul>" +
-      //   "</div>";
-
-      let html =
-        segs.length > 0
-          ? `${segs
-              .map((seg) => {
-                return `
-          <div class="event-list-item">
-            <div class="event-list-title">${seg.def.title}</div>
-              <div class="event-list-date-wrapper">
-                <div class="event-list-date-wrapper">${seg.def.start}</div>
-              </div>
-          </div>
-          `;
-              })
-              .join("")}`
-          : `<div>${segs.length}</div>`;
-
-      return { html: html };
-    },
-  };
-
-  const CustomViewPlugin = createPlugin({
-    views: {
-      monthList: CustomViewConfig,
-    },
-  });
-
   //~ fetch data
   fetchData().then((data) => {
+    //~ create custom view
+    const { sliceEvents, createPlugin } = FullCalendar;
+    const CustomViewConfig = {
+      classNames: ["custom-view"],
+      content: function (props) {
+        let segs = sliceEvents(props, true); // allDay=true
+        console.log("segs", segs);
+        console.log("segs.length < 0", segs.length > 0);
+        console.log("segs[0].def", segs[0]?.def);
+        let html =
+          segs.length > 0
+            ? ` <div class="events-list-wrapper d-flex flex-column-reverse">
+                  ${segs
+                    .map((seg) => {
+                      return `
+                  <div class="event-list-item">
+                    <div class="event-list-title">${seg.def.title}</div>
+                    <div class="event-list-date-wrapper d-flex flex-row align-items-center">
+                     <img src="assets/images/icons/calendar.svg" class="date-icon" alt=""/>
+                      <div class="event-list-date-start">
+                        ${moment(seg.range.start)
+                          .add(1, "days")
+                          .format("dddd, MMMM Do")}
+                      </div>
+                      <div class="event-list-date-end">
+                        ${
+                          moment(seg.range.end).isAfter(
+                            moment(seg.range.start).add(1, "days")
+                          )
+                            ? " - " +
+                              moment(seg.range.end).format("dddd, MMMM Do")
+                            : ""
+                        }
+                      </div>
+                    </div>
+                    <hr/>
+                    <div class="event-list-description">
+                      ${seg.def.extendedProps.eventDescription}
+                    </div>
+                     <div class="event-list-footer d-flex flex-row ${(seg.def.extendedProps.linkQuestion || seg.def.extendedProps.flyerQuestion) ? "" : "no-buttons"}">
+                 ${
+                   seg.def.extendedProps?.flyer
+                     ? `<a href="${
+                         data.images.find(
+                           (image) =>
+                             image._id ===
+                             seg.def.extendedProps.flyer.asset._ref
+                         ).url
+                       }"
+                  class="btn btn-secondary event-list-flyer-btn"
+                  target="_blank"
+                  >view flyer</a>`
+                     : ""
+                 }
+                 ${
+                   seg.def.extendedProps?.linkQuestion
+                     ? `
+                   <a
+                  href="${seg.def.extendedProps.linkDeets.linkURL}"
+                  class="btn btn-secondary event-list-link-btn"
+                  target="_blank"
+                  >${seg.def.extendedProps.linkDeets.linkText}</a
+                >
+                  `
+                     : ""
+                 }
+               
+               
+              </div>
+                  </div>
+                
+              `;
+                    })
+                    .join("")}
+                </div>`
+            : `<div class="no-events-message"><img class="no-events-icon injectable" src="assets/images/icons/no-events.svg"/>No events for this period</div>`;
+
+        return { html: html };
+      },
+    };
+
+    const CustomViewPlugin = createPlugin({
+      views: {
+        monthList: CustomViewConfig,
+      },
+    });
     console.log(
       `%c${JSON.stringify(data, null, 2)}`,
       "color: red; background: black"
@@ -77,8 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
         monthList: {
           buttonText: "list",
           duration: {
-            months: 2,
+            months: 1,
           },
+          // contentHeight: '500px',
+          height: 'unset',
         },
       },
       initialView: "dayGridMonth",
@@ -133,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         } else {
           modalFooter.style = "display: none";
-          modalBodyWrapper.style = "padding-bottom: 3rem";
+          modalBodyWrapper.style = "padding-bottom: 4rem";
         }
 
         $("#calModal").modal("show");

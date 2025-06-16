@@ -149,9 +149,10 @@ section {
 $inner-border-color: #f3f3f3;
 
 //* Modal styling
+$modal-margin: 3rem;
 .modal {
   .modal-dialog {
-    max-width: 600px;
+    max-width: 625px;
     // .modal-content defines the modal box
     .modal-content {
       border-radius: 10px;
@@ -162,8 +163,8 @@ $inner-border-color: #f3f3f3;
         #003d3d0a 0px 6px 6px -3px, #003d3d0a 0px 3px 3px -1.5px,
         #001f1f14 0px 1px 1px -0.5px, #003d3d0a 0px 0px 0px 1px;
       .modal-header {
-        padding: 2rem;
-        padding-bottom: 0.5rem;
+        padding: $modal-margin;
+        padding-bottom: 0.25rem;
         // border-bottom-color: $inner-border-color;
         border: none;
         .modal-title {
@@ -195,7 +196,7 @@ $inner-border-color: #f3f3f3;
       .modal-body-wrapper {
         line-height: 120%;
         font-size: 17px;
-        padding: 2rem;
+        padding: $modal-margin;
         padding-top: 0;
         .date-wrapper {
           color: hsla(50, 8%, 45%, 0.836);
@@ -214,7 +215,7 @@ $inner-border-color: #f3f3f3;
         }
         hr {
           background-color: $inner-border-color;
-          margin: 1.8rem 0;
+          margin: 1.25rem 0;
           opacity: 1;
         }
         .modal-body {
@@ -224,8 +225,9 @@ $inner-border-color: #f3f3f3;
         }
       }
       .modal-footer {
-        $mf-padding: 25px;
-        padding: 2rem;
+        $mf-padding: 36px;
+        padding: $modal-margin;
+        padding-top: 1rem;
         padding-left: $mf-padding;
         padding-right: $mf-padding;
         gap: 2px;
@@ -264,6 +266,112 @@ $inner-border-color: #f3f3f3;
           }
         }
       }
+    }
+  }
+}
+
+$outline-color: #e6e6e6;
+//* Event List styling
+.fc-monthList-view {
+  position: relative !important;
+  min-height: 200px;
+  .events-list-wrapper {
+    gap: 6px;
+    .event-list-item {
+      padding: 2.75rem 2.5rem 3rem 2.5rem;
+      border-radius: 10px;
+      background-color: white;
+      border: 1px solid $outline-color;
+      transition: all 0.15s ease;
+      .event-list-title {
+        font-family: "Aeonik Medium";
+        color: rgb(29, 29, 29);
+        font-size: 24px;
+        padding-bottom: .75rem;
+      }
+      .event-list-date-wrapper {
+        color: hsla(50, 8%, 45%, 0.836);
+        letter-spacing: 0.2px;
+        .date-icon {
+          position: relative;
+          width: auto;
+          height: 14px;
+          margin-right: 10px;
+          margin-left: 1.5px;
+          top: -1px;
+        }
+      }
+      hr {
+        background-color: $inner-border-color;
+        margin: 1.25rem 0;
+        opacity: 1;
+      }
+      .event-list-description {
+        padding: 0;
+        color: #767364;
+        letter-spacing: 0.2px;
+      }
+      .event-list-footer {
+        padding: 2rem 0 0 0;
+        gap: 3px;
+        border-top-color: transparent;
+        .event-list-flyer-btn,
+        .event-list-link-btn {
+          font-family: "Wayfarer";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: lowercase;
+          letter-spacing: 1px;
+          font-size: 15px;
+          height: 45px;
+          border-radius: 1px;
+          background-color: var(--color-secondary);
+          padding-bottom: 6px;
+          padding-left: 3rem;
+          padding-right: 3rem;
+          transition: all 0.25s ease;
+          border: none;
+          &:hover {
+            background-color: #c8b025;
+          }
+          &:active,
+          &:focus {
+            box-shadow: none;
+            border: none;
+          }
+        }
+        .event-list-flyer-btn {
+          border: 2px solid var(--color-secondary);
+          background-color: transparent;
+          color: var(--color-secondary);
+          &:hover {
+            color: white;
+            background-color: #c8b025;
+            border-color: #c8b025;
+          }
+        }
+        &.no-buttons {
+          padding: 0;
+        }
+      }
+      &:hover {
+        border-color: #ddd;
+        box-shadow: 0 1px 2px 0 #0000000d;
+      }
+    }
+  }
+  .no-events-message {
+    display: flex;
+    align-items: center;
+    @include center-it;
+    @include monospaced(rgb(184 184 184));
+    // top: 20%;
+    .no-events-icon {
+      height: 12px;
+      width: auto;
+      margin-right: 15px;
+      opacity: 0.23;
     }
   }
 }

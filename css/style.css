@@ -16882,11 +16882,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16920,11 +16920,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16939,47 +16939,9 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(0deg) translate(-50%, -50%);
-}
-.slyde:nth-child(4).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(5) {
-  z-index: 6;
-  transform: rotate(1deg) translate(-50%, -50%);
-}
-.slyde:nth-child(5).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(6) {
-  z-index: 5;
   transform: rotate(-2deg) translate(-50%, -50%);
 }
-.slyde:nth-child(6).leave {
+.slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
@@ -16994,13 +16956,51 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background-color: transparent;
 }
 
+.slyde:nth-child(5) {
+  z-index: 6;
+  transform: rotate(-1deg) translate(-50%, -50%);
+}
+.slyde:nth-child(5).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-1deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
+.slyde:nth-child(6) {
+  z-index: 5;
+  transform: rotate(-3deg) translate(-50%, -50%);
+}
+.slyde:nth-child(6).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-3deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
 .slyde:nth-child(7) {
   z-index: 4;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(7).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17015,11 +17015,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17034,11 +17034,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17398,7 +17398,7 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
 }
 
 .modal .modal-dialog {
-  max-width: 600px;
+  max-width: 625px;
 }
 .modal .modal-dialog .modal-content {
   border-radius: 10px;
@@ -17407,8 +17407,8 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   box-shadow: rgba(0, 61, 61, 0.0392156863) 0px 64px 64px -32px, rgba(0, 61, 61, 0.0392156863) 0px 32px 32px -16px, rgba(0, 61, 61, 0.0392156863) 0px 16px 16px -8px, rgba(0, 61, 61, 0.0392156863) 0px 12px 12px -6px, rgba(0, 61, 61, 0.0392156863) 0px 6px 6px -3px, rgba(0, 61, 61, 0.0392156863) 0px 3px 3px -1.5px, rgba(0, 31, 31, 0.0784313725) 0px 1px 1px -0.5px, rgba(0, 61, 61, 0.0392156863) 0px 0px 0px 1px;
 }
 .modal .modal-dialog .modal-content .modal-header {
-  padding: 2rem;
-  padding-bottom: 0.5rem;
+  padding: 3rem;
+  padding-bottom: 0.25rem;
   border: none;
 }
 .modal .modal-dialog .modal-content .modal-header .modal-title {
@@ -17440,7 +17440,7 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
 .modal .modal-dialog .modal-content .modal-body-wrapper {
   line-height: 120%;
   font-size: 17px;
-  padding: 2rem;
+  padding: 3rem;
   padding-top: 0;
 }
 .modal .modal-dialog .modal-content .modal-body-wrapper .date-wrapper {
@@ -17460,7 +17460,7 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
 }
 .modal .modal-dialog .modal-content .modal-body-wrapper hr {
   background-color: #f3f3f3;
-  margin: 1.8rem 0;
+  margin: 1.25rem 0;
   opacity: 1;
 }
 .modal .modal-dialog .modal-content .modal-body-wrapper .modal-body {
@@ -17469,9 +17469,10 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   letter-spacing: 0.2px;
 }
 .modal .modal-dialog .modal-content .modal-footer {
-  padding: 2rem;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 3rem;
+  padding-top: 1rem;
+  padding-left: 36px;
+  padding-right: 36px;
   gap: 2px;
   border-top-color: transparent;
 }
@@ -17506,6 +17507,119 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   color: white;
   background-color: #c8b025;
   border-color: #c8b025;
+}
+
+.fc-monthList-view {
+  position: relative !important;
+  min-height: 200px;
+}
+.fc-monthList-view .events-list-wrapper {
+  gap: 6px;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item {
+  padding: 2.75rem 2.5rem 3rem 2.5rem;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  transition: all 0.15s ease;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-title {
+  font-family: "Aeonik Medium";
+  color: rgb(29, 29, 29);
+  font-size: 24px;
+  padding-bottom: 0.75rem;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper {
+  color: hsla(50, 8%, 45%, 0.836);
+  letter-spacing: 0.2px;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon {
+  position: relative;
+  width: auto;
+  height: 14px;
+  margin-right: 10px;
+  margin-left: 1.5px;
+  top: -1px;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item hr {
+  background-color: #f3f3f3;
+  margin: 1.25rem 0;
+  opacity: 1;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-description {
+  padding: 0;
+  color: #767364;
+  letter-spacing: 0.2px;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer {
+  padding: 2rem 0 0 0;
+  gap: 3px;
+  border-top-color: transparent;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn,
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-link-btn {
+  font-family: "Wayfarer";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  height: 45px;
+  border-radius: 1px;
+  background-color: var(--color-secondary);
+  padding-bottom: 6px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  transition: all 0.25s ease;
+  border: none;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn:hover,
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-link-btn:hover {
+  background-color: #c8b025;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn:active, .fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn:focus,
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-link-btn:active,
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-link-btn:focus {
+  box-shadow: none;
+  border: none;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn {
+  border: 2px solid var(--color-secondary);
+  background-color: transparent;
+  color: var(--color-secondary);
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn:hover {
+  color: white;
+  background-color: #c8b025;
+  border-color: #c8b025;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer.no-buttons {
+  padding: 0;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item:hover {
+  border-color: #ddd;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.0509803922);
+}
+.fc-monthList-view .no-events-message {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Sono";
+  font-weight: 475;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgb(184, 184, 184);
+}
+.fc-monthList-view .no-events-message .no-events-icon {
+  height: 12px;
+  width: auto;
+  margin-right: 15px;
+  opacity: 0.23;
 }
 
 .my-hr {
