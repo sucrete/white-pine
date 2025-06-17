@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 .modal {
-   background: #00000043;
+  background: #00000043;
 }
 .my-btn {
   color: white !important;
@@ -325,7 +325,6 @@ section {
   max-width: 500px;
   position: relative;
   z-index: 33;
-
   p {
     color: #fcfaf4;
     font-size: 19px;
@@ -414,7 +413,81 @@ section {
         rgba(0, 0, 0, 0.65) 0px 8px 16px -8px;
     }
   }
+  .frost-warning {
+    // padding: 1.75rem 3.5rem 2.15rem 0.95rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px, rgba(255, 255, 255, 0.836) inset 0 3px 6px;
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.727);
+    // border-bottom-color: #ddd;
+    overflow: hidden;
+    .row {
+      margin: 0.3rem;
+      background: rgb(255, 255, 255);
+      border-radius: 7px;
+      .icon-col {
+        position: relative;
+        padding: 1.75rem 0rem 2.15rem 0.95rem;
+        .warning-icon-wrapper {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 37%;
+          left: 67%;
+          .warning-icon {
+            width: 18px;
+            height: auto;
+            position: relative;
+            z-index: 7;
+            path {
+              fill: #ecc903;
+            }
+          }
+          .radiate-stack {
+            @include center-it;
+            top: 57%;
+            .circle {
+              @include center-it;
+              background-color: rgb(255 246 194);
+              border-radius: 200px;
+              width: 40px;
+              height: 40px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .text-col {
+        position: relative;
+        z-index: 9;
+        padding: 0.5rem;
+        width: 83%;
+        // padding-right: 1.25rem;
+        flex-basis: auto;
+        .text-wrapper {
+          // background: rgba(255, 255, 255, 0.679);
+          border-radius: 7px;
+          z-index: 88;
+          padding: 1rem 3rem 1.5rem 1.5rem;
+          .frost-warning-title {
+            font-family: "Aeonik Medium";
+            font-size: 20px;
+            color: black;
+            margin-bottom: 3px;
+          }
+          .frost-warning-text {
+            font-size: 15px;
+            text-shadow: none;
+            color: #636363;
+            line-height: 117%;
+          }
+        }
+      }
+    }
+  }
 }
+
 //* pdf card
 a {
   .single-solution-style-one {

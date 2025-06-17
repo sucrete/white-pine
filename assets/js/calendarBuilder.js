@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     })
                     .join("")}
                 </div>`
-            : `<div class="no-events-message"><img class="no-events-icon injectable" src="assets/images/icons/no-events.svg"/>No events for this period</div>`;
+            : `<div class="no-events-message"><img class="no-events-icon injectable" src="assets/images/icons/no-events.svg"/>no events scheduled for this month</div>`;
 
         return { html: html };
       },
