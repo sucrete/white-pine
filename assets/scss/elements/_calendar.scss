@@ -165,7 +165,7 @@ $modal-margin: 3rem;
       .modal-header {
         padding: $modal-margin;
         padding-bottom: 0.25rem;
-        // border-bottom-color: $inner-border-color;
+        padding-top: 2.5rem;
         border: none;
         .modal-title {
           font-family: "Aeonik Medium";
@@ -276,7 +276,7 @@ $outline-color: #e6e6e6;
   position: relative !important;
   min-height: 200px;
   .events-list-wrapper {
-    gap: 6px;
+    gap: 10px;
     .event-list-item {
       padding: 2.75rem 2.5rem 3rem 2.5rem;
       border-radius: 10px;

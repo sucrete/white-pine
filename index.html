@@ -44,9 +44,25 @@
 
     <!-- footer Lit component -->
     <script type="module" src="./lit/footer.js"></script>
+
+    <!-- fullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+    <!-- fullCalendar initiation -->
+    <script src="assets/js/listBuilder.js"></script>
+    <!-- moment.js - time parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+    <!-- Sanity data fetch -->
+    <script src="assets/js/fetchData.js"></script>
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0"
+    ></script>
     <!-- header four area start -->
     <header class="header-area-four header--sticky home">
       <my-header> </my-header>
@@ -123,7 +139,8 @@
         <div class="row">
           <div class="col">
             <div class="short-introduction">
-              <div class="frost-warning">
+              <div class="frost-warning wow fadeInUp" data-wow-offset="120"
+                data-wow-delay=".6s">
                 <div class="row flex-row">
                   <div class="col icon-col">
                     <div class="warning-icon-wrapper">
@@ -139,7 +156,7 @@
                   </div>
                   <div class="col text-col">
                     <div class="text-wrapper">
-                      <h4 class="frost-warning-title">Frost Warning!</h4>
+                      <h4 class="frost-warning-title">Frost Alert!</h4>
                       <p class="frost-warning-text">
                         Due to frost on the greens, course is closed until
                         11:00am.
@@ -256,6 +273,39 @@
     </section>
     <!-- end of introduction -->
 
+    <!-- Calendar/Facebook feed section -->
+    <section class="calendar-and-facebook-section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-8">
+            <div id="events-list"></div>
+          </div>
+          <div class="col-4">
+            <div
+              class="fb-page"
+              data-href="https://www.facebook.com/profile.php?id=61559039492400#"
+              data-tabs="timeline"
+              data-width="500"
+              data-height="650"
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="true"
+              data-show-facepile="false"
+            >
+              <blockquote
+                cite="https://www.facebook.com/profile.php?id=61559039492400#"
+                class="fb-xfbml-parse-ignore"
+              >
+                <a
+                  href="https://www.facebook.com/profile.php?id=61559039492400#"
+                  >Ely NV - White Pine Golf Course</a
+                >
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <my-footer></my-footer>
     </footer>
