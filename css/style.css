@@ -16882,85 +16882,9 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(0deg) translate(-50%, -50%);
-}
-.slyde:nth-child(1).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(2) {
-  z-index: 9;
-  transform: rotate(3deg) translate(-50%, -50%);
-}
-.slyde:nth-child(2).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(3) {
-  z-index: 8;
-  transform: rotate(1deg) translate(-50%, -50%);
-}
-.slyde:nth-child(3).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(4) {
-  z-index: 7;
-  transform: rotate(3deg) translate(-50%, -50%);
-}
-.slyde:nth-child(4).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(5) {
-  z-index: 6;
   transform: rotate(-3deg) translate(-50%, -50%);
 }
-.slyde:nth-child(5).leave {
+.slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
@@ -16975,11 +16899,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background-color: transparent;
 }
 
-.slyde:nth-child(6) {
-  z-index: 5;
+.slyde:nth-child(2) {
+  z-index: 9;
   transform: rotate(-1deg) translate(-50%, -50%);
 }
-.slyde:nth-child(6).leave {
+.slyde:nth-child(2).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
@@ -16994,11 +16918,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background-color: transparent;
 }
 
-.slyde:nth-child(7) {
-  z-index: 4;
+.slyde:nth-child(3) {
+  z-index: 8;
   transform: rotate(0deg) translate(-50%, -50%);
 }
-.slyde:nth-child(7).leave {
+.slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
@@ -17013,13 +16937,89 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background-color: transparent;
 }
 
+.slyde:nth-child(4) {
+  z-index: 7;
+  transform: rotate(1deg) translate(-50%, -50%);
+}
+.slyde:nth-child(4).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(1deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
+.slyde:nth-child(5) {
+  z-index: 6;
+  transform: rotate(0deg) translate(-50%, -50%);
+}
+.slyde:nth-child(5).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(0deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
+.slyde:nth-child(6) {
+  z-index: 5;
+  transform: rotate(1deg) translate(-50%, -50%);
+}
+.slyde:nth-child(6).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(1deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
+.slyde:nth-child(7) {
+  z-index: 4;
+  transform: rotate(-3deg) translate(-50%, -50%);
+}
+.slyde:nth-child(7).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-3deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(-2deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-2deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17034,11 +17034,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(-2deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-2deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17053,11 +17053,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17986,16 +17986,14 @@ section.form-section .container .row [class*=col] img.golfer-swangin {
   box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.65) 0px 8px 16px -8px;
 }
 .short-introduction .frost-warning {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px, rgba(255, 255, 255, 0.836) inset 0 3px 6px;
-  border: 1px solid rgba(255, 255, 255, 0.372);
-  border-top-color: rgba(255, 255, 255, 0.671);
+  background: #fefce8;
+  border-radius: 1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-left: 5px solid #ecc903;
   overflow: hidden;
 }
 .short-introduction .frost-warning .row {
   margin: 0.4rem;
-  background: rgba(255, 255, 255, 0.842);
   border-radius: 7px;
 }
 .short-introduction .frost-warning .row .icon-col {
@@ -18005,7 +18003,7 @@ section.form-section .container .row [class*=col] img.golfer-swangin {
 .short-introduction .frost-warning .row .icon-col .warning-icon-wrapper {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 37%;
+  top: 35%;
   left: 67%;
 }
 .short-introduction .frost-warning .row .icon-col .warning-icon-wrapper .warning-icon {
@@ -18039,25 +18037,24 @@ section.form-section .container .row [class*=col] img.golfer-swangin {
   position: relative;
   z-index: 9;
   padding: 0.5rem;
-  width: 83%;
+  width: 87%;
   flex-basis: auto;
 }
 .short-introduction .frost-warning .row .text-col .text-wrapper {
-  border-radius: 7px;
   z-index: 88;
-  padding: 1rem 2.5rem 1.2rem 1.5rem;
+  padding: 0.5rem 2.5rem 0.75rem 1.5rem;
 }
 .short-introduction .frost-warning .row .text-col .text-wrapper .frost-warning-title {
   font-family: "Aeonik Medium";
-  font-size: 20px;
-  color: black;
-  margin-bottom: 3px;
+  font-size: 17px;
+  color: oklch(55.4% 0.135 66.442);
+  margin-bottom: 1px;
   letter-spacing: 0.2px;
 }
 .short-introduction .frost-warning .row .text-col .text-wrapper .frost-warning-text {
   font-size: 15px;
   text-shadow: none;
-  color: #636363;
+  color: oklch(55.299% 0.12746 61.788/0.774);
   letter-spacing: 0.2px;
   line-height: 117%;
 }

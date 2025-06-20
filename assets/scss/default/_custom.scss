@@ -415,18 +415,19 @@ section {
   }
   .frost-warning {
     // padding: 1.75rem 3.5rem 2.15rem 0.95rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    background: #fefce8;
+    border-radius: 1px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px, rgba(255, 255, 255, 0.836) inset 0 3px 6px;
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     // backdrop-filter: blur(7px);
-    border: 1px solid rgba(255, 255, 255, 0.372);
-    border-top-color: rgba(255, 255, 255, 0.671);
+    // border: 1px solid rgba(255, 255, 255, 0.372);
+    // border-top-color: rgba(255, 255, 255, 0.671);
+    border-left: 5px solid #ecc903;
     // border-bottom-color: #ddd;
     overflow: hidden;
     .row {
       margin: 0.4rem;
-      background: rgba(255, 255, 255, 0.842);
+      // background: rgba(255, 255, 255, 0.842);
       border-radius: 7px;
       .icon-col {
         position: relative;
@@ -434,7 +435,7 @@ section {
         .warning-icon-wrapper {
           position: absolute;
           transform: translate(-50%, -50%);
-          top: 37%;
+          top: 35%;
           left: 67%;
           .warning-icon {
             width: 18px;
@@ -463,25 +464,23 @@ section {
         position: relative;
         z-index: 9;
         padding: 0.5rem;
-        width: 83%;
+        width: 87%;
         // padding-right: 1.25rem;
         flex-basis: auto;
         .text-wrapper {
-          // background: rgba(255, 255, 255, 0.679);
-          border-radius: 7px;
           z-index: 88;
-          padding: 1rem 2.5rem 1.2rem 1.5rem;
+          padding: .5rem 2.5rem .75rem 1.5rem;
           .frost-warning-title {
             font-family: "Aeonik Medium";
-            font-size: 20px;
-            color: black;
-            margin-bottom: 3px;
+            font-size: 17px;
+            color: oklch(55.4% .135 66.442);
+            margin-bottom: 1px;
             letter-spacing: .2px;
           }
           .frost-warning-text {
             font-size: 15px;
             text-shadow: none;
-            color: #636363;
+            color: oklch(55.299% 0.12746 61.788 / 0.774);
             letter-spacing: .2px;
             line-height: 117%;
           }
