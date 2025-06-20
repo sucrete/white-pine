@@ -22,14 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const CustomViewConfig = {
       classNames: ["custom-view"],
       content: function (props) {
-        let segs = sliceEvents(props, true); // allDay=true
+        let segs = sliceEvents(props, true);
+        // sort events ascendingly
+        const sortedSegs = segs.sort(
+          (a, b) => new Date(b.range.start) - new Date(a.range.start)
+        );
         console.log("segs", segs);
-        console.log("segs.length < 0", segs.length > 0);
-        console.log("segs[0].def", segs[0]?.def);
         let html =
           segs.length > 0
             ? ` <div class="events-list-wrapper d-flex flex-column-reverse">
-                  ${segs
+                  ${sortedSegs
                     .map((seg) => {
                       return `
                   <div class="event-list-item">

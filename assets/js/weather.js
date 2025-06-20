@@ -1,7 +1,9 @@
 //~ Standard Variables
 // API URL
-const apiUrl =
-  "https://api.pirateweather.net/forecast/ntC8U5xrrc5kn10XQebmEvssDHcleOe5/39.263,-114.858?exclude=minutely,hourly,alerts,flags";
+const coordinates = "39.263,-114.858";
+const key = "EqRw5datS5zL99ze3FwQ8Q7PJEtJAC0i";
+
+const apiUrl = `https://api.pirateweather.net/forecast/${key}/${coordinates}?exclude=minutely,hourly,alerts,flags`;
 
 // Days of the week
 const days = [
