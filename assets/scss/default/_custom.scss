@@ -1,6 +1,21 @@
+html {
+  background-color: #4c533f;
+}
+
 .my-hr {
   background-color: #d1d1d1;
   opacity: 1;
+}
+
+.events-list-heading {
+  font-family: "Wayfarer";
+  padding-left: 1rem;
+  letter-spacing: 1px;
+  color: rgb(202 202 182);
+}
+
+.pre-wrap {
+  white-space: pre-line;
 }
 
 .explainer-icon {
@@ -469,19 +484,19 @@ section {
         flex-basis: auto;
         .text-wrapper {
           z-index: 88;
-          padding: .5rem 2.5rem .75rem 1.5rem;
+          padding: 0.5rem 2.5rem 0.75rem 1.5rem;
           .frost-warning-title {
             font-family: "Aeonik Medium";
             font-size: 17px;
-            color: oklch(55.4% .135 66.442);
+            color: oklch(55.4% 0.135 66.442);
             margin-bottom: 1px;
-            letter-spacing: .2px;
+            letter-spacing: 0.2px;
           }
           .frost-warning-text {
             font-size: 15px;
             text-shadow: none;
             color: oklch(55.299% 0.12746 61.788 / 0.774);
-            letter-spacing: .2px;
+            letter-spacing: 0.2px;
             line-height: 117%;
           }
         }
@@ -863,7 +878,8 @@ table {
   padding: 5rem 0 14rem 0;
   background-color: #fafaf6;
   .container {
-    .row {}
+    .row {
+    }
   }
 }
 

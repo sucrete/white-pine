@@ -1,14 +1,32 @@
 const calendarQuery =
-  "https://5vgxmbfr.api.sanity.io/v2025-06-12/data/query/production?query=%7B%27events%27%3A*%5B_type+%3D%3D+%27event%27%5D%2C%27images%27%3A*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%7D&perspective=published";
+  "https://5vgxmbfr.api.sanity.io/v2025-06-23/data/query/production?query=%7B%27events%27%3A*%5B_type+%3D%3D+%27event%27%5D%2C%27images%27%3A*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%2C+%27courseDetails%27%3A+*%5B_type+%3D%3D+%22courseDetails%22%5D%7D&perspective=published";
 
 const todaysDate = new Date();
 const futureDate = todaysDate.setMonth(todaysDate.getMonth() + 5);
 
 document.addEventListener("DOMContentLoaded", function () {
   var cal = document.getElementById("events-list");
+  var alert = document.getElementsByClassName("frost-warning")[0];
+  var alertTitle = document.getElementsByClassName("frost-warning-title")[0];
+  var alertTextBody = document.getElementsByClassName("frost-warning-text")[0];
+  var intro = document.getElementsByClassName("introduction-paragraph")[0];
+  var courseBio = document.getElementsByClassName("course-bio")[0];
 
   //~ fetch data
   fetchData(calendarQuery).then((data) => {
+    const cd = data.courseDetails[0];
+    console.log("alert active? -> ", cd.alertQuestion);
+    if (cd.alertQuestion) {
+      intro.style.display = "none";
+      alert.style.display = "block";
+      alertTitle.textContent = cd.alert.alertHeading;
+      alertTextBody.textContent = cd.alert.alertTextBody;
+    } else {
+      alert.style.display = "none";
+      intro.style.display = "block";
+    }
+    courseBio.textContent = cd.courseBio;
+
     //~ create custom view
     const { sliceEvents, createPlugin } = FullCalendar;
     const CustomViewConfig = {
@@ -42,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                           moment(seg.range.end).isAfter(
                             moment(seg.range.start).add(1, "days")
                           )
-                            ? " - " +
+                            ? "&nbsp;- " +
                               moment(seg.range.end).format("dddd, MMMM Do")
                             : ""
                         }

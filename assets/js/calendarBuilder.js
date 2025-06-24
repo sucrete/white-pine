@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                           moment(seg.range.end).isAfter(
                             moment(seg.range.start).add(1, "days")
                           )
-                            ? " - " +
+                            ? "&nbsp;- " +
                               moment(seg.range.end).format("dddd, MMMM Do")
                             : ""
                         }
