@@ -14,16 +14,39 @@ export class Header extends LitElement {
               <div class="nav-area">
                 <nav>
                   <ul class="parent-nav">
-                     <li>
-                      <a class="nav-link" href="rates.html">Rates</a>
-                    </li>
-                     <li>
-                      <a class="nav-link" href="membership.html">membership</a>
+                    <li class="has-dropdown ">
+                      <a class="nav-link" href="#">
+                        rates
+                        <span class="chevron">^</span>
+                      </a>
+                      <ul class="submenu parent-nav with-border">
+                        <li>
+                          <a href="rates.html"
+                            ><span class="submenu-chevron">^</span
+                            ><span class="submenu-link"
+                              >Greens Fees</span
+                            ></a
+                          >
+                        </li>
+                        <li>
+                          <a href="membership.html"
+                            ><span class="submenu-chevron">^</span>
+                            <span class="submenu-link"
+                              >Membership Fees</span
+                            >
+                          </a>
+                        </li>
+                      </ul>
                     </li>
                     <li>
-                      <a class="nav-link" href="calendar.html">Calendar</a>
+                      <a class="nav-link" href="calendar.html">events</a>
                     </li>
-                   
+
+                    <li>
+                      <a class="nav-link" href="instruction.html"
+                        >instruction</a
+                      >
+                    </li>
                   </ul>
                 </nav>
               </div>

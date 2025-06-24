@@ -12340,6 +12340,12 @@ Copyright (c) 2015 Daniel Eden
   width: 100%;
   background: transparent;
 }
+.header--sticky .logo {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+}
 
 .header--sticky.sticky {
   position: fixed !important;
@@ -12385,6 +12391,7 @@ Copyright (c) 2015 Daniel Eden
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 3.5rem;
 }
 @media only screen and (max-width: 991px) {
   .header-area-four .header-four-wrapper {
@@ -12397,7 +12404,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 .header-area-four .header-four-wrapper .nav-area ul li > a.nav-link {
-  color: rgba(255, 255, 255, 0.733);
+  color: rgba(255, 255, 255, 0.75);
 }
 .header-area-four .header-four-wrapper .nav-area ul li > a.nav-link:hover {
   color: white;
@@ -12408,6 +12415,15 @@ Copyright (c) 2015 Daniel Eden
 }
 .header-area-four.sticky {
   background: var(--color-primary);
+}
+.header-area-four.sticky .header-four-wrapper {
+  padding-top: 0;
+}
+.header-area-four.sticky .header-four-wrapper .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header-area-four:not(.home, .sticky) .nav-area ul li > a.nav-link {
   color: #fcfaf4;
@@ -12434,6 +12450,7 @@ Copyright (c) 2015 Daniel Eden
   opacity: 1;
   width: 100%;
 }
+
 @-moz-document url-prefix() {
   .rts-banner-area-five .round-shape-one img {
     opacity: 0.15;
@@ -12540,7 +12557,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .menu-item-open > a {
-  color: rgba(255, 255, 255, 0.6509803922) !important;
+  color: #ffffff !important;
 }
 .menu-item-open > a i::before {
   content: "\f077";
@@ -12571,7 +12588,7 @@ Copyright (c) 2015 Daniel Eden
   margin: 0;
   padding: 0;
 }
-.nav-area ul li a {
+.nav-area ul li a:not(.my-btn) {
   padding: 38px 0;
   display: block;
   color: #000000;
@@ -12580,13 +12597,14 @@ Copyright (c) 2015 Daniel Eden
   letter-spacing: 1px;
   position: relative;
 }
-.nav-area ul li a:after {
+.nav-area ul li a:not(.my-btn):after {
   background: none repeat scroll 0 0 transparent;
   bottom: 3.25rem;
   content: "";
   display: block;
   height: 1.76px;
   left: 50%;
+  transform: translateX(-50%);
   border-radius: 77px;
   position: absolute;
   background: var(--color-primary);
@@ -12594,26 +12612,24 @@ Copyright (c) 2015 Daniel Eden
   width: 0;
   opacity: 0;
 }
-.nav-area ul li a:hover {
+.nav-area ul li a:not(.my-btn):hover {
   color: #0e5023;
 }
-.nav-area ul li a:hover:after {
-  width: 100%;
-  left: 0;
-  opacity: 0.9;
-}
-.nav-area ul li a.active {
-  color: #0e5023;
-}
-.nav-area ul li a.active:after {
-  width: 100%;
-  left: 0;
+.nav-area ul li a:not(.my-btn):hover:after {
+  width: 23px;
   opacity: 1;
 }
-.nav-area ul li a.active.book-tee-time-btn:after {
+.nav-area ul li a:not(.my-btn).active {
+  color: #0e5023;
+}
+.nav-area ul li a:not(.my-btn).active:after {
+  width: 23px;
+  opacity: 1;
+}
+.nav-area ul li a:not(.my-btn).active.book-tee-time-btn:after {
   opacity: 0;
 }
-.nav-area ul li a.active.book-tee-time-btn:hover:after {
+.nav-area ul li a:not(.my-btn).active.book-tee-time-btn:hover:after {
   opacity: 1;
 }
 
@@ -12648,18 +12664,27 @@ Copyright (c) 2015 Daniel Eden
 li.has-dropdown {
   position: relative;
 }
+li.has-dropdown .nav-link .chevron {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  padding-left: 2px;
+  transition: transform 0.15s ease;
+  transform: rotate(180deg);
+  transform-origin: center 47%;
+}
 li.has-dropdown .submenu {
-  min-width: 230px;
+  min-width: 275px;
   height: auto;
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 90;
+  z-index: 99;
   opacity: 0;
   visibility: hidden;
   text-align: left;
   transition: 0.3s;
-  border-radius: 0 0 0px 0px;
+  border-radius: 1px;
   background-color: #fff;
   border-left: 0;
   border-bottom: 0;
@@ -12675,33 +12700,62 @@ li.has-dropdown .submenu li {
   padding: 0;
 }
 li.has-dropdown .submenu li a {
-  padding: 9px 16px !important;
+  padding: 9px 16px;
   font-weight: 400;
   font-size: 16px;
   transition: opacity 0.1s ease-out;
   transition-delay: 0s;
   border-radius: 0;
-  display: block;
   display: flex;
   align-items: center;
+  position: relative;
+  top: -1px;
   gap: 10px;
   opacity: 0;
+  letter-spacing: 1px;
+  color: var(--color-primary);
 }
 li.has-dropdown .submenu li a i {
   font-size: 11px;
   transition: all 0.15s ease-out;
 }
+li.has-dropdown .submenu li a .submenu-chevron {
+  position: relative;
+  top: 2.75px;
+  transform: rotate(90deg);
+  opacity: 0.75;
+}
+li.has-dropdown .submenu li a .submenu-link {
+  position: relative;
+  transition: transform 0.15s ease;
+}
 li.has-dropdown .submenu li a:hover {
   background: transparent;
   color: var(--color-primary);
 }
-li.has-dropdown .submenu li a:hover i {
-  padding-right: 5px;
+li.has-dropdown .submenu li a:hover .submenu-link {
+  transform: translateX(3px);
+}
+li.has-dropdown .submenu li a:after {
+  display: none;
+}
+li.has-dropdown .submenu li a:nth-of-type(1) {
+  padding-bottom: 11px;
+}
+li.has-dropdown .submenu li a:nth-of-type(2) {
+  padding-top: 11px;
+}
+li.has-dropdown:hover .nav-link:after {
+  opacity: 1;
+  width: 23px;
+}
+li.has-dropdown:hover .nav-link .chevron {
+  transform: rotate(0deg);
 }
 li.has-dropdown:hover .submenu {
   opacity: 1;
   visibility: visible;
-  top: 100%;
+  top: 95%;
   transform: translateY(0);
   transform: scaleY(1);
 }
@@ -16398,11 +16452,12 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 
 .has-dropdown .submenu.with-border {
-  padding: 3px 0 4px 0;
+  padding: 0;
 }
 .has-dropdown .submenu.with-border li a {
   border-bottom: 1px solid #f7f7f7;
-  font-family: var(--font-primary);
+  font-family: "Wayfarer", sans-serif;
+  text-transform: lowercase;
 }
 .has-dropdown .submenu.with-border li:last-child a {
   border: none;
@@ -16882,11 +16937,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(-1deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-1deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16901,11 +16956,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(2) {
   z-index: 9;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(2).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16920,11 +16975,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16939,11 +16994,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16958,11 +17013,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(5) {
   z-index: 6;
-  transform: rotate(-2deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(5).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-2deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16977,11 +17032,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(6) {
   z-index: 5;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(6).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17015,11 +17070,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17034,11 +17089,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17053,11 +17108,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);

@@ -150,11 +150,12 @@
 
 .has-dropdown {
   .submenu.with-border {
-    padding: 3px 0 4px 0;
+    padding: 0;
     li {
       a {
         border-bottom: 1px solid #f7f7f7;
-        font-family: var(--font-primary);
+        font-family: "Wayfarer", sans-serif;
+        text-transform: lowercase;
       }
 
       &:last-child {

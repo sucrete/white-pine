@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
 
-      a {
+      a:not(.my-btn) {
         padding: 38px 0;
         display: block;
         color: #000000;
@@ -25,10 +25,10 @@
           display: block;
           height: 1.76px;
           left: 50%;
+          transform: translateX(-50%);
           border-radius: 77px;
           position: absolute;
           background: var(--color-primary);
-          // background: #c6bfa2;
           transition: width 0.3s ease 0s, left 0.3s ease 0s,
             opacity 0.3s ease 0s;
           width: 0;
@@ -37,16 +37,15 @@
         &:hover {
           color: #0e5023;
           &:after {
-            width: 100%;
-            left: 0;
-            opacity: .9;
+            width: 23px;
+            // left: 0;
+            opacity: 1;
           }
         }
         &.active {
           color: #0e5023;
           &:after {
-            width: 100%;
-            left: 0;
+            width: 23px;
             opacity: 1;
           }
           &.book-tee-time-btn {

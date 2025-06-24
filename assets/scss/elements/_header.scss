@@ -59,6 +59,12 @@ header .rts-btn {
   position: relative;
   width: 100%;
   background: transparent;
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+  }
 }
 
 .header--sticky.sticky {
@@ -106,7 +112,7 @@ header .rts-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    padding-top: 3.5rem;
     @media #{$mdsm-layout} {
       padding: 15px;
     }
@@ -119,7 +125,7 @@ header .rts-btn {
       ul {
         li {
           & > a.nav-link {
-            color: rgba(255, 255, 255, 0.733);
+            color: rgba(255, 255, 255, 0.75);
             &:hover {
               color: white;
             }
@@ -137,9 +143,16 @@ header .rts-btn {
 
   &.sticky {
     background: var(--color-primary);
+    .header-four-wrapper {
+      padding-top: 0;
+ .logo {
+      @include center-it;
+    }
+    }
+   
   }
-  &:not(.home,.sticky) {
-     .nav-area {
+  &:not(.home, .sticky) {
+    .nav-area {
       ul {
         li {
           & > a.nav-link {
@@ -173,60 +186,6 @@ header .rts-btn {
       opacity: 1;
       width: 100%;
     }
-  }
-
-  // &::after {
-  //     position: absolute;
-  //     width: 250px;
-  //     height: 250px;
-  //     left: 667.51px;
-  //     top: 82.76px;
-  //     content: '';
-  //     background: linear-gradient(270deg, #FF34DD 25.08%, #FFFFFF 43.64%, #3534FF 66.3%);
-  //     -webkit-filter: blur(200px);
-  //     -moz-filter: blur(200px);
-  //     filter: blur(200px);
-  //     transform: rotate(165deg);
-  //     z-index: -1;
-  // }
-
-  // &::before {
-  //     content: '';
-  //     z-index: -1;
-  //     position: absolute;
-  //     width: 224px;
-  //     height: 224px;
-  //     left: 108px;
-  //     top: 473px;
-  //     background: linear-gradient(270deg, #FF34DD 25.08%, #FFFFFF 43.64%, #3534FF 66.3%);
-  //     -webkit-filter: blur(200px);
-  //     -moz-filter: blur(200px);
-  //     filter: blur(200px);
-
-  // }
-
-  .banner-inner-wrapper-five {
-    // &::after {
-    //     content: '';
-    //     z-index: -1;
-    //     position: absolute;
-    //     width: 292px;
-    //     height: 292px;
-    //     left: 1313px;
-    //     top: 485px;
-    //     background: linear-gradient(270deg, #FF34DD 25.08%, #FFFFFF 43.64%, #3534FF 66.3%);
-    //     -webkit-filter: blur(200px);
-    //     -moz-filter: blur(200px);
-    //     filter: blur(200px);
-
-    //     @media #{$laptop-device} {
-    //         display: none;
-    //     }
-
-    //     @media #{$smlg-device} {
-    //         display: none;
-    //     }
-    // }
   }
 }
 
@@ -383,7 +342,7 @@ header .rts-btn {
 
 .menu-item-open {
   & > a {
-    color: #ffffffa6 !important;
+    color: #ffffff !important;
 
     i {
       &::before {
