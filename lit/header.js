@@ -32,7 +32,7 @@ export class Header extends LitElement {
                           <a href="membership.html"
                             ><span class="submenu-chevron">^</span>
                             <span class="submenu-link"
-                              >Membership Fees</span
+                              >Membership</span
                             >
                           </a>
                         </li>
