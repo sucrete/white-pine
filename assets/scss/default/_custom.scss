@@ -1851,7 +1851,6 @@ footer {
 //* ================ PHABLET STYLING ==================
 //* ===================================================
 
-// padding for screens under 767px wide
 @media (max-width: 992px) {
   header {
     &.header-area-four {
@@ -2025,6 +2024,75 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  section {
+    &.calendar-section {
+      padding-top: 11rem;
+      padding-bottom: 7rem;
+      .container {
+        #calendar {
+          .fc-header-toolbar {
+            position: relative;
+            margin-bottom: 0.9rem;
+            .fc-toolbar-chunk:nth-of-type(2) {
+              position: absolute;
+              width: 100%;
+              left: 0;
+              top: -4rem;
+              h2 {
+                @include center-it;
+                width: 100%;
+                text-align: center;
+                font-size: 32px;
+              }
+            }
+            .fc-toolbar-chunk {
+              .fc-button-group {
+                .fc-prev-button,
+                .fc-next-button {
+                  .fc-icon {
+                    position: relative;
+                    top: -.75px;
+                  }
+                }
+              }
+            }
+          }
+          .fc-view-harness {
+            .custom-view {
+              .no-events-message {
+                width: 100%;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .banner-four-area.home-page.banner-four-bg {
+    .container {
+      margin-bottom: 1rem;
+      .short-introduction {
+        .frost-warning {
+          .icon-col {
+            .warning-icon-wrapper {
+              top: 28%;
+              left: 77%;
+            }
+          }
+          .text-col {
+            .text-wrapper {
+              padding-right: 1.5rem;
+              .frost-warning-text {
+                font-size: 13px;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .membership-page-body {
     .container {
       .row {
@@ -2089,7 +2157,7 @@ footer {
                   width: 22px;
                   height: auto;
                   position: absolute;
-                  left: 10px;
+                  left: 5px;
                   top: 50%;
                   transform: translateY(-50%);
                 }
@@ -2147,7 +2215,7 @@ footer {
           margin-bottom: 1rem;
           letter-spacing: 0.4px;
           text-shadow: 0 0 12px black;
-          width: 90%;
+          // width: 90%;
           .compass {
             .compass-icon {
               width: 16px;

@@ -12536,6 +12536,9 @@ Copyright (c) 2015 Daniel Eden
 @media only screen and (max-width: 991px) {
   .header-area-four .button-area-right-header {
     display: block;
+    top: 3px;
+    right: 2px;
+    position: relative;
   }
   .header-area-four .button-area-right-header svg rect {
     fill: var(--color-primary);
@@ -12547,6 +12550,9 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 @media only screen and (max-width: 991px) {
+  .header-area-four.header--sticky.sticky .button-area-right-header {
+    top: 8px;
+  }
   .header-area-four.header--sticky.sticky .button-area-right-header svg rect {
     fill: white;
   }
@@ -16934,11 +16940,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16972,11 +16978,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16991,11 +16997,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17029,11 +17035,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(6) {
   z-index: 5;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(6).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17067,11 +17073,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17587,12 +17593,16 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   letter-spacing: 0.2px;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon {
+  display: inline-block;
   position: relative;
   width: auto;
   height: 14px;
   margin-right: 10px;
   margin-left: 1.5px;
   top: -1px;
+}
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .event-list-date-start, .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .event-list-date-end {
+  display: inline;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item hr {
   background-color: #f3f3f3;
@@ -19247,6 +19257,52 @@ footer .rts-copyright-area-one .new-row p {
   }
 }
 @media screen and (max-width: 768px) {
+  section.calendar-section {
+    padding-top: 11rem;
+    padding-bottom: 7rem;
+  }
+  section.calendar-section .container #calendar .fc-header-toolbar {
+    position: relative;
+    margin-bottom: 0.9rem;
+  }
+  section.calendar-section .container #calendar .fc-header-toolbar .fc-toolbar-chunk:nth-of-type(2) {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -4rem;
+  }
+  section.calendar-section .container #calendar .fc-header-toolbar .fc-toolbar-chunk:nth-of-type(2) h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+  }
+  section.calendar-section .container #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-prev-button .fc-icon,
+  section.calendar-section .container #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-next-button .fc-icon {
+    position: relative;
+    top: -0.75px;
+  }
+  section.calendar-section .container #calendar .fc-view-harness .custom-view .no-events-message {
+    width: 100%;
+    justify-content: center;
+  }
+  .banner-four-area.home-page.banner-four-bg .container {
+    margin-bottom: 1rem;
+  }
+  .banner-four-area.home-page.banner-four-bg .container .short-introduction .frost-warning .icon-col .warning-icon-wrapper {
+    top: 28%;
+    left: 77%;
+  }
+  .banner-four-area.home-page.banner-four-bg .container .short-introduction .frost-warning .text-col .text-wrapper {
+    padding-right: 1.5rem;
+  }
+  .banner-four-area.home-page.banner-four-bg .container .short-introduction .frost-warning .text-col .text-wrapper .frost-warning-text {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
   .membership-page-body .container .row .col h2 {
     font-size: 58px;
   }
@@ -19279,7 +19335,7 @@ footer .rts-copyright-area-one .new-row p {
     width: 22px;
     height: auto;
     position: absolute;
-    left: 10px;
+    left: 5px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -19298,7 +19354,6 @@ footer .rts-copyright-area-one .new-row p {
     margin-bottom: 1rem;
     letter-spacing: 0.4px;
     text-shadow: 0 0 12px black;
-    width: 90%;
   }
   .banner-four-area.home-page .container .short-introduction p .compass .compass-icon {
     width: 16px;

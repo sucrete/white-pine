@@ -1,5 +1,5 @@
 const calendarQuery =
-  "https://5vgxmbfr.api.sanity.io/v2025-06-23/data/query/production?query=%7B%27events%27%3A*%5B_type+%3D%3D+%27event%27%5D%2C%27images%27%3A*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%2C+%27courseDetails%27%3A+*%5B_type+%3D%3D+%22courseDetails%22%5D%7D&perspective=published";
+  "https://5vgxmbfr.api.sanity.io/v2025-06-26/data/query/production?query=%7B%27events%27%3A*%5B_type+%3D%3D+%27event%27%5D%2C%27images%27%3A*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%2C+%27courseDetails%27%3A+*%5B_type+%3D%3D+%22courseSettings%22%5D%7D&perspective=published";
 
 const todaysDate = new Date();
 const futureDate = todaysDate.setMonth(todaysDate.getMonth() + 5);
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="event-list-description">
                       ${seg.def.extendedProps.eventDescription}
                     </div>
-                     <div class="event-list-footer d-flex flex-row ${
+                     <div class="event-list-footer d-flex flex-column flex-md-row  ${
                        seg.def.extendedProps.linkQuestion ||
                        seg.def.extendedProps.flyerQuestion
                          ? ""
@@ -85,9 +85,9 @@ document.addEventListener("DOMContentLoaded", function () {
                              seg.def.extendedProps.flyer.asset._ref
                          ).url
                        }"
-                  class="btn btn-secondary event-list-flyer-btn"
+                  class="btn btn-secondary event-list-flyer-btn col-12 col-md-4"
                   target="_blank"
-                  >view flyer</a>`
+                  >view flyer</a>` 
                      : ""
                  }
                  ${
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
                      ? `
                    <a
                   href="${seg.def.extendedProps.linkDeets.linkURL}"
-                  class="btn btn-secondary event-list-link-btn"
+                  class="btn btn-secondary event-list-link-btn col-12 col-md-4"
                   target="_blank"
                   >${seg.def.extendedProps.linkDeets.linkText}</a
                 >

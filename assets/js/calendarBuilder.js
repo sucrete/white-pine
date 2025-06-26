@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var modalAttachment = document.getElementsByClassName("modal-attachment")[0];
   var modalLink = document.getElementsByClassName("modal-link")[0];
+  var windowWidth = window.innerWidth;
 
   //~ fetch data
   fetchData(calendarQuery).then((data) => {
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       return `
                   <div class="event-list-item">
                     <div class="event-list-title">${seg.def.title}</div>
-                    <div class="event-list-date-wrapper d-flex flex-row align-items-center">
+                    <div class="event-list-date-wrapper">
                      <img src="assets/images/icons/calendar.svg" class="date-icon" alt=""/>
                       <div class="event-list-date-start">
                         ${moment(seg.range.start)
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="event-list-description">
                       ${seg.def.extendedProps.eventDescription}
                     </div>
-                     <div class="event-list-footer d-flex flex-row ${
+                     <div class="event-list-footer d-flex flex-column flex-md-row ${
                        seg.def.extendedProps.linkQuestion ||
                        seg.def.extendedProps.flyerQuestion
                          ? ""
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
                              seg.def.extendedProps.flyer.asset._ref
                          ).url
                        }"
-                  class="btn btn-secondary event-list-flyer-btn"
+                  class="btn btn-secondary event-list-flyer-btn col-12 col-md-3"
                   target="_blank"
                   >view flyer</a>`
                      : ""
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                      ? `
                    <a
                   href="${seg.def.extendedProps.linkDeets.linkURL}"
-                  class="btn btn-secondary event-list-link-btn"
+                  class="btn btn-secondary event-list-link-btn col-12 col-md-3"
                   target="_blank"
                   >${seg.def.extendedProps.linkDeets.linkText}</a
                 >
@@ -132,6 +133,18 @@ document.addEventListener("DOMContentLoaded", function () {
           // contentHeight: '500px',
           height: "unset",
         },
+        dayGridMonth: {
+          contentHeight: windowWidth < 768 ? 700 : null,
+        },
+      },
+      windowResize: function (dayGridMonth) {
+        windowWidth = window.innerWidth;
+        console.log("day grid month");
+        if (windowWidth < 768) {
+          calendar.setOption("contentHeight", 700);
+        } else {
+          calendar.setOption("contentHeight", null);
+        }
       },
       initialView: "dayGridMonth",
       events: data.events,

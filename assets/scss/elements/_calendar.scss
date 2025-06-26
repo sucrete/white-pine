@@ -293,12 +293,16 @@ $outline-color: #e6e6e6;
         color: hsla(50, 8%, 45%, 0.836);
         letter-spacing: 0.2px;
         .date-icon {
+          display: inline-block;
           position: relative;
           width: auto;
           height: 14px;
           margin-right: 10px;
           margin-left: 1.5px;
           top: -1px;
+        }
+        .event-list-date-start, .event-list-date-end {
+          display: inline;
         }
       }
       hr {

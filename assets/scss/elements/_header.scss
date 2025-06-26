@@ -145,11 +145,10 @@ header .rts-btn {
     background: var(--color-primary);
     .header-four-wrapper {
       padding-top: 0;
- .logo {
-      @include center-it;
+      .logo {
+        @include center-it;
+      }
     }
-    }
-   
   }
   &:not(.home, .sticky) {
     .nav-area {
@@ -302,7 +301,9 @@ header .rts-btn {
 
     @media #{$mdsm-layout} {
       display: block;
-
+      top: 3px;
+      right: 2px;
+      position: relative;
       svg {
         rect {
           fill: var(--color-primary);
@@ -320,6 +321,7 @@ header .rts-btn {
   @media #{$mdsm-layout} {
     &.header--sticky.sticky {
       .button-area-right-header {
+        top: 8px;
         svg {
           rect {
             fill: white;
