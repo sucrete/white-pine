@@ -277,17 +277,20 @@ $outline-color: #e6e6e6;
   min-height: 200px;
   .events-list-wrapper {
     gap: 10px;
+    position: relative;
     .event-list-item {
       padding: 2.75rem 2.5rem 3rem 2.5rem;
       border-radius: 10px;
       background-color: white;
       border: 1px solid $outline-color;
-      transition: all 0.15s ease;
+      transition: all 0.25s ease;
+      position: relative;
+      z-index: 7;
       .event-list-title {
         font-family: "Aeonik Medium";
         color: rgb(29, 29, 29);
         font-size: 24px;
-        padding-bottom: .75rem;
+        padding-bottom: 0.75rem;
       }
       .event-list-date-wrapper {
         color: hsla(50, 8%, 45%, 0.836);
@@ -301,7 +304,8 @@ $outline-color: #e6e6e6;
           margin-left: 1.5px;
           top: -1px;
         }
-        .event-list-date-start, .event-list-date-end {
+        .event-list-date-start,
+        .event-list-date-end {
           display: inline;
         }
       }
@@ -361,7 +365,8 @@ $outline-color: #e6e6e6;
       }
       &:hover {
         border-color: #ddd;
-        box-shadow: 0 1px 2px 0 #0000000d;
+        z-index: 77;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 25px -5px, rgba(0, 0, 0, 0.03) 0px 10px 10px -5px;
       }
     }
   }

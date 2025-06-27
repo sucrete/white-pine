@@ -12673,6 +12673,7 @@ li.has-dropdown {
 li.has-dropdown .nav-link .chevron {
   display: inline-block;
   position: relative;
+  opacity: 0.5;
   top: 2px;
   padding-left: 2px;
   transition: transform 0.15s ease;
@@ -16940,85 +16941,9 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(-1deg) translate(-50%, -50%);
-}
-.slyde:nth-child(1).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-1deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(2) {
-  z-index: 9;
-  transform: rotate(0deg) translate(-50%, -50%);
-}
-.slyde:nth-child(2).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(3) {
-  z-index: 8;
-  transform: rotate(3deg) translate(-50%, -50%);
-}
-.slyde:nth-child(3).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(4) {
-  z-index: 7;
-  transform: rotate(-4deg) translate(-50%, -50%);
-}
-.slyde:nth-child(4).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(5) {
-  z-index: 6;
   transform: rotate(-3deg) translate(-50%, -50%);
 }
-.slyde:nth-child(5).leave {
+.slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
@@ -17033,13 +16958,89 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background-color: transparent;
 }
 
+.slyde:nth-child(2) {
+  z-index: 9;
+  transform: rotate(-1deg) translate(-50%, -50%);
+}
+.slyde:nth-child(2).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-1deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
+.slyde:nth-child(3) {
+  z-index: 8;
+  transform: rotate(-4deg) translate(-50%, -50%);
+}
+.slyde:nth-child(3).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-4deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
+.slyde:nth-child(4) {
+  z-index: 7;
+  transform: rotate(3deg) translate(-50%, -50%);
+}
+.slyde:nth-child(4).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(3deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
+.slyde:nth-child(5) {
+  z-index: 6;
+  transform: rotate(-1deg) translate(-50%, -50%);
+}
+.slyde:nth-child(5).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-1deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
 .slyde:nth-child(6) {
   z-index: 5;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(6).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17073,11 +17074,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17092,11 +17093,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17111,11 +17112,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17574,13 +17575,16 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
 }
 .fc-monthList-view .events-list-wrapper {
   gap: 10px;
+  position: relative;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item {
   padding: 2.75rem 2.5rem 3rem 2.5rem;
   border-radius: 10px;
   background-color: white;
   border: 1px solid #e6e6e6;
-  transition: all 0.15s ease;
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 7;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item .event-list-title {
   font-family: "Aeonik Medium";
@@ -17601,7 +17605,8 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   margin-left: 1.5px;
   top: -1px;
 }
-.fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .event-list-date-start, .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .event-list-date-end {
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .event-list-date-start,
+.fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .event-list-date-end {
   display: inline;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item hr {
@@ -17662,7 +17667,8 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
 }
 .fc-monthList-view .events-list-wrapper .event-list-item:hover {
   border-color: #ddd;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.0509803922);
+  z-index: 77;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 25px -5px, rgba(0, 0, 0, 0.03) 0px 10px 10px -5px;
 }
 .fc-monthList-view .no-events-message {
   display: flex;

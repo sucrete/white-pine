@@ -5,6 +5,7 @@ li.has-dropdown {
     .chevron {
       display: inline-block;
       position: relative;
+      opacity: .5;
       top: 2px;
       padding-left: 2px;
       transition: transform 0.15s ease;
