@@ -27,7 +27,9 @@ export class Footer extends LitElement {
                     <div class="col"></div>
                   </div>
 
-                  <div class="link-group d-flex flex-column flex-md-row flex-start">
+                  <div
+                    class="link-group d-flex flex-column flex-md-row flex-start"
+                  >
                     <div class="contact-stack">
                       <div class="footer-link-group-title">contact</div>
                       <a
@@ -75,7 +77,11 @@ export class Footer extends LitElement {
                         class="social-link link"
                         target="_blank"
                       >
-                        <img src="./assets/images/icons/city.svg" class="city" alt="" />
+                        <img
+                          src="./assets/images/icons/city.svg"
+                          class="city"
+                          alt=""
+                        />
                         City of Ely
                       </a>
                       <a
@@ -83,7 +89,11 @@ export class Footer extends LitElement {
                         class="social-link link"
                         target="_blank"
                       >
-                        <img src="./assets/images/icons/tourism.svg" class="tourism" alt="" />
+                        <img
+                          src="./assets/images/icons/tourism.svg"
+                          class="tourism"
+                          alt=""
+                        />
                         City of Ely Tourism
                       </a>
                       <a
@@ -91,7 +101,11 @@ export class Footer extends LitElement {
                         class="social-link link"
                         target="_blank"
                       >
-                        <img src="./assets/images/icons/county.svg" class="county" alt="" />
+                        <img
+                          src="./assets/images/icons/county.svg"
+                          class="county"
+                          alt=""
+                        />
                         White Pine County
                       </a>
                       <a
@@ -99,7 +113,11 @@ export class Footer extends LitElement {
                         class="social-link link"
                         target="_blank"
                       >
-                        <img src="./assets/images/icons/cc.svg" class="cc" alt="" />
+                        <img
+                          src="./assets/images/icons/cc.svg"
+                          class="cc"
+                          alt=""
+                        />
                         White Pine Chamber of Commerce
                       </a>
                       <a
@@ -107,7 +125,11 @@ export class Footer extends LitElement {
                         class="social-link link"
                         target="_blank"
                       >
-                        <img src="./assets/images/icons/nv.svg" class="nv" alt="" />
+                        <img
+                          src="./assets/images/icons/nv.svg"
+                          class="nv"
+                          alt=""
+                        />
                         Travel Nevada
                       </a>
                       <a
@@ -115,7 +137,11 @@ export class Footer extends LitElement {
                         class="social-link link"
                         target="_blank"
                       >
-                        <img src="./assets/images/icons/pony.svg" class="pony" alt="" />
+                        <img
+                          src="./assets/images/icons/pony.svg"
+                          class="pony"
+                          alt=""
+                        />
                         Pony Express Territory
                       </a>
                     </div>
@@ -243,8 +269,13 @@ export class Footer extends LitElement {
                   <div class="copyright-wrapper">
                     <div class="new-row">
                       <p>
-                        © White Pine Golf Course,
-                        ${new Date().getFullYear()}
+                        <a
+                          class="link-to-studio no-underline"
+                          href="https://white-pine.sanity.studio/"
+                          target="_blank"
+                        >
+                          © White Pine Golf Course, ${new Date().getFullYear()}
+                        </a>
                       </p>
                     </div>
                     <a
