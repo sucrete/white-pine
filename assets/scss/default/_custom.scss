@@ -286,6 +286,9 @@ section {
       }
     }
   }
+   &.instruction-plaque {
+      padding: 15rem 0;
+    }
 }
 
 //* sidebar 'book tee time' button
@@ -2051,7 +2054,7 @@ footer {
                 .fc-next-button {
                   .fc-icon {
                     position: relative;
-                    top: -.75px;
+                    top: -0.75px;
                   }
                 }
               }
@@ -2343,7 +2346,8 @@ footer {
     }
   }
   section {
-    &.form-section.membership-form {
+    &.form-section.membership-form,
+    &.instruction-plaque {
       padding: 10px;
       .container {
         padding: 5rem 2rem;
@@ -2376,6 +2380,7 @@ footer {
         }
       }
     }
+   
   }
   .membership-page-body {
     padding-top: 7rem !important;

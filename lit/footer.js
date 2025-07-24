@@ -278,11 +278,7 @@ export class Footer extends LitElement {
                         </a>
                       </p>
                     </div>
-                    <a
-                      class="teequest-link no-underline"
-                      target="_blank"
-                      href="https://www.teequestsolutions.com"
-                    >
+                    <a class="teequest-link no-underline">
                       <svg
                         class="svg-inline--fa fa-gears"
                         aria-hidden="true"
