@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //~ fetch data
   fetchData(calendarQuery).then((data) => {
+    const allEvents = data.events;
+    allEvents.forEach((event, index) => {
+      if (event?.multidayEvent) {
+        event.end = moment(event.end).add(1, "days").format("YYYY-MM-DD");
+      }
+    });
     //~ create custom view
     const { sliceEvents, createPlugin } = FullCalendar;
     const CustomViewConfig = {
@@ -34,15 +40,53 @@ document.addEventListener("DOMContentLoaded", function () {
             ? ` <div class="events-list-wrapper d-flex flex-column-reverse">
                   ${sortedSegs
                     .map((seg) => {
+                      console.log(
+                        "includes today's date? ",
+                        moment(moment().format("YYYY-MM-DD")).isBetween(
+                          moment(seg.range.start)
+                            .add(1, "days")
+                            .format("YYYY-MM-DD"),
+                          moment(seg.range.end).format("YYYY-MM-DD"),
+                          undefined,
+                          "[]"
+                        )
+                      );
+                      // console.log("today's date: ", moment().format("YYYY-MM-DD"))
+                      // console.log("title: ", seg.def.title)
+                      // console.log(
+                      //   "start: ",
+                      //   moment(seg.range.start)
+                      //     .add(1, "days")
+                      //     .format("YYYY-MM-DD")
+                      // );
+                      // console.log(
+                      //   "end: ",
+                      //   moment(seg.range.end).format("YYYY-MM-DD")
+                      // );
                       return `
-                  <div class="event-list-item">
+                  <div class="event-list-item ${
+                    moment(moment().format("YYYY-MM-DD")).isBetween(
+                      moment(seg.range.start)
+                        .add(1, "days")
+                        .format("YYYY-MM-DD"),
+                      moment(seg.range.end).format("YYYY-MM-DD"),
+                      undefined,
+                      "[]"
+                    )
+                      ? " today"
+                      : ""
+                  }">
                     <div class="event-list-title">${seg.def.title}</div>
                     <div class="event-list-date-wrapper">
                      <img src="assets/images/icons/calendar.svg" class="date-icon" alt=""/>
                       <div class="event-list-date-start">
-                        ${moment(seg.range.start)
-                          .add(1, "days")
-                          .format("dddd, MMMM Do")}
+                      
+                        ${
+                          // adding a day because FullCalendar ranges (which are given to all events in FC) are exclusive (example: an event falling on July 23rd is given the range "Tue Jul 22 2025 19:00 (start) - Wed Jul 23 2025 19:00 (end)")
+                          moment(seg.range.start)
+                            .add(1, "days")
+                            .format("dddd, MMMM Do")
+                        }
                       </div>
                       <div class="event-list-date-end">
                         ${
@@ -74,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
                              seg.def.extendedProps.flyer.asset._ref
                          ).url
                        }"
-                  class="btn btn-secondary event-list-flyer-btn col-12 col-md-3"
+                  class="btn btn-secondary event-list-flyer-btn col-12 col-sm-2"
                   target="_blank"
                   >view flyer</a>`
                      : ""
@@ -83,16 +127,14 @@ document.addEventListener("DOMContentLoaded", function () {
                    seg.def.extendedProps?.linkQuestion
                      ? `
                    <a
-                  href="${seg.def.extendedProps.linkDeets.linkURL}"
-                  class="btn btn-secondary event-list-link-btn col-12 col-md-3"
+                  href="${seg.def.extendedProps?.linkDeets?.linkURL}"
+                  class="btn btn-secondary event-list-link-btn col-12 col-sm-2"
                   target="_blank"
-                  >${seg.def.extendedProps.linkDeets.linkText}</a
+                  >${seg.def.extendedProps?.linkDeets?.linkText}</a
                 >
                   `
                      : ""
                  }
-               
-               
               </div>
                   </div>
                 
@@ -147,10 +189,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       },
       initialView: "dayGridMonth",
-      events: data.events,
+      //* WHERE EVENTS ARE CONSUMED BY FULLCALENDAR
+      // events: data.events,
+      events: allEvents,
 
       eventClick: function (info) {
         //~Modal
+        // ➡️ remove links until check
+        modalAttachment.style = "display:none";
+        modalLink.style = "display:none";
+        modalFooter.style = "display:none !important";
         // ➡️ add title
         modalTitle.textContent = info.event.title;
 
@@ -170,15 +218,20 @@ document.addEventListener("DOMContentLoaded", function () {
           modalDateEnd.textContent = "";
         }
 
-        // ➡️  check if there is an attachment AND a link
+        // ➡️  check if there is an attachment OR a link
+        console.log(
+          "has flyerQuestion or linkQuestion?: " +
+            info.event.extendedProps?.flyerQuestion ||
+            info.event.extendedProps?.linkQuestion
+        );
         if (
-          info.event.extendedProps.flyerQuestion ||
-          info.event.extendedProps.linkQuestion
+          info.event.extendedProps?.flyerQuestion ||
+          info.event.extendedProps?.linkQuestion
         ) {
           modalFooter.style = "display: flex";
-          modalBodyWrapper.style = "padding-bottom: 1rem";
+          modalBodyWrapper.style = "padding-bottom: 2rem";
           // ➡️ if there is a flyer, search for it and attach it to the View Flyer button...
-          if (info.event.extendedProps.flyerQuestion) {
+          if (info.event.extendedProps?.flyerQuestion) {
             modalAttachment.style = "display:flex";
             var imageAssetObject = data.images.find(
               (image) => image._id === info.event.extendedProps.flyer.asset._ref
@@ -188,16 +241,17 @@ document.addEventListener("DOMContentLoaded", function () {
             // ...otherwise delete the button
             modalAttachment.style = "display:none";
           }
-          // ➡️  if there is a registration link, search for it and attach it to the View Flyer button...
-          if (info.event.extendedProps.linkQuestion) {
+          // ➡️  if there is a registration link, search for it and attach it to the Register button...
+          if (info.event.extendedProps?.linkQuestion) {
             modalLink.style = "display:flex";
             modalLink.href = info.event.extendedProps.linkDeets.linkURL;
+            modalLink.textContent = info.event.extendedProps.linkDeets.linkText;
           } else {
             // ...otherwise delete the button
             modalLink.style = "display:none";
           }
         } else {
-          modalFooter.style = "display: none";
+          modalFooter.style = "display: none !important";
           modalBodyWrapper.style = "padding-bottom: 4rem";
         }
 

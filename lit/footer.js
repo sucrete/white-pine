@@ -73,6 +73,18 @@ export class Footer extends LitElement {
                     <div class="social-stack">
                       <div class="footer-link-group-title">resources</div>
                       <a
+                        href="https://www.whitepinecounty.net/"
+                        class="social-link link"
+                        target="_blank"
+                      >
+                        <img
+                          src="./assets/images/icons/county.svg"
+                          class="county"
+                          alt=""
+                        />
+                        White Pine County
+                      </a>
+                      <a
                         href="https://www.cityofelynv.gov/"
                         class="social-link link"
                         target="_blank"
@@ -96,18 +108,7 @@ export class Footer extends LitElement {
                         />
                         City of Ely Tourism
                       </a>
-                      <a
-                        href="https://www.whitepinecounty.net/"
-                        class="social-link link"
-                        target="_blank"
-                      >
-                        <img
-                          src="./assets/images/icons/county.svg"
-                          class="county"
-                          alt=""
-                        />
-                        White Pine County
-                      </a>
+
                       <a
                         href="https://www.whitepinechamber.com/"
                         class="social-link link"
