@@ -6,9 +6,9 @@ const futureDate = todaysDate.setMonth(todaysDate.getMonth() + 5);
 
 document.addEventListener("DOMContentLoaded", function () {
   var cal = document.getElementById("events-list");
-  // var alert = document.getElementsByClassName("frost-warning")[0];
-  // var alertTitle = document.getElementsByClassName("frost-warning-title")[0];
-  // var alertTextBody = document.getElementsByClassName("frost-warning-text")[0];
+  var alert = document.getElementsByClassName("frost-warning")[0];
+  var alertTitle = document.getElementsByClassName("frost-warning-title")[0];
+  var alertTextBody = document.getElementsByClassName("frost-warning-text")[0];
   var intro = document.getElementsByClassName("introduction-paragraph")[0];
   var courseBio = document.getElementsByClassName("course-bio")[0];
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alertTitle.textContent = cd.alert.alertHeading;
       alertTextBody.textContent = cd.alert.alertTextBody;
     } else {
-      // alert.style.display = "none";
+      alert.style.display = "none";
       intro.style.display = "block";
     }
     courseBio.textContent = cd.courseBio;
