@@ -1,4 +1,31 @@
-// header style
+.white-pine-badge {
+  width: 260px;
+  height: auto;
+  margin-top: -2px;
+
+  path {
+    fill: white;
+  }
+}
+.white-pine-badge,
+.white-pine-offset {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.03))
+    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.04))
+    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.05))
+    drop-shadow(0 8px 8px rgba(0, 0, 0, 0.06))
+    drop-shadow(0 16px 16px rgba(0, 0, 0, 0.07))
+    drop-shadow(0 32px 32px rgba(0, 0, 0, 0.08));
+}
+
+.white-pine-logo-roman {
+  width: 204px;
+  height: auto;
+  path {
+    fill: white;
+  }
+}
+
+
 .header-wrapper-1 {
   display: flex;
   align-items: center;
@@ -59,6 +86,7 @@ header .rts-btn {
   position: relative;
   width: 100%;
   background: transparent;
+  
   .logo {
     position: absolute;
     left: 50%;
@@ -370,5 +398,125 @@ header .rts-btn {
   }
   &.menu-item-open > a {
     color: #0b2e16b3 !important;
+  }
+}
+
+header {
+  &.header--sticky {
+    .white-pine-logo-roman,
+    .white-pine-logo-roman-stacked,
+    .white-pine-offset,
+    .white-pine-logo-stag {
+      display: none;
+    }
+    .white-pine-offset {
+      width: 217px;
+      height: auto;
+      path {
+        fill: white;
+      }
+    }
+    &.sticky {
+      .white-pine-badge {
+        display: none;
+      }
+      .white-pine-logo-roman {
+        display: unset;
+      }
+      .nav-area {
+        ul {
+          li {
+            a:not(.my-btn) {
+              &:after {
+                bottom: 1.5rem;
+                background: white;
+                background: var(--color-secondary);
+              }
+            }
+          }
+        }
+      }
+      .container {
+        .row {
+          [class*="col"] {
+            .header-four-wrapper {
+              .nav-area {
+                .has-dropdown {
+                  .submenu {
+                    top: 95%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.style-white {
+    .white-pine-offset {
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+//* subpage header at the top (ie not .sticky)
+header {
+  overflow: visible;
+  & * {
+    overflow: visible;
+  }
+  &.header-area-four {
+    &.header--sticky:not(.sticky) {
+      &.subpage {
+        .container {
+          .row {
+            .header-four-wrapper {
+              .logo {
+                .white-pine-logo-roman {
+                  path {
+                    fill: var(--color-primary);
+                  }
+                }
+              }
+              .button-area-right-header {
+                .menu-btn-toggle {
+                  svg {
+                    rect {
+                      fill: var(--color-primary);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//* sets nav link color: on home page
+header {
+  &.header--sticky:not(.sticky) {
+    &.home {
+      .container {
+        .row {
+          .header-four-wrapper {
+            .nav-area {
+              ul {
+                li {
+                  & > a.nav-link {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
