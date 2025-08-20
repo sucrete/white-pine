@@ -622,16 +622,19 @@ a {
   width: 260px;
   height: auto;
   margin-top: -2px;
+
+  path {
+    fill: white;
+  }
+}
+.white-pine-badge,
+.white-pine-offset {
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.03))
     drop-shadow(0 2px 2px rgba(0, 0, 0, 0.04))
     drop-shadow(0 4px 4px rgba(0, 0, 0, 0.05))
     drop-shadow(0 8px 8px rgba(0, 0, 0, 0.06))
     drop-shadow(0 16px 16px rgba(0, 0, 0, 0.07))
     drop-shadow(0 32px 32px rgba(0, 0, 0, 0.08));
-
-  path {
-    fill: white;
-  }
 }
 
 .white-pine-logo-roman {
@@ -651,7 +654,7 @@ header {
       display: none;
     }
     .white-pine-offset {
-      width: 190px;
+      width: 217px;
       height: auto;
       path {
         fill: white;
@@ -1436,7 +1439,7 @@ section {
               .white-pine-offset {
                 position: absolute;
                 display: unset;
-                top: -10px;
+                top: -13px;
                 left: 50%;
                 transform: translateX(-50%);
               }
@@ -1450,6 +1453,7 @@ section {
             .header-four-wrapper {
               .logo {
                 .white-pine-offset {
+                  width: 190px;
                   top: -16px;
                 }
               }
@@ -1775,7 +1779,7 @@ section {
       margin-bottom: 0rem;
       .short-introduction {
         p {
-          font-size: 13px;
+          font-size: 14px;
           line-height: 140%;
           margin-bottom: 1rem;
           letter-spacing: 0.4px;

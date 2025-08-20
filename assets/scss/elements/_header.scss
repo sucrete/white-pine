@@ -301,7 +301,7 @@ header .rts-btn {
 
     @media #{$mdsm-layout} {
       display: block;
-      top: 3px;
+      top: 5px;
       right: 2px;
       position: relative;
       svg {
@@ -321,7 +321,7 @@ header .rts-btn {
   @media #{$mdsm-layout} {
     &.header--sticky.sticky {
       .button-area-right-header {
-        top: 8px;
+        top: 7.5px;
         svg {
           rect {
             fill: white;
