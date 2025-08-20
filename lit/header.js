@@ -69,22 +69,17 @@ export class Header extends LitElement {
                 <img
                   src="/assets/images/logo/white-pine.svg"
                   alt=""
-                  class="white-pine-badge"
+                  class="white-pine-badge injectable"
                 />
                 <img
-                  src="/assets/images/logo/white-pine-offset.svg"
+                  src="/assets/images/logo/white-pine.svg"
                   alt=""
                   class="white-pine-offset injectable"
                 />
                 <img
-                  src="/assets/images/logo/white-pine-coarse-2.svg"
+                  src="/assets/images/logo/white-pine-flare.svg"
                   alt=""
                   class="white-pine-logo-roman injectable"
-                />
-                <img
-                  src="/assets/images/logo/lone-pine.svg"
-                  alt=""
-                  class="white-pine-logo-stag injectable"
                 />
               </a>
               <div class="nav-area">

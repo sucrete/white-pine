@@ -19,7 +19,7 @@ export class Footer extends LitElement {
                       <a href="index.html" class="logo">
                         <img
                           class="footer-logo"
-                          src="assets/images/logo/white-pine.svg"
+                          src="assets/images/logo/white-pine-flare.svg"
                           alt=""
                         />
                       </a>

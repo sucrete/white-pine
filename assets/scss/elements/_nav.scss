@@ -28,7 +28,7 @@
           transform: translateX(-50%);
           border-radius: 77px;
           position: absolute;
-          background: var(--color-primary);
+          background: #fff;
           transition: width 0.3s ease 0s, left 0.3s ease 0s,
             opacity 0.3s ease 0s;
           width: 0;
@@ -39,7 +39,7 @@
           &:after {
             width: 23px;
             // left: 0;
-            opacity: 1;
+            opacity: .5;
           }
         }
         &.active {
@@ -78,7 +78,8 @@
             .nav-link {
               &:after {
                 background: white;
-                background: var(--color-secondary)
+                // background: var(--color-secondary)
+                opacity: .5;
               }
             }
           }

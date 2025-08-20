@@ -994,4 +994,3 @@ export {
   B as svg,
   n as unsafeCSS,
 };
-//# sourceMappingURL=lit-core.min.js.map'

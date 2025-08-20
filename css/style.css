@@ -12343,7 +12343,7 @@ Copyright (c) 2015 Daniel Eden
 .header--sticky .logo {
   position: absolute;
   left: 50%;
-  top: 5%;
+  top: 33%;
   transform: translateX(-50%);
 }
 
@@ -12541,7 +12541,7 @@ Copyright (c) 2015 Daniel Eden
     position: relative;
   }
   .header-area-four .button-area-right-header svg rect {
-    fill: var(--color-primary);
+    fill: #fff;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -12613,7 +12613,7 @@ Copyright (c) 2015 Daniel Eden
   transform: translateX(-50%);
   border-radius: 77px;
   position: absolute;
-  background: var(--color-primary);
+  background: #fff;
   transition: width 0.3s ease 0s, left 0.3s ease 0s, opacity 0.3s ease 0s;
   width: 0;
   opacity: 0;
@@ -12623,7 +12623,7 @@ Copyright (c) 2015 Daniel Eden
 }
 .nav-area ul li a:not(.my-btn):hover:after {
   width: 23px;
-  opacity: 1;
+  opacity: 0.5;
 }
 .nav-area ul li a:not(.my-btn).active {
   color: #0e5023;
@@ -12645,7 +12645,7 @@ Copyright (c) 2015 Daniel Eden
 
 .header--sticky.header-area-four:not(.home) .header-four-wrapper .nav-area nav .parent-nav .nav-link:after {
   background: white;
-  background: var(--color-secondary);
+  opacity: 0.5;
 }
 
 .has-dropdown a {
@@ -12684,7 +12684,7 @@ li.has-dropdown .submenu {
   min-width: 275px;
   height: auto;
   position: absolute;
-  top: 95%;
+  top: 85%;
   left: 0;
   z-index: 99;
   opacity: 0;
@@ -12700,7 +12700,7 @@ li.has-dropdown .submenu {
   box-shadow: 0 36px 35px rgba(0, 0, 0, 0.08);
   padding: 0 0;
   transform-origin: 0 0;
-  transform: scaleY(0);
+  transform: scaleY(0.5);
 }
 li.has-dropdown .submenu li {
   margin-right: 0;
@@ -12759,7 +12759,7 @@ li.has-dropdown:hover .nav-link .chevron {
 li.has-dropdown:hover .submenu {
   opacity: 1;
   visibility: visible;
-  top: 95%;
+  top: 85%;
   transform: translateY(0);
   transform: scaleY(1);
 }
@@ -13035,7 +13035,7 @@ li.has-dropdown:hover .submenu li a {
 }
 .rts-btn.btn-primary {
   padding: 17px 15px;
-  padding-bottom: 19px;
+  padding-bottom: 20px;
   background: var(--color-secondary);
   gap: 31px;
   height: 48px;
@@ -14536,6 +14536,7 @@ section.cta.blonde .rts-cts-area {
 }
 .rts-footer-area .logo {
   display: block;
+  width: fit-content;
 }
 .rts-footer-area .logo-area {
   max-width: 322px;
@@ -14737,6 +14738,334 @@ section.cta.blonde .rts-cts-area {
   margin: 0;
   display: flex;
   align-items: center;
+}
+
+footer {
+  background: var(--color-primary);
+  color: white;
+}
+footer .container .row .logo-column.center-please {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .container .row .logo-column div:not(.that-group) {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .row .logo-column div:not(.that-group) .logo-brick {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5rem;
+  align-items: center;
+}
+footer .container .row .logo-column div:not(.that-group) .logo-brick .logo-col .footer-logo {
+  width: 280px;
+  height: auto;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.07)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.08)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.09)) drop-shadow(0 32px 32px rgba(0, 0, 0, 0.1));
+}
+footer .container .row .logo-column div:not(.that-group) .footer-form {
+  padding-bottom: 3rem;
+}
+footer .container .row .logo-column div:not(.that-group) .footer-form p {
+  color: white;
+}
+footer .container .row .logo-column div:not(.that-group) .footer-form .that-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+}
+footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input {
+  border-radius: 0;
+  height: 40px;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border: 1px solid var(--color-offset);
+  color: white;
+  background: #4e5540;
+}
+footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input::placeholder {
+  color: rgba(255, 255, 255, 0.435);
+}
+footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input:active, footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input:focus, footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input:hover {
+  border: 1px solid #6c7460;
+}
+footer .container .row .logo-column div:not(.that-group) .footer-form .that-group button {
+  height: 40px;
+  font-family: "Wayfarer";
+  letter-spacing: 1px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .footer-link-group-title {
+  font-family: "Wayfarer";
+  font-size: 16.5px;
+  letter-spacing: 1px;
+  opacity: 0.3;
+  padding-bottom: 1.25rem;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack {
+  padding-top: 0.25rem;
+  padding-right: 3rem;
+  color: rgba(255, 255, 255, 0.733);
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link {
+  transition: all 0.3s ease;
+  line-height: 145%;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link.map-link {
+  margin-top: 1.5rem;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon {
+  width: 20px;
+  height: auto;
+  margin-right: 15px;
+  position: relative;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.phone-icon {
+  top: -1px;
+  width: 26px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.phone-icon path {
+  fill: #b0632e;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.map-icon {
+  width: 25px;
+  bottom: -2px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link:hover {
+  color: rgb(255, 255, 255);
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack {
+  padding-left: 5rem;
+  color: rgba(255, 255, 255, 0.733);
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  line-height: 145%;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img {
+  width: 20px;
+  height: auto;
+  margin-right: 15px;
+  margin-top: -1.5px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.city {
+  width: 15px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.county {
+  width: 24px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.cc {
+  width: 20px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.nv {
+  width: 13px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.pony {
+  width: 21px;
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link:hover {
+  color: rgb(255, 255, 255);
+}
+footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link:not(:first-of-type) {
+  margin-top: 1rem;
+}
+footer .weather-card {
+  padding: 7rem;
+  position: relative;
+  top: -5px;
+  width: fit-content;
+  background-color: #4f5640;
+  min-width: 90%;
+  border-radius: 1px;
+}
+footer .weather-card .weather-heading {
+  color: white;
+  font-family: "IKOB";
+  font-size: 3rem;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+footer .weather-card .weather-heading .grey-text {
+  color: rgba(255, 255, 255, 0.65);
+  display: inline-block;
+  font-family: var(--font-primary);
+}
+footer .weather-card .weather-heading .grey-text .hyphen {
+  display: inline-block;
+}
+footer .weather-card .weather-heading .grey-text .break {
+  display: none;
+}
+footer .weather-card .card-body {
+  padding: 0;
+}
+footer .weather-card .row {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-medium);
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 0.65);
+  justify-content: center;
+  align-items: center;
+}
+footer .weather-card .row [class*=col] .tomorrow-icon,
+footer .weather-card .row [class*=col] .day-after-tomorrow-icon,
+footer .weather-card .row [class*=col] .three-days-from-today-icon {
+  width: 17px;
+}
+footer .weather-card .row.today-row {
+  padding-bottom: 1.75rem;
+}
+footer .weather-card .row.today-row .today-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .weather-card .row.today-row .today-icon .icon-img {
+  margin-top: -1px;
+  margin-left: -9px;
+  width: 52px;
+}
+footer .weather-card .row.today-row .today-temp {
+  font-size: 5.5rem;
+  padding: 0rem;
+  margin-left: -5px;
+  color: white;
+}
+footer .weather-card .row.today-row .today-temp .the-temp {
+  position: relative;
+}
+footer .weather-card .row.today-row .today-temp .the-temp:after {
+  content: "°F";
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  position: absolute;
+  right: -16px;
+  top: 8px;
+}
+footer .weather-card .row.today-row .today-weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .weather-card .row.today-row .today-weather .today-weather-wrapper {
+  width: fit-content;
+  padding-top: 0rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  line-height: 116%;
+}
+footer .weather-card .row.today-row .today-weather .today-weather-wrapper .what-weather {
+  color: white;
+  display: block;
+}
+footer .weather-card .row.today-row .today-weather .today-weather-wrapper .light-white {
+  display: block;
+  color: rgba(255, 255, 255, 0.6509803922);
+}
+footer .weather-card .row.today-row .today-weather .today-weather-wrapper .light-white .wind-icon {
+  width: 15px;
+  height: auto;
+  position: relative;
+  top: -0.5px;
+}
+footer .weather-card .row.future-row [class*=col] {
+  flex: 1;
+}
+footer .weather-card .row.future-row .icon {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.65;
+}
+@media screen and (max-width: 550px) {
+  footer .weather-card ._500 {
+    line-height: 130%;
+    margin-bottom: 1rem !important;
+  }
+  footer .weather-card ._500 .hyphen {
+    display: none;
+  }
+  footer .weather-card .card-body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+  }
+  footer .weather-card .card-body .today-icon {
+    padding-right: 0rem;
+  }
+}
+footer .rts-copyright-area-one {
+  color: white;
+}
+footer .rts-copyright-area-one .new-row p {
+  color: rgba(255, 255, 255, 0.733);
+}
+@media screen and (max-width: 1106px) {
+  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column .logo-brick .logo-col {
+    flex-basis: unset;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container .row .weather-col .weather-card {
+    padding: 5rem;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container .row .weather-col .weather-card .card-body .weather-heading {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column div:not(.that-group) .link-group {
+    font-size: 15px;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column div:not(.that-group) .link-group .contact-stack {
+    border-right: none;
+    border-bottom: 1px solid var(--color-offset);
+    padding-bottom: 2rem;
+    padding-right: 0;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column div:not(.that-group) .link-group .social-stack {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column .logo-brick .logo-col a {
+    margin: 0 auto;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container .row .weather-col .weather-card {
+    padding: 4rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  footer .gradient-footer-wrapper .rts-footer-area .container > .row {
+    padding-bottom: 4rem;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .logo-brick {
+    padding-bottom: 9rem;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .logo-brick .logo-col a .footer-logo {
+    width: 250px;
+    position: relative;
+    z-index: 98;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .footer-form {
+    padding-bottom: 5rem;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.map-icon {
+    width: 22px;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.phone-icon {
+    width: 25.5px;
+  }
+  footer .gradient-footer-wrapper .rts-footer-area .container > .row .weather-col .weather-card {
+    padding: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.25rem;
+    width: 100%;
+  }
 }
 
 .title-center-style-two {
@@ -16948,11 +17277,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16967,11 +17296,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(2) {
   z-index: 9;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(2).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -16986,28 +17315,9 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(1deg) translate(-50%, -50%);
-}
-.slyde:nth-child(3).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.in-view {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.in-view:after {
-  background-color: transparent;
-}
-
-.slyde:nth-child(4) {
-  z-index: 7;
   transform: rotate(0deg) translate(-50%, -50%);
 }
-.slyde:nth-child(4).leave {
+.slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
@@ -17022,13 +17332,32 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background-color: transparent;
 }
 
+.slyde:nth-child(4) {
+  z-index: 7;
+  transform: rotate(2deg) translate(-50%, -50%);
+}
+.slyde:nth-child(4).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(2deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.in-view {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.in-view:after {
+  background-color: transparent;
+}
+
 .slyde:nth-child(5) {
   z-index: 6;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(5).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17062,11 +17391,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(7) {
   z-index: 4;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(7).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17081,11 +17410,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17119,11 +17448,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -18004,19 +18333,20 @@ section.instruction-plaque {
 }
 .short-introduction p {
   color: #fcfaf4;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 140%;
   margin-bottom: 0rem;
+  letter-spacing: 0.3px;
   text-shadow: 0 0 19px black;
 }
 .short-introduction p .compass {
   display: inline-block;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 .short-introduction p .compass .compass-icon {
   position: relative;
   top: -3px;
-  width: 22px;
+  width: 17px;
   height: auto;
 }
 .short-introduction a {
@@ -18243,9 +18573,9 @@ a .single-solution-style-one:hover .bottom .card-subheading .arrow path {
 }
 
 .white-pine-badge {
-  width: 132px;
+  width: 260px;
   height: auto;
-  margin-top: 10px;
+  margin-top: -2px;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.03)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.05)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.06)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.07)) drop-shadow(0 32px 32px rgba(0, 0, 0, 0.08));
 }
 .white-pine-badge path {
@@ -18253,7 +18583,7 @@ a .single-solution-style-one:hover .bottom .card-subheading .arrow path {
 }
 
 .white-pine-logo-roman {
-  width: 240px;
+  width: 204px;
   height: auto;
 }
 .white-pine-logo-roman path {
@@ -18267,11 +18597,11 @@ header.header--sticky .white-pine-logo-stag {
   display: none;
 }
 header.header--sticky .white-pine-offset {
-  width: 200px;
+  width: 190px;
   height: auto;
 }
 header.header--sticky .white-pine-offset path {
-  fill: var(--color-primary);
+  fill: white;
 }
 header.header--sticky.sticky .white-pine-badge {
   display: none;
@@ -18283,6 +18613,9 @@ header.header--sticky.sticky .nav-area ul li a:not(.my-btn):after {
   bottom: 1.5rem;
   background: white;
   background: var(--color-secondary);
+}
+header.header--sticky.sticky .container .row [class*=col] .header-four-wrapper .nav-area .has-dropdown .submenu {
+  top: 95%;
 }
 header.style-white .white-pine-offset path {
   fill: white;
@@ -18296,7 +18629,7 @@ header.header-area-four.header--sticky:not(.sticky).subpage .container .row .hea
 }
 
 header.header--sticky:not(.sticky).home .container .row .header-four-wrapper .nav-area ul li > a.nav-link {
-  color: var(--color-primary);
+  color: #fff;
 }
 
 table {
@@ -18851,332 +19184,6 @@ section.calendar-section .title-bar p {
   margin-bottom: 0;
 }
 
-footer {
-  background: var(--color-primary);
-  color: white;
-}
-footer .container .row .logo-column.center-please {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-footer .container .row .logo-column div:not(.that-group) {
-  display: flex;
-  flex-direction: column;
-}
-footer .container .row .logo-column div:not(.that-group) .logo-brick {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 2rem;
-  align-items: center;
-}
-footer .container .row .logo-column div:not(.that-group) .logo-brick .logo-col .footer-logo {
-  width: 140px;
-  height: auto;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.07)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.08)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.09)) drop-shadow(0 32px 32px rgba(0, 0, 0, 0.1));
-}
-footer .container .row .logo-column div:not(.that-group) .footer-form {
-  padding-bottom: 3rem;
-}
-footer .container .row .logo-column div:not(.that-group) .footer-form p {
-  color: white;
-}
-footer .container .row .logo-column div:not(.that-group) .footer-form .that-group {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 10px;
-}
-footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input {
-  border-radius: 0;
-  height: 40px;
-  font-size: 16px;
-  padding: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  border: 1px solid var(--color-offset);
-  color: white;
-  background: #4e5540;
-}
-footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input::placeholder {
-  color: rgba(255, 255, 255, 0.435);
-}
-footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input:active, footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input:focus, footer .container .row .logo-column div:not(.that-group) .footer-form .that-group input:hover {
-  border: 1px solid #6c7460;
-}
-footer .container .row .logo-column div:not(.that-group) .footer-form .that-group button {
-  height: 40px;
-  font-family: "Wayfarer";
-  letter-spacing: 1px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .footer-link-group-title {
-  font-family: "Wayfarer";
-  font-size: 16.5px;
-  letter-spacing: 1px;
-  opacity: 0.3;
-  padding-bottom: 1.25rem;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack {
-  padding-top: 0.25rem;
-  padding-right: 3rem;
-  border-right: 1px solid var(--color-offset);
-  color: rgba(255, 255, 255, 0.733);
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link {
-  transition: all 0.3s ease;
-  line-height: 145%;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link.map-link {
-  margin-top: 1.5rem;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon {
-  width: 20px;
-  height: auto;
-  margin-right: 15px;
-  position: relative;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.phone-icon {
-  top: -1px;
-  width: 26px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.phone-icon path {
-  fill: #b0632e;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.map-icon {
-  width: 25px;
-  bottom: -2px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .contact-stack .link:hover {
-  color: rgb(255, 255, 255);
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack {
-  padding-left: 3rem;
-  color: rgba(255, 255, 255, 0.733);
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link {
-  text-decoration: none;
-  transition: all 0.3s ease;
-  line-height: 145%;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img {
-  width: 20px;
-  height: auto;
-  margin-right: 15px;
-  margin-top: -1.5px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.city {
-  width: 15px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.county {
-  width: 24px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.cc {
-  width: 20px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.nv {
-  width: 13px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link img.pony {
-  width: 21px;
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link:hover {
-  color: rgb(255, 255, 255);
-}
-footer .container .row .logo-column div:not(.that-group) .link-group .social-stack .social-link:not(:first-of-type) {
-  margin-top: 1rem;
-}
-footer .weather-card {
-  padding: 7rem;
-  position: relative;
-  top: -5px;
-  width: fit-content;
-  background-color: #4f5640;
-  min-width: 90%;
-  border-radius: 1px;
-}
-footer .weather-card .weather-heading {
-  color: white;
-  font-family: "IKOB";
-  font-size: 3rem;
-  text-align: center;
-  justify-content: center;
-  padding-bottom: 3rem;
-}
-footer .weather-card .weather-heading .grey-text {
-  color: rgba(255, 255, 255, 0.65);
-  display: inline-block;
-  font-family: var(--font-primary);
-}
-footer .weather-card .weather-heading .grey-text .hyphen {
-  display: inline-block;
-}
-footer .weather-card .weather-heading .grey-text .break {
-  display: none;
-}
-footer .weather-card .card-body {
-  padding: 0;
-}
-footer .weather-card .row {
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-family: var(--font-medium);
-  padding: 10px 0;
-  color: rgba(255, 255, 255, 0.65);
-  justify-content: center;
-  align-items: center;
-}
-footer .weather-card .row [class*=col] .tomorrow-icon,
-footer .weather-card .row [class*=col] .day-after-tomorrow-icon,
-footer .weather-card .row [class*=col] .three-days-from-today-icon {
-  width: 17px;
-}
-footer .weather-card .row.today-row {
-  padding-bottom: 1.75rem;
-}
-footer .weather-card .row.today-row .today-icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-footer .weather-card .row.today-row .today-icon .icon-img {
-  margin-top: -1px;
-  margin-left: -9px;
-  width: 52px;
-}
-footer .weather-card .row.today-row .today-temp {
-  font-size: 5.5rem;
-  padding: 0rem;
-  margin-left: -5px;
-  color: white;
-}
-footer .weather-card .row.today-row .today-temp .the-temp {
-  position: relative;
-}
-footer .weather-card .row.today-row .today-temp .the-temp:after {
-  content: "°F";
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.65);
-  position: absolute;
-  right: -16px;
-  top: 8px;
-}
-footer .weather-card .row.today-row .today-weather {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-footer .weather-card .row.today-row .today-weather .today-weather-wrapper {
-  width: fit-content;
-  padding-top: 0rem;
-  padding-left: 0rem;
-  padding-right: 0rem;
-  line-height: 116%;
-}
-footer .weather-card .row.today-row .today-weather .today-weather-wrapper .what-weather {
-  color: white;
-  display: block;
-}
-footer .weather-card .row.today-row .today-weather .today-weather-wrapper .light-white {
-  display: block;
-  color: rgba(255, 255, 255, 0.6509803922);
-}
-footer .weather-card .row.today-row .today-weather .today-weather-wrapper .light-white .wind-icon {
-  width: 15px;
-  height: auto;
-  position: relative;
-  top: -0.5px;
-}
-footer .weather-card .row.future-row [class*=col] {
-  flex: 1;
-}
-footer .weather-card .row.future-row .icon {
-  text-align: center;
-  font-size: 1.2rem;
-  opacity: 0.65;
-}
-@media screen and (max-width: 550px) {
-  footer .weather-card ._500 {
-    line-height: 130%;
-    margin-bottom: 1rem !important;
-  }
-  footer .weather-card ._500 .hyphen {
-    display: none;
-  }
-  footer .weather-card .card-body {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2.5rem;
-    padding-top: 1rem;
-  }
-  footer .weather-card .card-body .today-icon {
-    padding-right: 0rem;
-  }
-}
-footer .rts-copyright-area-one {
-  color: white;
-}
-footer .rts-copyright-area-one .new-row p {
-  color: rgba(255, 255, 255, 0.733);
-}
-@media screen and (max-width: 1106px) {
-  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column .logo-brick .logo-col {
-    flex-basis: unset;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container .row .weather-col .weather-card {
-    padding: 5rem;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container .row .weather-col .weather-card .card-body .weather-heading {
-    padding: 1rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column div:not(.that-group) .link-group {
-    font-size: 15px;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column div:not(.that-group) .link-group .contact-stack {
-    border-right: none;
-    border-bottom: 1px solid var(--color-offset);
-    padding-bottom: 2rem;
-    padding-right: 0;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container .row .logo-column div:not(.that-group) .link-group .social-stack {
-    padding-left: 0;
-    padding-top: 2rem;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container .row .weather-col .weather-card {
-    padding: 4rem;
-  }
-}
-@media screen and (max-width: 576px) {
-  footer .gradient-footer-wrapper .rts-footer-area .container > .row {
-    padding-bottom: 4rem;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .logo-brick {
-    padding-bottom: 2rem;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .logo-brick .logo-col a .footer-logo {
-    width: 100px;
-    position: relative;
-    z-index: 98;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column .footer-form {
-    padding-bottom: 5rem;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.map-icon {
-    width: 22px;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container > .row .logo-column div:not(.that-group) .link-group .contact-stack .link .icon.phone-icon {
-    width: 25.5px;
-  }
-  footer .gradient-footer-wrapper .rts-footer-area .container > .row .weather-col .weather-card {
-    padding: 1rem;
-    padding-top: 1.5rem;
-    padding-bottom: 0.25rem;
-    width: 100%;
-  }
-}
-
 @media (max-width: 992px) {
   header.header-area-four .container .row .header-four-wrapper {
     height: 70px;
@@ -19186,20 +19193,21 @@ footer .rts-copyright-area-one .new-row p {
   header.header-area-four .container .row .header-four-wrapper a.logo {
     position: absolute;
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   header.header-area-four .container .row .header-four-wrapper a.logo .white-pine-badge {
     display: none;
   }
   header.header-area-four .container .row .header-four-wrapper a.logo .white-pine-offset {
-    position: relative;
+    position: absolute;
     display: unset;
-    top: 3px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   header.header-area-four.header--sticky.sticky .container .row .header-four-wrapper .logo .white-pine-offset {
-    top: 0px;
-    display: none;
+    top: -16px;
   }
   header.header-area-four:not(.home) .container .row .header-four-wrapper .button-area-right-header .menu-btn-toggle svg rect {
     fill: white;
@@ -19369,14 +19377,14 @@ footer .rts-copyright-area-one .new-row p {
     margin-bottom: 0rem;
   }
   .banner-four-area.home-page .container .short-introduction p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 140%;
     margin-bottom: 1rem;
     letter-spacing: 0.4px;
-    text-shadow: 0 0 12px black;
+    text-shadow: none;
   }
   .banner-four-area.home-page .container .short-introduction p .compass .compass-icon {
-    width: 16px;
+    width: 14px;
   }
   .banner-four-area.home-page .container .short-introduction a .trip-advisor-bite {
     padding: 1rem 0rem 0.5rem 0.25rem;

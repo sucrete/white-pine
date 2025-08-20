@@ -17,7 +17,7 @@ li.has-dropdown {
     min-width: 275px;
     height: auto;
     position: absolute;
-    top: 95%;
+    top: 85%;
     left: 0;
     z-index: 99;
     opacity: 0;
@@ -33,7 +33,7 @@ li.has-dropdown {
     box-shadow: 0 36px 35px rgba(0, 0, 0, 0.08);
     padding: 0 0;
     transform-origin: 0 0;
-    transform: scaleY(0);
+    transform: scaleY(0.5);
 
     li {
       margin-right: 0;
@@ -103,7 +103,7 @@ li.has-dropdown {
     .submenu {
       opacity: 1;
       visibility: visible;
-      top: 95%;
+      top: 85%;
       transform: translateY(0);
       transform: scaleY(1);
       li {

@@ -62,7 +62,7 @@ header .rts-btn {
   .logo {
     position: absolute;
     left: 50%;
-    top: 5%;
+    top: 33%;
     transform: translateX(-50%);
   }
 }
@@ -306,7 +306,7 @@ header .rts-btn {
       position: relative;
       svg {
         rect {
-          fill: var(--color-primary);
+          fill: #fff;
         }
       }
     }
