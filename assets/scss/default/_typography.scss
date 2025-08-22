@@ -4,21 +4,18 @@
 
 @font-face {
   font-family: "Aeonik";
-  src: 
-    url("../assets/fonts/Aeonik-Regular.otf") format("opentype");
+  src: url("../assets/fonts/Aeonik-Regular.otf") format("opentype");
   // font-weight: 500;
 }
 @font-face {
   font-family: "Aeonik Medium";
-  src: 
-    url("../assets/fonts/Aeonik-Medium.otf") format("opentype");
+  src: url("../assets/fonts/Aeonik-Medium.otf") format("opentype");
   // font-weight: 500;
 }
 
 @font-face {
   font-family: "Wayfarer";
-  src: 
-    url("../assets/fonts/Wayfarer-Regular.otf") format("opentype");
+  src: url("../assets/fonts/Wayfarer-Regular.otf") format("opentype");
   // font-weight: 500;
 }
 
@@ -31,9 +28,9 @@
 }
 @font-face {
   font-family: "IKOB Italic";
-  src: url("../assets/fonts/happy-times-NG_italic_master.otf") format("opentype");
-  font-weight: normal;
-  font-style: italic;
+  src: url("../assets/fonts/ikob-italic.woff2") format("woff2"),
+    url("../assets/fonts/happy-times-NG_italic_master.otf") format("opentype"),
+    url("../assets/fonts/ikob-italic.otf") format("opentype");
 }
 
 * {
