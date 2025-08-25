@@ -323,6 +323,8 @@ $outline-color: #e6e6e6;
         padding: 0;
         color: #767364;
         letter-spacing: 0.2px;
+        white-space: pre-line;
+        line-height: 1.4;
       }
       .event-list-footer {
         padding: 2rem 0 0 0;
@@ -387,6 +389,95 @@ $outline-color: #e6e6e6;
       width: auto;
       margin-right: 15px;
       opacity: 0.23;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    &.calendar-section,
+    &.calendar-and-facebook-section {
+      .container {
+        .modal {
+          .modal-dialog {
+            .modal-content {
+              .modal-header {
+                padding: 2.5rem 2rem 0.75rem 2rem;
+                .modal-title {
+                  font-size: 22px;
+                  line-height: 1.1;
+                  width: 85%;
+                }
+                .close-button-wrapper {
+                  top: 2rem;
+                  right: 2rem;
+                }
+              }
+              .modal-body-wrapper {
+                padding: 2rem;
+                padding-top: 0;
+                font-size: 14px;
+                .date-wrapper {
+                  .date-icon {
+                    width: 12px;
+                    top: -2px;
+                  }
+                }
+              }
+              .modal-footer {
+                padding: 0.5rem 2.5rem 2rem 2rem;
+              }
+            }
+          }
+        }
+        #calendar,
+        #events-list {
+          .fc-view-harness {
+            .fc-daygrid {
+              table {
+                thead {
+                  .fc-col-header-cell-cushion {
+                    font-size: 12px;
+                    padding-bottom: 5px;
+                  }
+                }
+              }
+            }
+            .fc-monthList-view {
+              .events-list-wrapper {
+                .event-list-item {
+                  padding: 2.5rem 2rem 2.75rem 2rem;
+                  .event-list-title {
+                    font-size: 22px;
+                    line-height: 1.1;
+                    hyphens: auto;
+                    word-break: break-word;
+                  }
+                  .event-list-date-wrapper,
+                  .event-list-description {
+                    font-size: 14px;
+                  }
+                  .event-list-date-wrapper {
+                    .date-icon {
+                      height: 12px;
+                      top: -1.5px;
+                      margin-right: 4px;
+                      &-home {
+                        top: -0.5px;
+                        margin-right: 6px;
+                      }
+                    }
+                  }
+                  .event-list-description {
+                    line-height: 1.4;
+                    white-space: pre-line;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

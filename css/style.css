@@ -16430,7 +16430,7 @@ footer .rts-copyright-area-one .new-row p {
 .side-bar.show {
   right: 0;
   overflow-y: auto;
-  box-shadow: -5px 0 30px 20px rgba(0, 0, 0, 0.2196078431);
+  box-shadow: -5px 0 30px 61px rgba(0, 0, 0, 0.15);
 }
 
 .side-bar button {
@@ -17346,11 +17346,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(-1deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-1deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17384,11 +17384,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(3) {
   z-index: 8;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(3).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17403,11 +17403,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17422,11 +17422,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(5) {
   z-index: 6;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(5).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17441,11 +17441,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(6) {
   z-index: 5;
-  transform: rotate(-2deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(6).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-2deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17460,11 +17460,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(7) {
   z-index: 4;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(7).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17479,11 +17479,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17498,11 +17498,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-3deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-3deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -17517,11 +17517,11 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -18028,6 +18028,8 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   padding: 0;
   color: #767364;
   letter-spacing: 0.2px;
+  white-space: pre-line;
+  line-height: 1.4;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer {
   padding: 2rem 0 0 0;
@@ -18101,6 +18103,79 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   opacity: 0.23;
 }
 
+@media screen and (max-width: 768px) {
+  section.calendar-section .container .modal .modal-dialog .modal-content .modal-header, section.calendar-and-facebook-section .container .modal .modal-dialog .modal-content .modal-header {
+    padding: 2.5rem 2rem 0.75rem 2rem;
+  }
+  section.calendar-section .container .modal .modal-dialog .modal-content .modal-header .modal-title, section.calendar-and-facebook-section .container .modal .modal-dialog .modal-content .modal-header .modal-title {
+    font-size: 22px;
+    line-height: 1.1;
+    width: 85%;
+  }
+  section.calendar-section .container .modal .modal-dialog .modal-content .modal-header .close-button-wrapper, section.calendar-and-facebook-section .container .modal .modal-dialog .modal-content .modal-header .close-button-wrapper {
+    top: 2rem;
+    right: 2rem;
+  }
+  section.calendar-section .container .modal .modal-dialog .modal-content .modal-body-wrapper, section.calendar-and-facebook-section .container .modal .modal-dialog .modal-content .modal-body-wrapper {
+    padding: 2rem;
+    padding-top: 0;
+    font-size: 14px;
+  }
+  section.calendar-section .container .modal .modal-dialog .modal-content .modal-body-wrapper .date-wrapper .date-icon, section.calendar-and-facebook-section .container .modal .modal-dialog .modal-content .modal-body-wrapper .date-wrapper .date-icon {
+    width: 12px;
+    top: -2px;
+  }
+  section.calendar-section .container .modal .modal-dialog .modal-content .modal-footer, section.calendar-and-facebook-section .container .modal .modal-dialog .modal-content .modal-footer {
+    padding: 0.5rem 2.5rem 2rem 2rem;
+  }
+  section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table thead .fc-col-header-cell-cushion,
+  section.calendar-section .container #events-list .fc-view-harness .fc-daygrid table thead .fc-col-header-cell-cushion, section.calendar-and-facebook-section .container #calendar .fc-view-harness .fc-daygrid table thead .fc-col-header-cell-cushion,
+  section.calendar-and-facebook-section .container #events-list .fc-view-harness .fc-daygrid table thead .fc-col-header-cell-cushion {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+  section.calendar-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item,
+  section.calendar-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item, section.calendar-and-facebook-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item,
+  section.calendar-and-facebook-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item {
+    padding: 2.5rem 2rem 2.75rem 2rem;
+  }
+  section.calendar-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-title,
+  section.calendar-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-title, section.calendar-and-facebook-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-title,
+  section.calendar-and-facebook-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-title {
+    font-size: 22px;
+    line-height: 1.1;
+    hyphens: auto;
+    word-break: break-word;
+  }
+  section.calendar-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper,
+  section.calendar-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-description,
+  section.calendar-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper,
+  section.calendar-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-description, section.calendar-and-facebook-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper,
+  section.calendar-and-facebook-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-description,
+  section.calendar-and-facebook-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper,
+  section.calendar-and-facebook-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-description {
+    font-size: 14px;
+  }
+  section.calendar-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon,
+  section.calendar-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon, section.calendar-and-facebook-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon,
+  section.calendar-and-facebook-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon {
+    height: 12px;
+    top: -1.5px;
+    margin-right: 4px;
+  }
+  section.calendar-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon-home,
+  section.calendar-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon-home, section.calendar-and-facebook-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon-home,
+  section.calendar-and-facebook-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-date-wrapper .date-icon-home {
+    top: -0.5px;
+    margin-right: 6px;
+  }
+  section.calendar-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-description,
+  section.calendar-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-description, section.calendar-and-facebook-section .container #calendar .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-description,
+  section.calendar-and-facebook-section .container #events-list .fc-view-harness .fc-monthList-view .events-list-wrapper .event-list-item .event-list-description {
+    line-height: 1.4;
+    white-space: pre-line;
+  }
+}
 html {
   background-color: #4c533f;
 }

@@ -100,9 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       </div>
                     </div>
                     <hr/>
-                    <div class="event-list-description">
-                      ${seg.def.extendedProps.eventDescription}
-                    </div>
+                    <div class="event-list-description">${seg.def.extendedProps.eventDescription}</div>
                      <div class="event-list-footer d-flex flex-column flex-md-row ${
                        seg.def.extendedProps.linkQuestion ||
                        seg.def.extendedProps.flyerQuestion

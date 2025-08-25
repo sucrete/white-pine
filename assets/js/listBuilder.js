@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <div class="event-list-item">
                     <div class="event-list-title">${seg.def.title}</div>
                     <div class="event-list-date-wrapper d-flex flex-row align-items-center">
-                     <img src="assets/images/icons/calendar.svg" class="date-icon" alt=""/>
+                     <img src="assets/images/icons/calendar.svg" class="date-icon date-icon-home" alt=""/>
                       <div class="event-list-date-start">
                         ${moment(seg.range.start)
                           .add(1, "days")
@@ -67,15 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
                       </div>
                     </div>
                     <hr/>
-                    <div class="event-list-description">
-                      ${seg.def.extendedProps.eventDescription}
-                    </div>
-                     <div class="event-list-footer d-flex flex-column flex-md-row  ${
-                       seg.def.extendedProps.linkQuestion ||
-                       seg.def.extendedProps.flyerQuestion
-                         ? ""
-                         : "no-buttons"
-                     }">
+                    <div class="event-list-description">${seg.def.extendedProps.eventDescription}</div>
+                    <div class="event-list-footer d-flex flex-column flex-md-row  ${
+                      seg.def.extendedProps.linkQuestion ||
+                      seg.def.extendedProps.flyerQuestion
+                        ? ""
+                        : "no-buttons"
+                    }">
                  ${
                    seg.def.extendedProps?.flyer
                      ? `<a href="${
