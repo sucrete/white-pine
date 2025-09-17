@@ -16,7 +16,7 @@
   flex-direction: column;
   overflow-y: auto;
   overflow: visible;
-  box-shadow: -5px 0 10px 20px #00000000;
+  box-shadow:-5px 0 20px 100px #00000000;
   @media #{$large-mobile} {
     width: 90%;
   }
@@ -61,27 +61,25 @@
       }
     }
   }
-}
-
-.side-bar.show {
-  right: 0;
-  overflow-y: auto;
-  box-shadow: -5px 0 30px 61px rgba(0, 0, 0, 0.15);
-}
-
-.side-bar button {
-  width: 42px;
-  height: 42px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  border: none;
-  background-color: var(--color-primary);
-  svg {
-    width: 14px;
-    @include center-it;
-    polygon {
-      fill: #fff;
+  &.show {
+    right: 0;
+    overflow-y: auto;
+    box-shadow:-5px 0 100px 70px #0000003d;
+  }
+  button {
+    width: 42px;
+    height: 42px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: none;
+    background-color: var(--color-primary);
+    svg {
+      width: 14px;
+      @include center-it;
+      polygon {
+        fill: #fff;
+      }
     }
   }
 }
