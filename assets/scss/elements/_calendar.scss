@@ -173,6 +173,7 @@ $modal-margin: 3rem;
           font-size: 24px;
           width: 90%;
           line-height: 1.2;
+          letter-spacing: -.5px;
         }
         .close-button-wrapper {
           background-color: #f9f9f9;
@@ -296,6 +297,7 @@ $outline-color: #e6e6e6;
         color: rgb(29, 29, 29);
         font-size: 24px;
         padding-bottom: 0.75rem;
+        letter-spacing: -.5px;
       }
       .event-list-date-wrapper {
         color: hsla(50, 8%, 45%, 0.836);

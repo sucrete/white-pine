@@ -1,3 +1,37 @@
+// ── ADA Accessibility ──────────────────────────────────────────────────────
+
+// Skip navigation link (visually hidden until focused)
+.skip-to-main {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 99999;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+
+  &:focus {
+    top: 0;
+    outline: 3px solid #1a5276;
+    outline-offset: 2px;
+  }
+}
+
+// Focus indicators — visible on keyboard navigation
+:focus-visible {
+  outline: 3px solid #e8a000;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+
 html {
   background-color: #4c533f;
 }
@@ -229,6 +263,7 @@ section {
             margin-bottom: 0.5rem;
             color: var(--color-secondary);
             margin-left: -3px;
+            letter-spacing: -1px;
           }
           hr {
             margin: 2rem 0;
