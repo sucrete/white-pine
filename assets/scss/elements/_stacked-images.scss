@@ -4,6 +4,8 @@
 // }
 
 .reload-button {
+  @include center-it;
+  width: fit-content;
   border: none;
   background-color: rgb(235 235 235);
   color: #b4b4b4;

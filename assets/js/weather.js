@@ -1,163 +1,111 @@
-//~ Standard Variables
-// API URL
-const coordinates = "39.263,-114.858";
-const key = "EqRw5datS5zL99ze3FwQ8Q7PJEtJAC0i";
+const LAT = 39.263;
+const LON = -114.858;
 
-const apiUrl = `https://api.pirateweather.net/forecast/${key}/${coordinates}?exclude=minutely,hourly,alerts,flags`;
+const apiUrl =
+  `https://api.open-meteo.com/v1/forecast` +
+  `?latitude=${LAT}&longitude=${LON}` +
+  `&current=temperature_2m,weather_code,wind_speed_10m` +
+  `&daily=weather_code,temperature_2m_max,temperature_2m_min` +
+  `&temperature_unit=fahrenheit&wind_speed_unit=mph` +
+  `&timezone=America%2FLos_Angeles&forecast_days=5`;
 
-// Days of the week
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 var weatherData;
 
-//~ First call Pirate Weather API
 async function getWeather() {
-  await fetch(apiUrl, { cache: "no-store" })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      // console.log(JSON.stringify(data, null, 2));
-      // code below gets day of the week
-      // console.log(
-      //   `%c${days[new Date(data.currently.time * 1000).getDay()]}`,
-      //   "color:green"
-      // );
-      weatherData = data;
-      return data;
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+  try {
+    const res = await fetch(apiUrl, { cache: 'no-store' });
+    if (!res.ok) throw new Error('Network response was not ok');
+    weatherData = await res.json();
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
-//~ Begin DOM manipulation - fired when fetch to API is finished - receives data object
 async function populateDOM() {
   await getWeather();
-  // now you can directly use jsonData
 
   //~ grab all DOM elements
   // today
-  const weatherIcon = document.getElementsByClassName("icon-img")[0];
-  const theTemp = document.getElementsByClassName("the-temp")[0];
-  const weather = document.getElementsByClassName("what-weather")[0];
-  const windSpeed = document.getElementsByClassName("wind")[0];
+  const weatherIcon     = document.getElementsByClassName('icon-img')[0];
+  const theTemp         = document.getElementsByClassName('the-temp')[0];
+  const weather         = document.getElementsByClassName('what-weather')[0];
+  const windSpeed       = document.getElementsByClassName('wind')[0];
 
   // tomorrow
-  const tomorrowDay = document.getElementsByClassName("tomorrow")[0];
-  const tomorrowWeatherIcon =
-    document.getElementsByClassName("tomorrow-icon")[0];
-  const tomorrowHi = document
-    .getElementsByClassName("future-row-1")[0]
-    .getElementsByClassName("hi")[0];
-  const tomorrowLo = document
-    .getElementsByClassName("future-row-1")[0]
-    .getElementsByClassName("lo")[0];
+  const tomorrowDay         = document.getElementsByClassName('tomorrow')[0];
+  const tomorrowWeatherIcon = document.getElementsByClassName('tomorrow-icon')[0];
+  const tomorrowHi          = document.getElementsByClassName('future-row-1')[0].getElementsByClassName('hi')[0];
+  const tomorrowLo          = document.getElementsByClassName('future-row-1')[0].getElementsByClassName('lo')[0];
 
   // day after tomorrow
-  const dayAfterTomorrowDay =
-    document.getElementsByClassName("day-after-tomorrow")[0];
-  const dayAfterTomorrowIcon = document.getElementsByClassName(
-    "day-after-tomorrow-icon"
-  )[0];
-  const dayAfterTomorrowHi = document
-    .getElementsByClassName("future-row-2")[0]
-    .getElementsByClassName("hi")[0];
-  const dayAfterTomorrowLo = document
-    .getElementsByClassName("future-row-2")[0]
-    .getElementsByClassName("lo")[0];
+  const dayAfterTomorrowDay  = document.getElementsByClassName('day-after-tomorrow')[0];
+  const dayAfterTomorrowIcon = document.getElementsByClassName('day-after-tomorrow-icon')[0];
+  const dayAfterTomorrowHi   = document.getElementsByClassName('future-row-2')[0].getElementsByClassName('hi')[0];
+  const dayAfterTomorrowLo   = document.getElementsByClassName('future-row-2')[0].getElementsByClassName('lo')[0];
 
   // three days from today
-  const threeDaysFromTodayDay = document.getElementsByClassName(
-    "three-days-from-today"
-  )[0];
-  const threeDaysFromTodayIcon = document.getElementsByClassName(
-    "three-days-from-today-icon"
-  )[0];
-  const threeDaysFromTodayHi = document
-    .getElementsByClassName("future-row-3")[0]
-    .getElementsByClassName("hi")[0];
-  const threeDaysFromTodayLo = document
-    .getElementsByClassName("future-row-3")[0]
-    .getElementsByClassName("lo")[0];
+  const threeDaysFromTodayDay  = document.getElementsByClassName('three-days-from-today')[0];
+  const threeDaysFromTodayIcon = document.getElementsByClassName('three-days-from-today-icon')[0];
+  const threeDaysFromTodayHi   = document.getElementsByClassName('future-row-3')[0].getElementsByClassName('hi')[0];
+  const threeDaysFromTodayLo   = document.getElementsByClassName('future-row-3')[0].getElementsByClassName('lo')[0];
 
   //~ Set Today's Weather
-  // console.log(weatherData.currently.icon);
-  const today = weatherData.currently;
-  // set today's icon
-  const iconPath = assignIcon(today.icon);
-  weatherIcon.src = `./assets/images/icons/${iconPath}.png`;
+  const current = weatherData.current;
+  weatherIcon.src      = `./assets/images/icons/${assignIcon(current.weather_code, current.wind_speed_10m)}.png`;
+  theTemp.innerHTML    = Math.ceil(current.temperature_2m);
+  weather.innerHTML    = weatherLabel(current.weather_code, current.wind_speed_10m);
+  windSpeed.innerHTML  = Math.ceil(current.wind_speed_10m);
 
-  // set today's temperature readable
-  theTemp.innerHTML = Math.ceil(today.temperature);
+  //~ Set Forecast
+  const daily = weatherData.daily;
 
-  // set today's weather readable
-  weather.innerHTML = today.summary;
+  const setForecast = (index, dayEl, iconEl, hiEl, loEl) => {
+    dayEl.innerHTML  = days[dayFromISO(daily.time[index])];
+    iconEl.src       = `./assets/images/icons/${assignIcon(daily.weather_code[index])}.svg`;
+    hiEl.innerHTML   = Math.ceil(daily.temperature_2m_max[index]);
+    loEl.innerHTML   = Math.ceil(daily.temperature_2m_min[index]);
+  };
 
-  // set today's wind speed
-  windSpeed.innerHTML = Math.ceil(today.windSpeed);
-
-  //~ set tomorrow's Weather
-  const tomorrow = weatherData.daily.data[2];
-  tomorrowDay.innerHTML = days[new Date(tomorrow.time * 1000).getDay()];
-  tomorrowWeatherIcon.src = `./assets/images/icons/${assignIcon(
-    tomorrow.icon
-  )}.svg`;
-  tomorrowHi.innerHTML = Math.ceil(tomorrow.temperatureHigh);
-  tomorrowLo.innerHTML = Math.ceil(tomorrow.temperatureLow);
-
-  //~ set day after tomorrow's Weather
-  const DAT = weatherData.daily.data[3];
-  dayAfterTomorrowDay.innerHTML = days[new Date(DAT.time * 1000).getDay()];
-  dayAfterTomorrowIcon.src = `./assets/images/icons/${assignIcon(
-    DAT.icon
-  )}.svg`;
-  dayAfterTomorrowHi.innerHTML = Math.ceil(DAT.temperatureHigh);
-  dayAfterTomorrowLo.innerHTML = Math.ceil(DAT.temperatureLow);
-
-  //~ set three days from today's Weather
-  const thirdOut = weatherData.daily.data[4];
-  threeDaysFromTodayDay.innerHTML =
-    days[new Date(thirdOut.time * 1000).getDay()];
-  threeDaysFromTodayIcon.src = `./assets/images/icons/${assignIcon(
-    thirdOut.icon
-  )}.svg`;
-  threeDaysFromTodayHi.innerHTML = Math.ceil(thirdOut.temperatureHigh);
-  threeDaysFromTodayLo.innerHTML = Math.ceil(thirdOut.temperatureLow);
+  setForecast(1, tomorrowDay,         tomorrowWeatherIcon, tomorrowHi,         tomorrowLo);
+  setForecast(2, dayAfterTomorrowDay, dayAfterTomorrowIcon, dayAfterTomorrowHi, dayAfterTomorrowLo);
+  setForecast(3, threeDaysFromTodayDay, threeDaysFromTodayIcon, threeDaysFromTodayHi, threeDaysFromTodayLo);
 }
 
-getWeather();
 populateDOM();
 
-const assignIcon = function (icon) {
-  // console.log(`%c${icon}`, "color: orange");
-  let iconSrc;
-  if (icon == "clear-day" || icon == "clear-night") {
-    iconSrc = "sun";
-  } else if (icon == "rain") {
-    iconSrc = "rain";
-  } else if (icon == "snow" || icon == "sleet") {
-    iconSrc = "snow";
-  } else if (icon == "wind") {
-    iconSrc = "wind";
-  } else if (icon == "fog") {
-    iconSrc = "foggy";
-  } else if (icon == "cloudy") {
-    iconSrc = "cloudy";
-  } else if (icon == "partly-cloudy-day" || icon == "partly-cloudy-night") {
-    iconSrc = "part-cloud";
-  }
-  // console.log(`%c${iconSrc}`, "color: yellow");
-  return iconSrc;
-};
+// WMO weather code → icon filename
+function assignIcon(code, wind = 0) {
+  if (wind > 20)       return 'wind';
+  if (code === 0)      return 'sun';
+  if (code <= 2)       return 'part-cloud';
+  if (code === 3)      return 'cloudy';
+  if (code <= 48)      return 'foggy';
+  if (code <= 67)      return 'rain';   // drizzle + rain
+  if (code <= 77)      return 'snow';   // snow/sleet
+  if (code <= 82)      return 'rain';   // rain showers
+  if (code <= 86)      return 'snow';   // snow showers
+  return                      'rain';   // thunderstorm
+}
+
+// WMO weather code → human-readable label
+function weatherLabel(code, wind = 0) {
+  if (wind > 20)       return 'Windy';
+  if (code === 0)      return 'Clear';
+  if (code <= 2)       return 'Partly Cloudy';
+  if (code === 3)      return 'Cloudy';
+  if (code <= 48)      return 'Foggy';
+  if (code <= 57)      return 'Drizzle';
+  if (code <= 67)      return 'Rainy';
+  if (code <= 77)      return 'Snowy';
+  if (code <= 82)      return 'Showers';
+  if (code <= 86)      return 'Snow Showers';
+  return                      'Stormy';
+}
+
+// Parse ISO date string (YYYY-MM-DD) to day-of-week index without UTC shift
+function dayFromISO(dateStr) {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  return new Date(y, m - 1, d).getDay();
+}
