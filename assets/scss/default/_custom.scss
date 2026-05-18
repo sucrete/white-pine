@@ -489,7 +489,7 @@ section {
         .warning-icon-wrapper {
           position: absolute;
           transform: translate(-50%, -50%);
-          top: 27%;
+          top: 22px;
           left: 67%;
           .warning-icon {
             width: 18px;
@@ -518,6 +518,7 @@ section {
         position: relative;
         z-index: 9;
         padding: 0.5rem;
+        padding-bottom: .8rem;
         width: 87%;
         // padding-right: 1.25rem;
         flex-basis: auto;
@@ -528,7 +529,7 @@ section {
             font-family: "Aeonik Medium";
             font-size: 17px;
             color: oklch(55.4% 0.135 66.442);
-            margin-bottom: 1px;
+            margin-bottom: 3px;
             letter-spacing: 0.2px;
           }
           .frost-warning-text {
