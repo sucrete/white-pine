@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         row(isr?.juniorLabel      || 'Junior',                  isr?.juniorDef,      isr?.junior9,      isr?.junior18),
         row(isr?.nonResidentLabel || 'Non-Resident',            isr?.nonResidentDef, isr?.nonResident9, isr?.nonResident18),
         row(isr?.cartsLabel       || 'Carts',                   isr?.cartsDef,       isr?.carts9,       isr?.carts18),
-        row(isr?.additional9Label || 'Additional 9 Hole Round', isr?.additional9Def, isr?.additional9,  '--'),
+        row(isr?.additional9Label       || 'Additional 9 Hole Round',    isr?.additional9Def,       isr?.additional9,       '--'),
+        row(isr?.additional9CartFeeLabel || 'Additional 9-Hole Cart Fee', isr?.additional9CartFeeDef, isr?.additional9CartFee, '--'),
       ].join('');
 
       // — Par 3 Rates —

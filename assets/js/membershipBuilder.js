@@ -33,17 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
         row(sp?.seniorDoubleLabel || 'Senior Double', sp?.seniorDoubleDef, sp?.seniorDouble),
       ].join('');
 
-      // — Punch Cards — [1]
-      const pcEl = wrappers[1];
-      if (pc?.heading) pcEl.querySelector('h3').textContent = pc.heading;
-      if (pc?.description) { const p = pcEl.querySelector('p'); if (p) p.textContent = pc.description; }
-      pcEl.querySelector('tbody').innerHTML = [
-        row(pc?.adultLabel  || 'Adult',  pc?.adultDef,  pc?.adult),
-        row(pc?.juniorLabel || 'Junior', pc?.juniorDef, pc?.junior),
-      ].join('');
+      // — Punch Cards — commented out; re-enable wrappers[1] and shift indices when restored
+      // const pcEl = wrappers[1];
+      // if (pc?.heading) pcEl.querySelector('h3').textContent = pc.heading;
+      // if (pc?.description) { const p = pcEl.querySelector('p'); if (p) p.textContent = pc.description; }
+      // pcEl.querySelector('tbody').innerHTML = [
+      //   row(pc?.adultLabel  || 'Adult',  pc?.adultDef,  pc?.adult),
+      //   row(pc?.juniorLabel || 'Junior', pc?.juniorDef, pc?.junior),
+      // ].join('');
 
-      // — 30 Day Cards — [2]
-      const tdcEl = wrappers[2];
+      // — 30 Day Cards — [1]
+      const tdcEl = wrappers[1];
       if (tdc?.heading) tdcEl.querySelector('h3').textContent = tdc.heading;
       if (tdc?.description) { const p = tdcEl.querySelector('p'); if (p) p.textContent = tdc.description; }
       tdcEl.querySelector('tbody').innerHTML = [
@@ -53,17 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
         row(tdc?.juniorLabel || 'Junior', tdc?.juniorDef, tdc?.junior),
       ].join('');
 
-      // — Yearly Trail Fees — [3]
-      const ytfEl = wrappers[3];
+      // — Yearly Trail Fees — [2]
+      const ytfEl = wrappers[2];
       if (ytf?.heading) ytfEl.querySelector('h3').textContent = ytf.heading;
       if (ytf?.description) { const p = ytfEl.querySelector('p'); if (p) p.textContent = ytf.description; }
       ytfEl.querySelector('tbody').innerHTML = [
-        row(ytf?.yearlyTrailFeeLabel        || 'Yearly Trail Fee',         ytf?.yearlyTrailFeeDef,        ytf?.yearlyTrailFee),
-        row(ytf?.yearlyNonCartOwnerFeeLabel || 'Yearly Non-Cart Owner Fee', ytf?.yearlyNonCartOwnerFeeDef, ytf?.yearlyNonCartOwnerFee),
+        row(ytf?.yearlyTrailFeeLabel || 'Yearly Trail Fee', ytf?.yearlyTrailFeeDef, ytf?.yearlyTrailFee),
       ].join('');
 
-      // — Cart Shed Rental — [4]
-      const csrEl = wrappers[4];
+      // — Cart Shed Rental — [3]
+      const csrEl = wrappers[3];
       if (csr?.heading) csrEl.querySelector('h3').textContent = csr.heading;
       if (csr?.description) { const p = csrEl.querySelector('p'); if (p) p.textContent = csr.description; }
       csrEl.querySelector('tbody').innerHTML = [
